@@ -4,6 +4,7 @@ import styled, { css } from "styled-components"
 const StyledDiv = styled.div<{
   bgColor: string
   height: string
+  pad: string
   position: string
 }>`
   display: flex;
@@ -11,13 +12,9 @@ const StyledDiv = styled.div<{
   height: ${({ theme, height }) => theme.size[height] || height};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
   position: relative;
-  max-width: 30em;
-
-  position: relative;
-  font-size: 1.1em;
   border-radius: 10px;
-  padding: 20px;
-  max-width: 400px;
+  padding: 15px;
+  padding: ${({ theme, pad }) => theme.edgeSize[pad] || pad};
 
   ${({ position, theme, bgColor }) =>
     position === "right" &&
@@ -32,6 +29,7 @@ const StyledDiv = styled.div<{
         top: 50%;
         margin-top: -10px;
       }
+      margin-right: 10px;
     `}
 
   ${({ position, theme, bgColor }) =>
@@ -47,6 +45,7 @@ const StyledDiv = styled.div<{
         top: 50%;
         margin-top: -10px;
       }
+      margin-left: 10px;
     `}
 
   ${({ position, theme, bgColor }) =>
@@ -64,6 +63,7 @@ const StyledDiv = styled.div<{
         left: 50%;
         margin-left: -10px;
       }
+      margin-bottom: 10px;
     `}
 
   ${({ position, theme, bgColor }) =>
@@ -79,6 +79,7 @@ const StyledDiv = styled.div<{
         left: 50%;
         margin-left: -10px;
       }
+      margin-top: 10px;
     `}
 `
 
@@ -86,17 +87,25 @@ interface Props {
   bgColor?: string
   children?: any
   height?: string
+  pad?: string
   position?: string
 }
 const SpeechBubble = ({
   bgColor = "",
   children,
-  height = "40px",
+  height = "",
+  pad = "small",
   position = "right",
   ...rest
 }: Props) => {
   return (
-    <StyledDiv height={height} bgColor={bgColor} position={position} {...rest}>
+    <StyledDiv
+      height={height}
+      bgColor={bgColor}
+      pad={pad}
+      position={position}
+      {...rest}
+    >
       {children}
     </StyledDiv>
   )

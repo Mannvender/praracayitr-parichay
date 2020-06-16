@@ -1,33 +1,75 @@
 import * as React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
+interface ParserArgs {
+  theme: any
+  pad: any
+}
+const parsePadding = ({ pad, theme }: ParserArgs): string => {
+  return `${theme.edgeSize[pad.vertical]} ${theme.edgeSize[pad.horizontal]}`
+}
 const StyledDiv = styled.div<{
+  align: string
   bgColor: string
+  direction: string
+  justify: string
   height: string
-  pad: string
+  pad: object | string
+  textTransform: string
 }>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ direction }) => direction};
   height: ${({ theme, height }) => theme.size[height] || height};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
-  padding: ${({ theme, pad }) => theme.edgeSize[pad] || pad};
+  align-items: ${({ align }) => align};
+  justify-content: ${({ justify }) => justify};
+  text-transform: ${({ textTransform }) => textTransform};
+  ${({ theme, pad }) =>
+    typeof pad === "string" &&
+    css`
+      padding: ${theme.edgeSize[pad] || pad};
+    `}
+  ${({ theme, pad }) => {
+    if (typeof pad === "object") {
+      return css`
+        padding: ${parsePadding({ pad, theme })};
+      `
+    }
+  }}
 `
 
 interface Props {
+  align?: string
   children?: any
+  direction?: string
   bgColor?: string
+  justify?: string
   height?: string
-  pad?: string
+  pad?: string | object
+  textTransform?: string
 }
 const Box = ({
+  align = "",
   children,
+  direction = "column",
   height = "",
   bgColor = "",
-  pad = "",
+  justify = "",
+  pad = {},
+  textTransform = "",
   ...rest
 }: Props) => {
   return (
-    <StyledDiv height={height} bgColor={bgColor} pad={pad} {...rest}>
+    <StyledDiv
+      align={align}
+      bgColor={bgColor}
+      direction={direction}
+      justify={justify}
+      height={height}
+      pad={pad}
+      textTransform={textTransform}
+      {...rest}
+    >
       {children}
     </StyledDiv>
   )
