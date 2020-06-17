@@ -2,17 +2,21 @@ import * as React from "react"
 import styled, { css } from "styled-components"
 
 const StyledDiv = styled.div<{
+  basis: string
   bgColor: string
   height: string
   pad: string
   position: string
   radius: string
   rotate: string
+  width: string
 }>`
   display: flex;
   flex-direction: column;
+  flex-basis: ${({ theme, basis }) => theme.size[basis] || basis};
   transform: rotate(${({ rotate }) => rotate});
   height: ${({ theme, height }) => theme.size[height] || height};
+  width: ${({ theme, width }) => theme.size[width] || width};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
   position: relative;
   border-radius: ${({ theme, radius }) => theme.edgeSize[radius] || radius};
@@ -87,6 +91,7 @@ const StyledDiv = styled.div<{
 `
 
 interface Props {
+  basis?: string
   bgColor?: string
   children?: any
   height?: string
@@ -94,8 +99,10 @@ interface Props {
   position?: string
   radius?: string
   rotate?: string
+  width?: string
 }
 const SpeechBubble = ({
+  basis = "",
   bgColor = "",
   children,
   height = "",
@@ -103,16 +110,19 @@ const SpeechBubble = ({
   position = "right",
   radius = "medium",
   rotate = "0deg",
+  width = "",
   ...rest
 }: Props) => {
   return (
     <StyledDiv
-      height={height}
+      basis={basis}
       bgColor={bgColor}
+      height={height}
       pad={pad}
       position={position}
       radius={radius}
       rotate={rotate}
+      width={width}
       {...rest}
     >
       {children}

@@ -5,7 +5,15 @@ import { FaGlobe, FaGithub, FaLinkedin, FaHeart } from "react-icons/fa"
 
 // project imports
 import { Box, SpeechBubble } from "components"
-import { NAME, HI, IM, AGE } from "text/home"
+import {
+  NAME,
+  HI,
+  IM,
+  AGE,
+  INTRO_HELLO,
+  INTRO_HEADING,
+  INTRO_DESCRIPTION,
+} from "text/home"
 
 // styled components
 const StyledFaGlobe = styled(FaGlobe)`
@@ -52,7 +60,21 @@ const StyledAge = styled.h2`
   color: ${({ theme }) => theme.color.primary3};
   font-weight: 600;
 `
-const StyledImage = styled.img``
+const StyledImage = styled.img`
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.color.secondary3};
+`
+const StyledIntoHello = styled.h3`
+  color: ${({ theme }) => theme.color.primary2};
+`
+const StyledIntoHeading = styled.h3`
+  color: ${({ theme }) => theme.color.light};
+`
+const StyledIntoDesc = styled.h3`
+  color: ${({ theme }) => theme.color.primary2};
+`
 
 const DEFAULT_STYLE = "DEFAULT_AVATAR"
 const GLASSES_STYLE = "GLASSES_AVATAR"
@@ -65,7 +87,7 @@ const Home = () => {
   return (
     <Fragment>
       <Box bgColor="primary2" direction="row" pad="xlarge">
-        <Box>
+        <Box basis="38%">
           <Box
             align="end"
             direction="row"
@@ -87,20 +109,22 @@ const Home = () => {
               <StyledHi>{HI}</StyledHi>
             </SpeechBubble>
           </Box>
-          <Box margin={{ vertical: "large" }}>
-            <SpeechBubble
-              bgColor="primary3"
-              pad="large"
-              position="right"
-              radius="large"
-            >
-              <Box direction="row" justify="center">
-                <StyledIm>{IM}</StyledIm>
-              </Box>
-              <Box direction="row">
-                <StyledName>{NAME}</StyledName>
-              </Box>
-            </SpeechBubble>
+          <Box direction="row" justify="end" margin={{ vertical: "large" }}>
+            <div>
+              <SpeechBubble
+                bgColor="primary3"
+                pad="large"
+                position="right"
+                radius="large"
+              >
+                <Box direction="row" justify="center">
+                  <StyledIm>{IM}</StyledIm>
+                </Box>
+                <Box direction="row">
+                  <StyledName>{NAME}</StyledName>
+                </Box>
+              </SpeechBubble>
+            </div>
           </Box>
           <Box margin={{ vertical: "large" }} direction="row" justify="end">
             <div>
@@ -115,7 +139,7 @@ const Home = () => {
             </div>
           </Box>
         </Box>
-        <Box onClick={handleAvatarClick}>
+        <Box onClick={handleAvatarClick} justify="center">
           <StyledImage
             alt="avatar"
             src={
@@ -125,6 +149,13 @@ const Home = () => {
                 : "/avatar_7.png")
             }
           ></StyledImage>
+        </Box>
+        <Box justify="center" basis="38%">
+          <SpeechBubble bgColor="secondary4" pad="medium" position="left">
+            <StyledIntoHello>{INTRO_HELLO}</StyledIntoHello>
+            <StyledIntoHeading>{INTRO_HEADING}</StyledIntoHeading>
+            <StyledIntoDesc>{INTRO_DESCRIPTION}</StyledIntoDesc>
+          </SpeechBubble>
         </Box>
       </Box>
       <Box

@@ -7,6 +7,8 @@ const theme = {
       secondary: "#c77349",
       secondary2: "#dd8e3f",
       secondary3: "#d8936c",
+      secondary4: "#c67645",
+      light: "#fff",
     },
     dark: { "dark-1": "blue" },
   },

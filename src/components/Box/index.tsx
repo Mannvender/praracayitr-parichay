@@ -12,15 +12,21 @@ const parseSpacing = ({ spacing, theme }: ParserArgs): string => {
 }
 const StyledDiv = styled.div<{
   align: string
+  basis: string
   bgColor: string
   direction: string
+  grow: string
   height: string
   justify: string
   margin: object | string
   pad: object | string
+  shrink: string
   textTransform: string
 }>`
   display: flex;
+  flex-basis: ${({ basis }) => basis};
+  flex-grow: ${({ grow }) => grow};
+  flex-shrink: ${({ shrink }) => shrink};
   flex-direction: ${({ direction }) => direction};
   height: ${({ theme, height }) => theme.size[height] || height};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
@@ -59,25 +65,31 @@ const StyledDiv = styled.div<{
 
 interface Props {
   align?: string
+  basis?: string
+  bgColor?: string
   children?: any
   direction?: string
-  bgColor?: string
+  grow?: string
   justify?: string
   margin?: string | object
   onClick?: () => void
   height?: string
   pad?: string | object
+  shrink?: string
   textTransform?: string
 }
 const Box = ({
   align = "",
+  basis = "",
+  bgColor = "",
   children,
   direction = "column",
+  grow = "",
   height = "",
-  bgColor = "",
   justify = "",
   margin = {},
   pad = {},
+  shrink = "",
   textTransform = "",
   onClick = () => {},
   ...rest
@@ -85,13 +97,16 @@ const Box = ({
   return (
     <StyledDiv
       align={align}
+      basis={basis}
       bgColor={bgColor}
       direction={direction}
+      grow={grow}
       height={height}
       justify={justify}
       margin={margin}
       onClick={onClick}
       pad={pad}
+      shrink={shrink}
       textTransform={textTransform}
       {...rest}
     >
