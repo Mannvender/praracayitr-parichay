@@ -139,7 +139,11 @@ const Home = () => {
             </div>
           </Box>
         </Box>
-        <Box onClick={handleAvatarClick} justify="center">
+        <Box
+          onClick={handleAvatarClick}
+          justify="center"
+          style={{ cursor: "pointer" }}
+        >
           <StyledImage
             alt="avatar"
             src={
