@@ -21,15 +21,15 @@ const StyledDiv = styled.div<{
     css`
       &:after {
         content: "";
-        border: 10px solid transparent;
+        border: 8px solid transparent;
         border-left-color: ${theme.color[bgColor] || bgColor};
         border-right: 0;
         position: absolute;
-        right: -10px;
+        right: -8px;
         top: 50%;
-        margin-top: -10px;
+        margin-top: -8px;
       }
-      margin-right: 10px;
+      margin-right: 8px;
     `}
 
   ${({ position, theme, bgColor }) =>
@@ -37,15 +37,15 @@ const StyledDiv = styled.div<{
     css`
       &:after {
         content: "";
-        border: 10px solid transparent;
+        border: 8px solid transparent;
         border-right-color: ${theme.color[bgColor] || bgColor};
         border-left: 0;
         position: absolute;
-        left: -10px;
+        left: -8px;
         top: 50%;
-        margin-top: -10px;
+        margin-top: -8px;
       }
-      margin-left: 10px;
+      margin-left: 8px;
     `}
 
   ${({ position, theme, bgColor }) =>
@@ -54,16 +54,16 @@ const StyledDiv = styled.div<{
       &:after {
         /* [THESE WILL CREATE THE TRIANGLE] */
         content: "";
-        border: 10px solid transparent;
+        border: 8px solid transparent;
         border-top-color: ${theme.color[bgColor] || bgColor};
         border-bottom: 0;
         /* [THESE WILL POSITION THE TRIANGLE] */
         position: absolute;
-        bottom: -10px;
+        bottom: -8px;
         left: 50%;
-        margin-left: -10px;
+        margin-left: -8px;
       }
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     `}
 
   ${({ position, theme, bgColor }) =>
@@ -71,15 +71,15 @@ const StyledDiv = styled.div<{
     css`
       &:after {
         content: "";
-        border: 10px solid transparent;
+        border: 8px solid transparent;
         border-bottom-color: ${theme.color[bgColor] || bgColor};
         border-top: 0;
         position: absolute;
-        top: -10px;
+        top: -8px;
         left: 50%;
-        margin-left: -10px;
+        margin-left: -8px;
       }
-      margin-top: 10px;
+      margin-top: 8px;
     `}
 `
 

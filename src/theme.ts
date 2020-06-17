@@ -1,9 +1,9 @@
 const theme = {
   color: {
     light: {
-      "primary-bg": "#fddfb9",
-      "primary-bg-2": "#fbc773",
-      "primary-bg-3": "#7a432e",
+      primary: "#fddfb9",
+      primary2: "#fbc773",
+      primary3: "#7a432e",
     },
     dark: { "dark-1": "blue" },
   },
