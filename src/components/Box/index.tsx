@@ -6,8 +6,8 @@ interface ParserArgs {
   spacing: any
 }
 const parseSpacing = ({ spacing, theme }: ParserArgs): string => {
-  return `${theme.edgeSize[spacing.vertical]} ${
-    theme.edgeSize[spacing.horizontal]
+  return `${theme.edgeSize[spacing.vertical] || 0} ${
+    theme.edgeSize[spacing.horizontal] || 0
   }`
 }
 const StyledDiv = styled.div<{
@@ -45,13 +45,13 @@ const StyledDiv = styled.div<{
   ${({ theme, margin }) =>
     typeof margin === "string" &&
     css`
-      padding: ${theme.edgeSize[margin] || margin};
+      margin: ${theme.edgeSize[margin] || margin};
     `}
 
   ${({ theme, margin }) => {
     if (typeof margin === "object") {
       return css`
-        padding: ${parseSpacing({ spacing: margin, theme })};
+        margin: ${parseSpacing({ spacing: margin, theme })};
       `
     }
   }}
