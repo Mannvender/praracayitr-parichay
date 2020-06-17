@@ -33,35 +33,59 @@ const StyledLinkLabel = styled.h3`
   margin: ${({ theme }) =>
     `0 ${theme.edgeSize.xlarge} 0 ${theme.edgeSize.medium}`};
 `
-const StyledHi = styled.h3`
+const StyledHi = styled.h1`
   color: ${({ theme }) => theme.color.primary3};
+  font-weight: 600;
+  font-size: 56px;
+  transform: rotate(-45deg);
 `
 const StyledIm = styled.h1`
   color: ${({ theme }) => theme.color.secondary};
   font-weight: 600;
+  font-size: 56px;
 `
-const StyledName = styled.h3`
+const StyledName = styled.h1`
   color: ${({ theme }) => theme.color.primary2};
+  font-weight: 600;
 `
-const StyledAge = styled.h3`
+const StyledAge = styled.h2`
   color: ${({ theme }) => theme.color.primary3};
+  font-weight: 600;
 `
 
 const Home = () => {
   return (
     <Fragment>
-      <Box height="xxlarge" bgColor="primary2" direction="row" pad="xlarge">
+      <Box bgColor="primary2" direction="row" pad="xlarge">
         <Box>
-          <Box direction="row" justify="end" margin={{ vertical: "large" }}>
-            <SpeechBubble bgColor="secondary" pad="medium" position="right">
-              <StyledHeart size="1.5em" />
-            </SpeechBubble>
-            <SpeechBubble bgColor="secondary2" pad="medium" position="right">
+          <Box
+            align="end"
+            direction="row"
+            justify="end"
+            margin={{ vertical: "large" }}
+          >
+            <div>
+              <SpeechBubble bgColor="secondary" pad="large" position="right">
+                <StyledHeart size="3em" />
+              </SpeechBubble>
+            </div>
+            <SpeechBubble
+              bgColor="secondary2"
+              pad="large"
+              position="right"
+              radius="round"
+              rotate="45deg"
+            >
               <StyledHi>{HI}</StyledHi>
             </SpeechBubble>
           </Box>
           <Box margin={{ vertical: "large" }}>
-            <SpeechBubble bgColor="primary3" pad="large" position="right">
+            <SpeechBubble
+              bgColor="primary3"
+              pad="large"
+              position="right"
+              radius="large"
+            >
               <Box direction="row" justify="center">
                 <StyledIm>{IM}</StyledIm>
               </Box>
@@ -70,10 +94,17 @@ const Home = () => {
               </Box>
             </SpeechBubble>
           </Box>
-          <Box margin={{ vertical: "large" }}>
-            <SpeechBubble bgColor="secondary3" pad="large" position="right">
-              <StyledAge>{AGE}</StyledAge>
-            </SpeechBubble>
+          <Box margin={{ vertical: "large" }} direction="row" justify="end">
+            <div>
+              <SpeechBubble
+                bgColor="secondary3"
+                pad="large"
+                position="right"
+                radius="large"
+              >
+                <StyledAge>{AGE}</StyledAge>
+              </SpeechBubble>
+            </div>
           </Box>
         </Box>
       </Box>

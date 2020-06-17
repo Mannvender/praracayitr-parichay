@@ -28,6 +28,7 @@ const theme = {
       medium: "8px",
       large: "16px",
       xlarge: "32px",
+      round: "50%",
     },
   },
 }

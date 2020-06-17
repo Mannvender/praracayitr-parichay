@@ -6,13 +6,16 @@ const StyledDiv = styled.div<{
   height: string
   pad: string
   position: string
+  radius: string
+  rotate: string
 }>`
   display: flex;
   flex-direction: column;
+  transform: rotate(${({ rotate }) => rotate});
   height: ${({ theme, height }) => theme.size[height] || height};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
   position: relative;
-  border-radius: 10px;
+  border-radius: ${({ theme, radius }) => theme.edgeSize[radius] || radius};
   padding: 15px;
   padding: ${({ theme, pad }) => theme.edgeSize[pad] || pad};
 
@@ -25,7 +28,7 @@ const StyledDiv = styled.div<{
         border-left-color: ${theme.color[bgColor] || bgColor};
         border-right: 0;
         position: absolute;
-        right: -8px;
+        right: -7px;
         top: 50%;
         margin-top: -8px;
       }
@@ -41,7 +44,7 @@ const StyledDiv = styled.div<{
         border-right-color: ${theme.color[bgColor] || bgColor};
         border-left: 0;
         position: absolute;
-        left: -8px;
+        left: -7px;
         top: 50%;
         margin-top: -8px;
       }
@@ -59,7 +62,7 @@ const StyledDiv = styled.div<{
         border-bottom: 0;
         /* [THESE WILL POSITION THE TRIANGLE] */
         position: absolute;
-        bottom: -8px;
+        bottom: -7px;
         left: 50%;
         margin-left: -8px;
       }
@@ -75,7 +78,7 @@ const StyledDiv = styled.div<{
         border-bottom-color: ${theme.color[bgColor] || bgColor};
         border-top: 0;
         position: absolute;
-        top: -8px;
+        top: -7px;
         left: 50%;
         margin-left: -8px;
       }
@@ -89,6 +92,8 @@ interface Props {
   height?: string
   pad?: string
   position?: string
+  radius?: string
+  rotate?: string
 }
 const SpeechBubble = ({
   bgColor = "",
@@ -96,6 +101,8 @@ const SpeechBubble = ({
   height = "",
   pad = "small",
   position = "right",
+  radius = "medium",
+  rotate = "0deg",
   ...rest
 }: Props) => {
   return (
@@ -104,6 +111,8 @@ const SpeechBubble = ({
       bgColor={bgColor}
       pad={pad}
       position={position}
+      radius={radius}
+      rotate={rotate}
       {...rest}
     >
       {children}
