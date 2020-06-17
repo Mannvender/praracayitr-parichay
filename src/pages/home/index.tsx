@@ -1,5 +1,5 @@
 // lib imports
-import React, { Fragment } from "react"
+import React, { Fragment, useState } from "react"
 import styled from "styled-components"
 import { FaGlobe, FaGithub, FaLinkedin, FaHeart } from "react-icons/fa"
 
@@ -52,8 +52,16 @@ const StyledAge = styled.h2`
   color: ${({ theme }) => theme.color.primary3};
   font-weight: 600;
 `
+const StyledImage = styled.img``
 
+const DEFAULT_STYLE = "DEFAULT_AVATAR"
+const GLASSES_STYLE = "GLASSES_AVATAR"
 const Home = () => {
+  const [avatarStyle, setAvatarStyle] = useState(DEFAULT_STYLE)
+  const handleAvatarClick = () =>
+    setAvatarStyle(
+      avatarStyle === DEFAULT_STYLE ? GLASSES_STYLE : DEFAULT_STYLE
+    )
   return (
     <Fragment>
       <Box bgColor="primary2" direction="row" pad="xlarge">
@@ -106,6 +114,17 @@ const Home = () => {
               </SpeechBubble>
             </div>
           </Box>
+        </Box>
+        <Box onClick={handleAvatarClick}>
+          <StyledImage
+            alt="avatar"
+            src={
+              process.env.PUBLIC_URL +
+              (avatarStyle === DEFAULT_STYLE
+                ? "/avatar_5.png"
+                : "/avatar_7.png")
+            }
+          ></StyledImage>
         </Box>
       </Box>
       <Box

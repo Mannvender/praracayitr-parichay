@@ -64,6 +64,7 @@ interface Props {
   bgColor?: string
   justify?: string
   margin?: string | object
+  onClick?: () => void
   height?: string
   pad?: string | object
   textTransform?: string
@@ -78,6 +79,7 @@ const Box = ({
   margin = {},
   pad = {},
   textTransform = "",
+  onClick = () => {},
   ...rest
 }: Props) => {
   return (
@@ -88,6 +90,7 @@ const Box = ({
       height={height}
       justify={justify}
       margin={margin}
+      onClick={onClick}
       pad={pad}
       textTransform={textTransform}
       {...rest}
