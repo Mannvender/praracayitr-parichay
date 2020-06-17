@@ -5,6 +5,7 @@ const StyledDiv = styled.div<{
   basis: string
   bgColor: string
   height: string
+  maxWidth: string
   pad: string
   position: string
   radius: string
@@ -17,6 +18,7 @@ const StyledDiv = styled.div<{
   transform: rotate(${({ rotate }) => rotate});
   height: ${({ theme, height }) => theme.size[height] || height};
   width: ${({ theme, width }) => theme.size[width] || width};
+  max-width: ${({ theme, maxWidth }) => theme.size[maxWidth] || maxWidth};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
   position: relative;
   border-radius: ${({ theme, radius }) => theme.edgeSize[radius] || radius};
@@ -95,10 +97,12 @@ interface Props {
   bgColor?: string
   children?: any
   height?: string
+  maxWidth?: string
   pad?: string
   position?: string
   radius?: string
   rotate?: string
+  style?: object
   width?: string
 }
 const SpeechBubble = ({
@@ -106,10 +110,12 @@ const SpeechBubble = ({
   bgColor = "",
   children,
   height = "",
+  maxWidth = "",
   pad = "small",
   position = "right",
   radius = "medium",
   rotate = "0deg",
+  style = {},
   width = "",
   ...rest
 }: Props) => {
@@ -118,10 +124,12 @@ const SpeechBubble = ({
       basis={basis}
       bgColor={bgColor}
       height={height}
+      maxWidth={maxWidth}
       pad={pad}
       position={position}
       radius={radius}
       rotate={rotate}
+      style={style}
       width={width}
       {...rest}
     >

@@ -76,6 +76,7 @@ interface Props {
   height?: string
   pad?: string | object
   shrink?: string
+  style?: object
   textTransform?: string
 }
 const Box = ({
@@ -90,6 +91,7 @@ const Box = ({
   margin = {},
   pad = {},
   shrink = "",
+  style = {},
   textTransform = "",
   onClick = () => {},
   ...rest
@@ -107,6 +109,7 @@ const Box = ({
       onClick={onClick}
       pad={pad}
       shrink={shrink}
+      style={style}
       textTransform={textTransform}
       {...rest}
     >

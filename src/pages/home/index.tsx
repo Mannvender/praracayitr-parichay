@@ -151,7 +151,12 @@ const Home = () => {
           ></StyledImage>
         </Box>
         <Box justify="center" basis="38%">
-          <SpeechBubble bgColor="secondary4" pad="medium" position="left">
+          <SpeechBubble
+            bgColor="secondary4"
+            pad="medium"
+            position="left"
+            maxWidth="xxlarge"
+          >
             <StyledIntoHello>{INTRO_HELLO}</StyledIntoHello>
             <StyledIntoHeading>{INTRO_HEADING}</StyledIntoHeading>
             <StyledIntoDesc>{INTRO_DESCRIPTION}</StyledIntoDesc>
