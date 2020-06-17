@@ -3,17 +3,20 @@ import styled, { css } from "styled-components"
 
 interface ParserArgs {
   theme: any
-  pad: any
+  spacing: any
 }
-const parsePadding = ({ pad, theme }: ParserArgs): string => {
-  return `${theme.edgeSize[pad.vertical]} ${theme.edgeSize[pad.horizontal]}`
+const parseSpacing = ({ spacing, theme }: ParserArgs): string => {
+  return `${theme.edgeSize[spacing.vertical]} ${
+    theme.edgeSize[spacing.horizontal]
+  }`
 }
 const StyledDiv = styled.div<{
   align: string
   bgColor: string
   direction: string
-  justify: string
   height: string
+  justify: string
+  margin: object | string
   pad: object | string
   textTransform: string
 }>`
@@ -24,15 +27,31 @@ const StyledDiv = styled.div<{
   align-items: ${({ align }) => align};
   justify-content: ${({ justify }) => justify};
   text-transform: ${({ textTransform }) => textTransform};
+
   ${({ theme, pad }) =>
     typeof pad === "string" &&
     css`
       padding: ${theme.edgeSize[pad] || pad};
     `}
+
   ${({ theme, pad }) => {
     if (typeof pad === "object") {
       return css`
-        padding: ${parsePadding({ pad, theme })};
+        padding: ${parseSpacing({ spacing: pad, theme })};
+      `
+    }
+  }}
+
+  ${({ theme, margin }) =>
+    typeof margin === "string" &&
+    css`
+      padding: ${theme.edgeSize[margin] || margin};
+    `}
+
+  ${({ theme, margin }) => {
+    if (typeof margin === "object") {
+      return css`
+        padding: ${parseSpacing({ spacing: margin, theme })};
       `
     }
   }}
@@ -44,6 +63,7 @@ interface Props {
   direction?: string
   bgColor?: string
   justify?: string
+  margin?: string | object
   height?: string
   pad?: string | object
   textTransform?: string
@@ -55,6 +75,7 @@ const Box = ({
   height = "",
   bgColor = "",
   justify = "",
+  margin = {},
   pad = {},
   textTransform = "",
   ...rest
@@ -64,8 +85,9 @@ const Box = ({
       align={align}
       bgColor={bgColor}
       direction={direction}
-      justify={justify}
       height={height}
+      justify={justify}
+      margin={margin}
       pad={pad}
       textTransform={textTransform}
       {...rest}
