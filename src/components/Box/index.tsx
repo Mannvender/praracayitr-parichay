@@ -20,8 +20,10 @@ const StyledDiv = styled.div<{
   justify: string
   margin: object | string
   pad: object | string
+  radius: string
   shrink: string
   textTransform: string
+  width: string
   wrap: string
 }>`
   display: flex;
@@ -31,38 +33,36 @@ const StyledDiv = styled.div<{
   flex-shrink: ${({ shrink }) => shrink};
   flex-direction: ${({ direction }) => direction};
   height: ${({ theme, height }) => theme.size[height] || height};
+  width: ${({ theme, width }) => theme.size[width] || width};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
   align-items: ${({ align }) => align};
   justify-content: ${({ justify }) => justify};
   text-transform: ${({ textTransform }) => textTransform};
-
-  ${({ theme, pad }) =>
-    typeof pad === "string" &&
-    css`
-      padding: ${theme.edgeSize[pad] || pad};
-    `}
-
-  ${({ theme, pad }) => {
-    if (typeof pad === "object") {
-      return css`
-        padding: ${parseSpacing({ spacing: pad, theme })};
-      `
-    }
-  }}
-
-  ${({ theme, margin }) =>
-    typeof margin === "string" &&
-    css`
-      margin: ${theme.edgeSize[margin] || margin};
-    `}
-
-  ${({ theme, margin }) => {
-    if (typeof margin === "object") {
-      return css`
-        margin: ${parseSpacing({ spacing: margin, theme })};
-      `
-    }
-  }}
+  border-radius: ${({ theme, radius }) => theme.edgeSize[radius] || radius};
+    ${({ theme, pad }) =>
+      typeof pad === "string" &&
+      css`
+        padding: ${theme.edgeSize[pad] || pad};
+      `}
+    ${({ theme, pad }) => {
+      if (typeof pad === "object") {
+        return css`
+          padding: ${parseSpacing({ spacing: pad, theme })};
+        `
+      }
+    }}
+    ${({ theme, margin }) =>
+      typeof margin === "string" &&
+      css`
+        margin: ${theme.edgeSize[margin] || margin};
+      `}
+    ${({ theme, margin }) => {
+      if (typeof margin === "object") {
+        return css`
+          margin: ${parseSpacing({ spacing: margin, theme })};
+        `
+      }
+    }};
 `
 
 interface Props {
@@ -77,9 +77,11 @@ interface Props {
   onClick?: () => void
   height?: string
   pad?: string | object
+  radius?: string
   shrink?: string
   style?: object
   textTransform?: string
+  width?: string
   wrap?: string
 }
 const Box = ({
@@ -94,9 +96,11 @@ const Box = ({
   margin = {},
   onClick = () => {},
   pad = {},
+  radius = "",
   shrink = "",
   style = {},
   textTransform = "",
+  width = "",
   wrap = "",
   ...rest
 }: Props) => {
@@ -112,9 +116,11 @@ const Box = ({
       margin={margin}
       onClick={onClick}
       pad={pad}
+      radius={radius}
       shrink={shrink}
       style={style}
       textTransform={textTransform}
+      width={width}
       wrap={wrap}
       {...rest}
     >

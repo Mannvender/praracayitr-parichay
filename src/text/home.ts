@@ -11,6 +11,9 @@ export const DEVELOPER = "DEVELOPER"
 // Section Headings
 export const SKILLS_SECTION_HEADING = "Skills"
 export const LEARNING_SECTION_HEADING = "Learning Experience"
+export const RATING_SECTION_HEADING = "Skill-O-Meter"
+export const HOBBY_SECTION_HEADING = "Hobby"
+export const CONTACT_SECTION_HEADING = "Contact"
 
 // Skills
 export const DATA_STRUCTURES = "Data-Structures"
@@ -45,3 +48,10 @@ export const DEW_SOLUTIONS = "Dew Solution Pvt Ltd"
 export const DEW_SOLUTIONS_DESCRIPTION = "Software Engineer"
 export const DEW_SOLUTIONS_FROM = "FEB 20"
 export const DEW_SOLUTIONS_TO = "Present"
+
+// Hobbies
+export const ANIMATION = "3D Animations"
+export const TRAVELLING = "Travelling"
+export const TV_SERIES = "TV Series"
+export const MOVIES = "Movies"
+export const GAMING = "PC Gaming"

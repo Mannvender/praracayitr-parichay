@@ -11,8 +11,12 @@ import {
   FaDatabase,
   FaLaptopCode,
   FaCss3Alt,
+  FaRoute,
+  FaTv,
+  FaGamepad,
 } from "react-icons/fa"
 import { AiOutlineCode } from "react-icons/ai"
+import { MdLocalMovies, MdMovie } from "react-icons/md"
 
 // project imports
 import { Box, SectionHeading, Timeline } from "components"
@@ -49,6 +53,14 @@ import {
   DEW_SOLUTIONS_DESCRIPTION,
   DEW_SOLUTIONS_FROM,
   DEW_SOLUTIONS_TO,
+  RATING_SECTION_HEADING,
+  HOBBY_SECTION_HEADING,
+  CONTACT_SECTION_HEADING,
+  TRAVELLING,
+  ANIMATION,
+  MOVIES,
+  TV_SERIES,
+  GAMING,
 } from "text/home"
 
 // home
@@ -82,6 +94,21 @@ const StyledFaCss3Alt = styled(FaCss3Alt)`
 const StyledAiOutlineCode = styled(AiOutlineCode)`
   color: ${({ theme }) => theme.color["primary3"]};
 `
+const StyledFaRoute = styled(FaRoute)`
+  color: ${({ theme }) => theme.color["primary3"]};
+`
+const StyledMdLocalMovies = styled(MdLocalMovies)`
+  color: ${({ theme }) => theme.color["primary3"]};
+`
+const StyledMdMovie = styled(MdMovie)`
+  color: ${({ theme }) => theme.color["primary3"]};
+`
+const StyledFaTv = styled(FaTv)`
+  color: ${({ theme }) => theme.color["primary3"]};
+`
+const StyledFaGamepad = styled(FaGamepad)`
+  color: ${({ theme }) => theme.color["primary3"]};
+`
 const CircularBackground = styled.div`
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.primary2};
@@ -89,6 +116,12 @@ const CircularBackground = styled.div`
 const StyledP = styled.p`
   color: ${({ theme }) => theme.color["primary3"]};
   font-weight: 600;
+`
+const HobbyTitle = styled.p`
+  color: ${({ theme }) => theme.color["primary3"]};
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
 `
 
 const SKIILS = [
@@ -175,6 +208,28 @@ const TIMELINE_DATA = [
     to: DEW_SOLUTIONS_TO,
   },
 ]
+const HOBBIES = [
+  {
+    icon: <StyledFaRoute size="5rem" />,
+    title: TRAVELLING,
+  },
+  {
+    icon: <StyledMdLocalMovies size="5rem" />,
+    title: ANIMATION,
+  },
+  {
+    icon: <StyledMdMovie size="5rem" />,
+    title: MOVIES,
+  },
+  {
+    icon: <StyledFaTv size="5rem" />,
+    title: TV_SERIES,
+  },
+  {
+    icon: <StyledFaGamepad size="5rem" />,
+    title: GAMING,
+  },
+]
 
 const BottomSection = () => {
   return (
@@ -191,6 +246,35 @@ const BottomSection = () => {
       <SectionHeading text={LEARNING_SECTION_HEADING} />
       <Box pad="xlarge">
         <Timeline data={TIMELINE_DATA} />
+      </Box>
+      <Box direction="row" justify="space-between">
+        <Box basis="30%">
+          <SectionHeading text={RATING_SECTION_HEADING} />
+        </Box>
+        <Box basis="30%">
+          <SectionHeading text={HOBBY_SECTION_HEADING} />
+          <Box direction="row" wrap="wrap" margin={{ vertical: "large" }}>
+            {HOBBIES.map((hobby) => (
+              <Box basis="50%" align="center" margin={{ vertical: "large" }}>
+                <Box
+                  align="center"
+                  bgColor="primary2"
+                  height="xlarge"
+                  width="xlarge"
+                  justify="center"
+                  margin={{ horizontal: "small", vertical: "medium" }}
+                  radius="large"
+                >
+                  {hobby.icon}
+                </Box>
+                <HobbyTitle>{hobby.title}</HobbyTitle>
+              </Box>
+            ))}
+          </Box>
+        </Box>
+        <Box basis="30%">
+          <SectionHeading text={CONTACT_SECTION_HEADING} />
+        </Box>
       </Box>
     </Box>
   )
