@@ -14,6 +14,7 @@ const DataSection = styled.div`
   display: flex;
   flex-grow: 1;
   height: ${({ theme }) => theme.size.xlarge};
+  border-radius: ${({ theme }) => theme.edgeSize.large};
 `
 const Line = styled.div<{}>`
   display: flex;
@@ -24,14 +25,18 @@ const Line = styled.div<{}>`
 `
 const DottedLine = styled.div<{
   left: string
+  top: string
+  index: number
 }>`
   position: relative;
   height: ${({ theme }) => theme.size.large};
   left: ${({ left }) => left};
-  top: 50%;
+  top: ${({ top }) => top};
   border: ${({ theme }) => `4px dashed ${theme.color.primary3}`};
+  transform: translateX(-${({ index }) => index * 100}%);
 `
 const Point = styled.div<{
+  index: number
   left: string
 }>`
   position: relative;
@@ -39,15 +44,17 @@ const Point = styled.div<{
   height: 100%;
   background-color: ${({ theme }) => theme.color.primary3};
   left: ${({ left }) => left};
+  transform: translateX(-${({ index }) => index * 100}%);
 `
 const Details = styled.div<{
   left: string
+  top: string
 }>`
   position: relative;
   height: ${({ theme }) => theme.size.large};
   left: ${({ left }) => left};
-  top: 0;
-  transform: translateX(-24px);
+  top: ${({ top }) => top};
+  width: 0;
 `
 const StyledFaBookOpen = styled(FaBookOpen)`
   color: ${({ theme }) => theme.color.primary};
@@ -76,37 +83,61 @@ interface Props {
   // @todo: define shape of array of object
   data?: Array<any>
 }
+
 const Timeline = ({ data = [], ...rest }: Props) => {
+  const renderDetails = (list: Array<any>) =>
+    list.map((item, index) => (
+      <>
+        <DottedLine
+          left={item.position}
+          // @todo: create constants for 'top' and 'bottom'
+          top={item.orientation === "top" ? "50%" : "0"}
+          index={index}
+        />
+        <Details
+          left={item.position}
+          top={item.orientation === "top" ? "0" : "50%"}
+        >
+          <Box direction="row" margin="small">
+            <div>
+              <SpeechBubble bgColor="secondary3">
+                <StyledFaBookOpen size="2rem" />
+              </SpeechBubble>
+            </div>
+            <Box
+              margin={{ horizontal: "medium" }}
+              style={{ minWidth: "200px" }}
+            >
+              <Title>{item.title}</Title>
+              <Description>{item.description}</Description>
+              <Time>
+                - {item.from} to {item.to}
+              </Time>
+            </Box>
+          </Box>
+        </Details>
+      </>
+    ))
+
+  const renderUpperRow = () => {
+    const upperData = data.filter((d) => d.orientation === "top")
+    return renderDetails(upperData)
+  }
+
+  const renderLowerRow = () => {
+    const lowerData = data.filter((d) => d.orientation === "bottom")
+    return renderDetails(lowerData)
+  }
+
   return (
     <StyledDiv {...rest}>
-      <DataSection>
-        {data.map((point) => (
-          <Fragment>
-            <DottedLine left={point.position} />
-            <Details left={point.position}>
-              <Box direction="row">
-                <div>
-                  <SpeechBubble bgColor="secondary3">
-                    <StyledFaBookOpen size="2rem" />
-                  </SpeechBubble>
-                </div>
-                <Box margin={{ horizontal: "medium" }}>
-                  <Title>{point.title}</Title>
-                  <Description>{point.description}</Description>
-                  <Time>
-                    - {point.from} To {point.to}
-                  </Time>
-                </Box>
-              </Box>
-            </Details>
-          </Fragment>
-        ))}
-      </DataSection>
+      <DataSection>{renderUpperRow()}</DataSection>
       <Line>
-        {data.map((point) => (
-          <Point left={point.position} />
+        {data.map((point, index) => (
+          <Point left={point.position} index={index} />
         ))}
       </Line>
+      <DataSection>{renderLowerRow()}</DataSection>
     </StyledDiv>
   )
 }

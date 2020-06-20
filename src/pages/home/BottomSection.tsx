@@ -115,12 +115,44 @@ const SKIILS = [
 ]
 const TIMELINE_DATA = [
   {
-    position: "10%",
+    position: "5%",
+    orientation: "top",
+    title: "Coding Blocks",
+    description: "Intoduced me to programming",
+    from: "SEP 16",
+    to: "DEC 17",
+  },
+  {
+    position: "12%",
     orientation: "bottom",
-    title: "School Name",
-    description: "High School",
-    from: "AUGUST 2015",
-    to: "present",
+    title: "SG Edutech Pvt Ltd",
+    description: "Interned as Web Developer",
+    from: "JUNE 18",
+    to: "AUG 18",
+  },
+  {
+    position: "38%",
+    orientation: "top",
+    title: "Eduatlas",
+    description: "Full Stack Web Developer/ Co-Founder",
+    from: "AUG 18",
+    to: "JULY 18",
+  },
+  {
+    position: "45%",
+    orientation: "bottom",
+    title: "Professional Freelancing",
+    description: "Full Stack Web Developer",
+    from: "FEB 18",
+    to: "FEB 20",
+  },
+  {
+    position: "68%",
+    orientation: "top",
+    title: "Dew Solutions Pvt Ltd",
+    description: "Software Engineer",
+    from: "FEB 20",
+    to: "Present",
   },
 ]
 
