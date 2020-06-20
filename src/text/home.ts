@@ -7,3 +7,4 @@ export const INTRO_HEADING = "I'm Web Developer in New Delhi, India."
 export const INTRO_DESCRIPTION = `I love Programming and never stop searching for
 								  challenging tasks and new form of self-expression to improve my skills.`
 export const DEVELOPER = "DEVELOPER"
+export const CREATIVE_SECTION_HEADING = "Creative Skills"

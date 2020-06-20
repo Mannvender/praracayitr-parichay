@@ -28,22 +28,18 @@ export const StyledLinkLabel = styled.h3`
 `
 export const StyledHi = styled.h1`
   color: ${({ theme }) => theme.color.primary3};
-  font-weight: 600;
   font-size: 56px;
   transform: rotate(-45deg);
 `
 export const StyledIm = styled.h1`
   color: ${({ theme }) => theme.color.secondary};
-  font-weight: 600;
   font-size: 56px;
 `
 export const StyledName = styled.h1`
   color: ${({ theme }) => theme.color.primary2};
-  font-weight: 600;
 `
 export const StyledAge = styled.h2`
   color: ${({ theme }) => theme.color.primary3};
-  font-weight: 600;
 `
 export const StyledImage = styled.img`
   height: 300px;
@@ -64,7 +60,6 @@ export const StyledDeveloper = styled.h1`
   color: ${({ theme }) => theme.color.primary3};
   margin-top: ${({ theme }) => theme.edgeSize.large};
   font-size: 48px;
-  font-weight: 600;
   font-style: italic;
   transform: rotate(-8deg);
   text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px #ccc,

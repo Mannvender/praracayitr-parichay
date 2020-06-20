@@ -5,6 +5,7 @@ import React, { Fragment } from "react"
 import { Box, SpeechBubble } from "components"
 
 // home directory imports
+import BottomSection from "pages/home/BottomSection"
 import TopSection from "pages/home/TopSection"
 import {
   StyledFaGlobe,
@@ -25,6 +26,7 @@ const Home = () => {
         height="large"
         justify="center"
         pad={{ horizontal: "xlarge" }}
+        shrink="0"
         textTransform="uppercase"
       >
         <StyledLink
@@ -61,6 +63,7 @@ const Home = () => {
           <StyledLinkLabel>/mannvender</StyledLinkLabel>
         </StyledLink>
       </Box>
+      <BottomSection />
     </Fragment>
   )
 }
