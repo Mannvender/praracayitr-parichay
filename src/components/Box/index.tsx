@@ -22,8 +22,10 @@ const StyledDiv = styled.div<{
   pad: object | string
   shrink: string
   textTransform: string
+  wrap: string
 }>`
   display: flex;
+  flex-wrap: ${({ wrap }) => wrap};
   flex-basis: ${({ basis }) => basis};
   flex-grow: ${({ grow }) => grow};
   flex-shrink: ${({ shrink }) => shrink};
@@ -78,6 +80,7 @@ interface Props {
   shrink?: string
   style?: object
   textTransform?: string
+  wrap?: string
 }
 const Box = ({
   align = "",
@@ -89,11 +92,12 @@ const Box = ({
   height = "",
   justify = "",
   margin = {},
+  onClick = () => {},
   pad = {},
   shrink = "",
   style = {},
   textTransform = "",
-  onClick = () => {},
+  wrap = "",
   ...rest
 }: Props) => {
   return (
@@ -111,6 +115,7 @@ const Box = ({
       shrink={shrink}
       style={style}
       textTransform={textTransform}
+      wrap={wrap}
       {...rest}
     >
       {children}
