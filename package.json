@@ -57,7 +57,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet"
+      "pre-commit": "tsc --noEmit && eslint 'src/*/**/*.{js,ts,tsx}' --quiet"
     }
   }
 }
