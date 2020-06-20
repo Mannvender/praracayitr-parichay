@@ -15,8 +15,21 @@ import {
 import { AiOutlineCode } from "react-icons/ai"
 
 // project imports
-import { Box, SectionHeading } from "components"
-import { SKILLS_SECTION_HEADING } from "text/home"
+import { Box, SectionHeading, Timeline } from "components"
+import {
+  LEARNING_SECTION_HEADING,
+  SKILLS_SECTION_HEADING,
+  ALGORITHMS,
+  DATA_STRUCTURES,
+  JAVASCRIPT,
+  C,
+  GIT,
+  HTML_CSS,
+  MONGO_DB,
+  REACT,
+  TYPESCRIPT,
+  NODE,
+} from "text/home"
 
 // home
 const StyledFaProjectDiagram = styled(FaProjectDiagram)`
@@ -53,49 +66,64 @@ const CircularBackground = styled.div`
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.primary2};
 `
+const StyledP = styled.p`
+  color: ${({ theme }) => theme.color["primary3"]};
+  font-weight: 600;
+`
 
 const SKIILS = [
   {
     logo: <StyledFaProjectDiagram size="5rem" />,
-    title: "Data-Structures",
+    title: DATA_STRUCTURES,
   },
   {
     logo: <StyledFaCode size="5rem" />,
-    title: "Algorithms",
+    title: ALGORITHMS,
   },
   {
     logo: <StyledFaJsSquare size="5rem" />,
-    title: "JavaScript",
+    title: JAVASCRIPT,
   },
   {
     logo: <StyledFaReact size="5rem" />,
-    title: "ReactJS",
+    title: REACT,
   },
   {
     logo: <StyledFaNode size="5rem" />,
-    title: "NodeJS",
+    title: NODE,
   },
   {
     logo: <StyledFaGit size="5rem" />,
-    title: "GIT",
+    title: GIT,
   },
   {
     logo: <StyledFaDatabase size="5rem" />,
-    title: "MongoDB",
+    title: MONGO_DB,
   },
   {
     logo: <StyledFaLaptopCode size="5rem" />,
-    title: "C",
+    title: C,
   },
   {
     logo: <StyledFaCss3Alt size="5rem" />,
-    title: "HTML/CSS",
+    title: HTML_CSS,
   },
   {
     logo: <StyledAiOutlineCode size="5rem" />,
-    title: "TypeScript",
+    title: TYPESCRIPT,
   },
 ]
+const TIMELINE_DATA = [
+  {
+    position: "10%",
+    orientation: "bottom",
+    title: "School Name",
+    description: "High School",
+    from: "AUGUST 2015",
+    to: "present",
+  },
+]
+
 const BottomSection = () => {
   return (
     <Box bgColor="primary" pad="xlarge">
@@ -104,9 +132,13 @@ const BottomSection = () => {
         {SKIILS.map((skill) => (
           <Box align="center" margin="xlarge">
             <CircularBackground>{skill.logo}</CircularBackground>
-            <p>{skill.title}</p>
+            <StyledP>{skill.title}</StyledP>
           </Box>
         ))}
+      </Box>
+      <SectionHeading text={LEARNING_SECTION_HEADING} />
+      <Box pad="xlarge">
+        <Timeline data={TIMELINE_DATA} />
       </Box>
     </Box>
   )
