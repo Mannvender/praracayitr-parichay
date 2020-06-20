@@ -22,7 +22,13 @@ import { AiOutlineCode } from "react-icons/ai"
 import { MdLocalMovies } from "react-icons/md"
 
 // project imports
-import { Box, SectionHeading, Timeline, SpeechBubble } from "components"
+import {
+  Box,
+  SectionHeading,
+  Timeline,
+  SpeechBubble,
+  ProgressBar,
+} from "components"
 import {
   LEARNING_SECTION_HEADING,
   SKILLS_SECTION_HEADING,
@@ -273,6 +279,72 @@ const BottomSection = () => {
       <Box direction="row" justify="space-evenly" wrap="wrap">
         <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
           <SectionHeading text={RATING_SECTION_HEADING} />
+          <Box margin={{ vertical: "large" }}>
+            <Box direction="row" margin={{ vertical: "large" }}>
+              <Box
+                align="center"
+                bgColor="primary2"
+                border={{ size: "small" }}
+                height="large"
+                justify="center"
+                margin={{ horizontal: "medium" }}
+                radius="large"
+                shrink="0"
+                width="large"
+              >
+                <StyledFaJsSquare size="3rem" />
+              </Box>
+              <ProgressBar progress="80%" />
+            </Box>
+            <Box direction="row" margin={{ vertical: "large" }}>
+              <Box
+                align="center"
+                bgColor="cyan"
+                border={{ size: "small" }}
+                height="large"
+                justify="center"
+                margin={{ horizontal: "medium" }}
+                radius="large"
+                shrink="0"
+                width="large"
+              >
+                <StyledFaReact size="3rem" />
+              </Box>
+              <ProgressBar progress="87%" />
+            </Box>
+            <Box direction="row" margin={{ vertical: "large" }}>
+              <Box
+                align="center"
+                bgColor="secondary2"
+                border={{ size: "small" }}
+                height="large"
+                justify="center"
+                margin={{ horizontal: "medium" }}
+                radius="large"
+                shrink="0"
+                width="large"
+              >
+                <StyledFaGit size="3rem" />
+              </Box>
+              <ProgressBar progress="80%" />
+            </Box>
+            <Box direction="row" margin={{ vertical: "large" }}>
+              <Box
+                align="center"
+                bgColor="green"
+                border={{ size: "small" }}
+                height="large"
+                justify="center"
+                margin={{ horizontal: "medium" }}
+                radius="large"
+                shrink="0"
+                width="large"
+              >
+                <StyledFaNode size="3rem" />
+              </Box>
+              <ProgressBar progress="70%" />
+            </Box>
+          </Box>
         </Box>
         <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
           <SectionHeading text={HOBBY_SECTION_HEADING} />

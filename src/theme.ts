@@ -8,6 +8,8 @@ const theme = {
       secondary2: "#dd8e3f",
       secondary3: "#d8936c",
       secondary4: "#c67645",
+      cyan: "#b0d3de",
+      green: "#add781",
       light: "#fff",
     },
     dark: { "dark-1": "blue" },

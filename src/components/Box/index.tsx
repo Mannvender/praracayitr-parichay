@@ -10,10 +10,23 @@ const parseSpacing = ({ spacing, theme }: ParserArgs): string => {
     theme.edgeSize[spacing.horizontal] || 0
   }`
 }
+
+interface BorderParserArgs {
+  theme: any
+  border: any
+}
+const parseBorder = ({ border, theme }: BorderParserArgs): string => {
+  const { size = "none", style = "solid", color = "primary3" } = border
+  return `${theme.edgeSize[size] || size} ${style} ${
+    theme.color[color] || color
+  }`
+}
+
 const StyledDiv = styled.div<{
   align: string
   basis: string
   bgColor: string
+  border: object
   direction: string
   grow: string
   height: string
@@ -38,6 +51,7 @@ const StyledDiv = styled.div<{
   align-items: ${({ align }) => align};
   justify-content: ${({ justify }) => justify};
   text-transform: ${({ textTransform }) => textTransform};
+  border: ${({ theme, border }) => parseBorder({ theme, border })};
   border-radius: ${({ theme, radius }) => theme.edgeSize[radius] || radius};
     ${({ theme, pad }) =>
       typeof pad === "string" &&
@@ -69,6 +83,7 @@ interface Props {
   align?: string
   basis?: string
   bgColor?: string
+  border?: object
   children?: any
   direction?: string
   grow?: string
@@ -88,6 +103,7 @@ const Box = ({
   align = "",
   basis = "",
   bgColor = "",
+  border = {},
   children,
   direction = "column",
   grow = "",
@@ -109,6 +125,7 @@ const Box = ({
       align={align}
       basis={basis}
       bgColor={bgColor}
+      border={border}
       direction={direction}
       grow={grow}
       height={height}
