@@ -14,12 +14,15 @@ import {
   FaRoute,
   FaTv,
   FaGamepad,
+  FaMobile,
+  FaAt,
+  FaHome,
 } from "react-icons/fa"
 import { AiOutlineCode } from "react-icons/ai"
-import { MdLocalMovies, MdMovie } from "react-icons/md"
+import { MdLocalMovies } from "react-icons/md"
 
 // project imports
-import { Box, SectionHeading, Timeline } from "components"
+import { Box, SectionHeading, Timeline, SpeechBubble } from "components"
 import {
   LEARNING_SECTION_HEADING,
   SKILLS_SECTION_HEADING,
@@ -59,8 +62,12 @@ import {
   TRAVELLING,
   ANIMATION,
   MOVIES,
-  TV_SERIES,
   GAMING,
+  NAME,
+  NAME_LABEL,
+  PHONE,
+  EMAIL,
+  ADDRESS,
 } from "text/home"
 
 // home
@@ -100,14 +107,20 @@ const StyledFaRoute = styled(FaRoute)`
 const StyledMdLocalMovies = styled(MdLocalMovies)`
   color: ${({ theme }) => theme.color["primary3"]};
 `
-const StyledMdMovie = styled(MdMovie)`
-  color: ${({ theme }) => theme.color["primary3"]};
-`
 const StyledFaTv = styled(FaTv)`
   color: ${({ theme }) => theme.color["primary3"]};
 `
 const StyledFaGamepad = styled(FaGamepad)`
   color: ${({ theme }) => theme.color["primary3"]};
+`
+const StyledFaMobile = styled(FaMobile)`
+  color: ${({ theme }) => theme.color["primary"]};
+`
+const StyledFaAt = styled(FaAt)`
+  color: ${({ theme }) => theme.color["primary"]};
+`
+const StyledFaHome = styled(FaHome)`
+  color: ${({ theme }) => theme.color["primary"]};
 `
 const CircularBackground = styled.div`
   border-radius: 50%;
@@ -122,6 +135,20 @@ const HobbyTitle = styled.p`
   font-weight: 600;
   margin: 0;
   text-align: center;
+`
+const NameLabel = styled.h2`
+  color: ${({ theme }) => theme.color.secondary3};
+  margin-right: ${({ theme }) => theme.edgeSize.medium};
+`
+const Name = styled.h2`
+  color: ${({ theme }) => theme.color["primary3"]};
+`
+const ContactDetail = styled.p`
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+  color: ${({ theme }) => theme.color["primary3"]};
+  margin-left: ${({ theme }) => theme.edgeSize.large};
 `
 
 const SKIILS = [
@@ -218,12 +245,8 @@ const HOBBIES = [
     title: ANIMATION,
   },
   {
-    icon: <StyledMdMovie size="5rem" />,
-    title: MOVIES,
-  },
-  {
     icon: <StyledFaTv size="5rem" />,
-    title: TV_SERIES,
+    title: MOVIES,
   },
   {
     icon: <StyledFaGamepad size="5rem" />,
@@ -247,11 +270,11 @@ const BottomSection = () => {
       <Box pad="xlarge">
         <Timeline data={TIMELINE_DATA} />
       </Box>
-      <Box direction="row" justify="space-between">
-        <Box basis="30%">
+      <Box direction="row" justify="space-evenly" wrap="wrap">
+        <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
           <SectionHeading text={RATING_SECTION_HEADING} />
         </Box>
-        <Box basis="30%">
+        <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
           <SectionHeading text={HOBBY_SECTION_HEADING} />
           <Box direction="row" wrap="wrap" margin={{ vertical: "large" }}>
             {HOBBIES.map((hobby) => (
@@ -272,8 +295,32 @@ const BottomSection = () => {
             ))}
           </Box>
         </Box>
-        <Box basis="30%">
+        <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
           <SectionHeading text={CONTACT_SECTION_HEADING} />
+          <Box>
+            <Box direction="row" margin={{ vertical: "xlarge" }}>
+              <NameLabel>{NAME_LABEL}</NameLabel>
+              <Name>{NAME}</Name>
+            </Box>
+            <Box direction="row" align="center" margin={{ vertical: "medium" }}>
+              <SpeechBubble bgColor="secondary3" pad="large" radius="large">
+                <StyledFaMobile size="3rem" />
+              </SpeechBubble>
+              <ContactDetail>{PHONE}</ContactDetail>
+            </Box>
+            <Box direction="row" align="center" margin={{ vertical: "medium" }}>
+              <SpeechBubble bgColor="secondary3" pad="large" radius="large">
+                <StyledFaAt size="3rem" />
+              </SpeechBubble>
+              <ContactDetail>{EMAIL}</ContactDetail>
+            </Box>
+            <Box direction="row" align="center" margin={{ vertical: "medium" }}>
+              <SpeechBubble bgColor="secondary3" pad="large" radius="large">
+                <StyledFaHome size="3rem" />
+              </SpeechBubble>
+              <ContactDetail>{ADDRESS}</ContactDetail>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Box>

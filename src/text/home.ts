@@ -52,6 +52,11 @@ export const DEW_SOLUTIONS_TO = "Present"
 // Hobbies
 export const ANIMATION = "3D Animations"
 export const TRAVELLING = "Travelling"
-export const TV_SERIES = "TV Series"
-export const MOVIES = "Movies"
+export const MOVIES = "Movies and Series"
 export const GAMING = "PC Gaming"
+
+// Contact Details
+export const NAME_LABEL = "Name:"
+export const PHONE = "+91 7217855864"
+export const EMAIL = "mannvender001@gmail"
+export const ADDRESS = "Sector 45, Gurugram"
