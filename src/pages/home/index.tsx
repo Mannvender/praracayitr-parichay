@@ -1,7 +1,5 @@
 // lib imports
 import React, { Fragment, useState } from "react"
-import styled from "styled-components"
-import { FaGlobe, FaGithub, FaLinkedin, FaHeart } from "react-icons/fa"
 
 // project imports
 import { Box, SpeechBubble } from "components"
@@ -13,68 +11,27 @@ import {
   INTRO_HELLO,
   INTRO_HEADING,
   INTRO_DESCRIPTION,
+  DEVELOPER,
 } from "text/home"
 
-// styled components
-const StyledFaGlobe = styled(FaGlobe)`
-  color: ${({ theme }) => theme.color["primary3"]};
-`
-const StyledGithub = styled(FaGithub)`
-  color: ${({ theme }) => theme.color["primary3"]};
-`
-const StyledLinkedIn = styled(FaLinkedin)`
-  color: ${({ theme }) => theme.color["primary3"]};
-`
-const StyledHeart = styled(FaHeart)`
-  color: ${({ theme }) => theme.color["primary2"]};
-`
-const StyledLink = styled.a<{
-  color: string
-}>`
-  display: flex;
-  align-items: center;
-
-  color: ${({ theme, color }) => theme.color[color]};
-  text-decoration: none;
-`
-const StyledLinkLabel = styled.h3`
-  margin: ${({ theme }) =>
-    `0 ${theme.edgeSize.xlarge} 0 ${theme.edgeSize.medium}`};
-`
-const StyledHi = styled.h1`
-  color: ${({ theme }) => theme.color.primary3};
-  font-weight: 600;
-  font-size: 56px;
-  transform: rotate(-45deg);
-`
-const StyledIm = styled.h1`
-  color: ${({ theme }) => theme.color.secondary};
-  font-weight: 600;
-  font-size: 56px;
-`
-const StyledName = styled.h1`
-  color: ${({ theme }) => theme.color.primary2};
-  font-weight: 600;
-`
-const StyledAge = styled.h2`
-  color: ${({ theme }) => theme.color.primary3};
-  font-weight: 600;
-`
-const StyledImage = styled.img`
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.color.secondary3};
-`
-const StyledIntoHello = styled.h3`
-  color: ${({ theme }) => theme.color.primary2};
-`
-const StyledIntoHeading = styled.h3`
-  color: ${({ theme }) => theme.color.light};
-`
-const StyledIntoDesc = styled.h3`
-  color: ${({ theme }) => theme.color.primary2};
-`
+// home directory imports
+import {
+  StyledAge,
+  StyledDeveloper,
+  StyledFaGlobe,
+  StyledGithub,
+  StyledHeart,
+  StyledHi,
+  StyledIm,
+  StyledImage,
+  StyledIntoDesc,
+  StyledIntoHeading,
+  StyledIntoHello,
+  StyledLink,
+  StyledLinkLabel,
+  StyledLinkedIn,
+  StyledName,
+} from "pages/home/styles"
 
 const DEFAULT_STYLE = "DEFAULT_AVATAR"
 const GLASSES_STYLE = "GLASSES_AVATAR"
@@ -143,6 +100,7 @@ const Home = () => {
           onClick={handleAvatarClick}
           justify="center"
           style={{ cursor: "pointer" }}
+          pad="xlarge"
         >
           <StyledImage
             alt="avatar"
@@ -153,6 +111,7 @@ const Home = () => {
                 : "/avatar_7.png")
             }
           ></StyledImage>
+          <StyledDeveloper>{DEVELOPER}</StyledDeveloper>
         </Box>
         <Box justify="center" basis="38%">
           <SpeechBubble
