@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/praracayitr-parichay/static/css/main.9d7d9642.chunk.css",
-    "main.js": "/praracayitr-parichay/static/js/main.070fbb76.chunk.js",
-    "main.js.map": "/praracayitr-parichay/static/js/main.070fbb76.chunk.js.map",
+    "main.js": "/praracayitr-parichay/static/js/main.eb971cc5.chunk.js",
+    "main.js.map": "/praracayitr-parichay/static/js/main.eb971cc5.chunk.js.map",
     "runtime-main.js": "/praracayitr-parichay/static/js/runtime-main.c578e3e9.js",
     "runtime-main.js.map": "/praracayitr-parichay/static/js/runtime-main.c578e3e9.js.map",
-    "static/js/2.522736b4.chunk.js": "/praracayitr-parichay/static/js/2.522736b4.chunk.js",
-    "static/js/2.522736b4.chunk.js.map": "/praracayitr-parichay/static/js/2.522736b4.chunk.js.map",
+    "static/js/2.be72236b.chunk.js": "/praracayitr-parichay/static/js/2.be72236b.chunk.js",
+    "static/js/2.be72236b.chunk.js.map": "/praracayitr-parichay/static/js/2.be72236b.chunk.js.map",
     "index.html": "/praracayitr-parichay/index.html",
-    "precache-manifest.6c8ab6e2d37d4e96a3467603d21d5dde.js": "/praracayitr-parichay/precache-manifest.6c8ab6e2d37d4e96a3467603d21d5dde.js",
+    "precache-manifest.57d3d1efa724fcd39ea6188c48d22c39.js": "/praracayitr-parichay/precache-manifest.57d3d1efa724fcd39ea6188c48d22c39.js",
     "service-worker.js": "/praracayitr-parichay/service-worker.js",
     "static/css/main.9d7d9642.chunk.css.map": "/praracayitr-parichay/static/css/main.9d7d9642.chunk.css.map",
-    "static/js/2.522736b4.chunk.js.LICENSE.txt": "/praracayitr-parichay/static/js/2.522736b4.chunk.js.LICENSE.txt"
+    "static/js/2.be72236b.chunk.js.LICENSE.txt": "/praracayitr-parichay/static/js/2.be72236b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c578e3e9.js",
-    "static/js/2.522736b4.chunk.js",
+    "static/js/2.be72236b.chunk.js",
     "static/css/main.9d7d9642.chunk.css",
-    "static/js/main.070fbb76.chunk.js"
+    "static/js/main.eb971cc5.chunk.js"
   ]
 }
