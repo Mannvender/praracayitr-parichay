@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 // project imports
 import { Box } from "components"
-import { Store } from "context/theme/store"
+import { Store, MODE } from "context/theme/store"
 
 const StyledFaMoon = styled(FaMoon)`
   color: ${({ theme }) => theme.color["primary3"]};
@@ -16,7 +16,8 @@ const StyledFaSun = styled(FaSun)`
 
 const Header = () => {
   const { mode, setMode } = useContext(Store)
-  console.log(mode)
+  const handleDarkModeClick = () => setMode(MODE.LIGHT)
+  const handleLightModeClick = () => setMode(MODE.DARK)
   return (
     <Box
       justify="flex-end"
@@ -25,8 +26,12 @@ const Header = () => {
       bgColor="primary2"
       pad="xlarge"
     >
-      <StyledFaMoon size="2rem" />
-      <StyledFaSun size="2rem" />
+      {mode === MODE.DARK && (
+        <StyledFaMoon size="2rem" onClick={handleDarkModeClick} />
+      )}
+      {mode === MODE.LIGHT && (
+        <StyledFaSun size="2rem" onClick={handleLightModeClick} />
+      )}
     </Box>
   )
 }

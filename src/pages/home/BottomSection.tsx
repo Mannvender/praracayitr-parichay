@@ -266,7 +266,7 @@ const BottomSection = () => {
       <SectionHeading text={SKILLS_SECTION_HEADING} />
       <Box direction="row" justify="space-evenly" wrap="wrap">
         {SKIILS.map((skill) => (
-          <Box align="center" margin="xlarge">
+          <Box key={skill.title} align="center" margin="xlarge">
             <CircularBackground>{skill.logo}</CircularBackground>
             <StyledP>{skill.title}</StyledP>
           </Box>
@@ -350,7 +350,12 @@ const BottomSection = () => {
           <SectionHeading text={HOBBY_SECTION_HEADING} />
           <Box direction="row" wrap="wrap" margin={{ vertical: "large" }}>
             {HOBBIES.map((hobby) => (
-              <Box basis="50%" align="center" margin={{ vertical: "large" }}>
+              <Box
+                key={hobby.title}
+                basis="50%"
+                align="center"
+                margin={{ vertical: "large" }}
+              >
                 <Box
                   align="center"
                   bgColor="primary2"
