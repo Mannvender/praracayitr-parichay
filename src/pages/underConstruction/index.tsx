@@ -20,14 +20,8 @@ const Message = styled.p`
 const UnderConstruction = () => {
   const { underConstruction: TEXT } = useText()
   return (
-    <Box
-      width="100%"
-      height="100%"
-      align="center"
-      justify="center"
-      bgColor="primary"
-    >
-      <StyledIoIosConstruct size="16em" />
+    <Box align="center" height="74vh" bgColor="primary" pad="xlarge">
+      <StyledIoIosConstruct size="14em" />
       <Message>{TEXT.MESSAGE}</Message>
     </Box>
   )

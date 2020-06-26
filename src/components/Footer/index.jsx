@@ -13,6 +13,7 @@ const StyledMadeWith = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.color["primary3"]};
   margin-right: ${({ theme }) => theme.edgeSize.medium};
+  font-size: 0.8em;
 `
 
 const Footer = () => {
