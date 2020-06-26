@@ -1,5 +1,5 @@
 // lib imports
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 
 // project imports
 import { Box, SpeechBubble } from "components"
