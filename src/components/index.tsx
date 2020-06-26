@@ -4,5 +4,14 @@ import SpeechBubble from "components/SpeechBubble"
 import Timeline from "components/Timeline"
 import ProgressBar from "components/ProgressBar"
 import Header from "components/Header"
+import Footer from "components/Footer"
 
-export { Box, SectionHeading, SpeechBubble, Timeline, ProgressBar, Header }
+export {
+  Box,
+  SectionHeading,
+  SpeechBubble,
+  Timeline,
+  ProgressBar,
+  Header,
+  Footer,
+}

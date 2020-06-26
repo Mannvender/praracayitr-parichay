@@ -2,7 +2,7 @@
 import React from "react"
 
 // shared imports
-import { Box, Header } from "components"
+import { Box, Header, Footer } from "components"
 
 interface Props {
   children?: any
@@ -12,6 +12,7 @@ const StackLayout = ({ children }: Props) => {
     <Box>
       <Header />
       {children}
+      <Footer />
     </Box>
   )
 }
