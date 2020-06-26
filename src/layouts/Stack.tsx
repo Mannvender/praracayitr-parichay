@@ -2,7 +2,7 @@
 import React from "react"
 
 // shared imports
-import Box from "components/Box"
+import { Box, Header } from "components"
 
 interface Props {
   children?: any
@@ -10,8 +10,8 @@ interface Props {
 }
 const StackLayout = ({ children, title }: Props) => {
   return (
-    <Box height="100vh" bgColor="primary-bg">
-      {/* TITLE_BAR */}
+    <Box>
+      <Header />
       {children}
     </Box>
   )
