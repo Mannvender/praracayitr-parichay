@@ -1,5 +1,5 @@
 // lib imports
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 
 // project imports
 import { Box, SpeechBubble } from "components"
@@ -13,6 +13,7 @@ import {
   INTRO_DESCRIPTION,
   DEVELOPER,
 } from "text/home"
+import { Store, MODE } from "context/theme/store"
 
 // home directory imports
 import {
@@ -28,14 +29,10 @@ import {
   StyledName,
 } from "pages/home/styles"
 
-const DEFAULT_STYLE = "DEFAULT_AVATAR"
-const GLASSES_STYLE = "GLASSES_AVATAR"
 const TopSection = () => {
-  const [avatarStyle, setAvatarStyle] = useState(DEFAULT_STYLE)
+  const { mode, setMode } = useContext(Store)
   const handleAvatarClick = () =>
-    setAvatarStyle(
-      avatarStyle === DEFAULT_STYLE ? GLASSES_STYLE : DEFAULT_STYLE
-    )
+    setMode(mode === MODE.LIGHT ? MODE.DARK : MODE.LIGHT)
   return (
     <Box bgColor="primary2" direction="row" pad="xlarge">
       <Box basis="38%">
@@ -100,7 +97,7 @@ const TopSection = () => {
           alt="avatar"
           src={
             process.env.PUBLIC_URL +
-            (avatarStyle === DEFAULT_STYLE ? "/avatar_5.png" : "/avatar_7.png")
+            (mode === MODE.LIGHT ? "/avatar_5.png" : "/avatar_7.png")
           }
         ></StyledImage>
         <StyledDeveloper>{DEVELOPER}</StyledDeveloper>
