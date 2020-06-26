@@ -36,15 +36,16 @@ const Header = () => {
       bgColor="primary2"
       pad="xlarge"
     >
-      <Box
-        onClick={handleColorSchemeClick}
-        style={{ cursor: "pointer" }}
-        pad={{ horizontal: "large" }}
-      >
+      <Box onClick={handleColorSchemeClick} style={{ cursor: "pointer" }}>
         {mode === MODE.LIGHT && <StyledFaMoon size="2em" />}
         {mode === MODE.DARK && <StyledFaSun size="2em" />}
       </Box>
-      <Box onClick={handleLanguageClick} style={{ cursor: "pointer" }}>
+      <Box
+        align="flex-end"
+        onClick={handleLanguageClick}
+        style={{ cursor: "pointer" }}
+        width="large"
+      >
         {lang === LANG.ENG && <StyledLanguageLable>हिन्दी</StyledLanguageLable>}
         {lang === LANG.HIN && <StyledLanguageLable>Eng</StyledLanguageLable>}
       </Box>
