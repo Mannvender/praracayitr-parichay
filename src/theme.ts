@@ -12,7 +12,18 @@ const theme = {
       green: "#add781",
       light: "#fff",
     },
-    dark: { "dark-1": "blue" },
+    dark: {
+      primary: "#363333",
+      primary2: "#272121",
+      primary3: "#f6e9e9",
+      secondary: "#e16428",
+      secondary2: "#f78e25",
+      secondary3: "#fc8948",
+      secondary4: "#fe690d",
+      cyan: "#92e3fc",
+      green: "#aefd5b",
+      light: "#272121",
+    },
   },
   size: {
     // by default size choosen by user is medium
