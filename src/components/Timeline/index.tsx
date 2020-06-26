@@ -82,9 +82,10 @@ const Time = styled.p`
 interface Props {
   // @todo: define shape of array of object
   data?: Array<any>
+  fromToSeparator?: string
 }
 
-const Timeline = ({ data = [], ...rest }: Props) => {
+const Timeline = ({ data = [], fromToSeparator = "-", ...rest }: Props) => {
   const renderDetails = (list: Array<any>) =>
     list.map((item, index) => (
       <Fragment key={index}>
@@ -111,7 +112,7 @@ const Timeline = ({ data = [], ...rest }: Props) => {
               <Title>{item.title}</Title>
               <Description>{item.description}</Description>
               <Time>
-                - {item.from} to {item.to}
+                - {item.from} {fromToSeparator} {item.to}
               </Time>
             </Box>
           </Box>

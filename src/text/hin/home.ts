@@ -48,6 +48,7 @@ export const DEW_SOLUTIONS = "ड्यू सॉल्यूशन प्रा
 export const DEW_SOLUTIONS_DESCRIPTION = "सॉफ्टवेयर इंजीनियर"
 export const DEW_SOLUTIONS_FROM = "फ़रवरी 20"
 export const DEW_SOLUTIONS_TO = "अब तक"
+export const TO = "से"
 
 // Hobbies
 export const ANIMATION = "3 डी एनिमेशन"

@@ -230,7 +230,7 @@ const BottomSection = () => {
       </Box>
       <SectionHeading text={TEXT.LEARNING_SECTION_HEADING} />
       <Box pad="xlarge">
-        <Timeline data={getTimeLineData(TEXT)} />
+        <Timeline data={getTimeLineData(TEXT)} fromToSeparator={TEXT.TO} />
       </Box>
       <Box direction="row" justify="space-evenly" wrap="wrap">
         <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>

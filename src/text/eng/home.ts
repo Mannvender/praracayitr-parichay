@@ -48,6 +48,7 @@ export const DEW_SOLUTIONS = "Dew Solution Pvt Ltd"
 export const DEW_SOLUTIONS_DESCRIPTION = "Software Engineer"
 export const DEW_SOLUTIONS_FROM = "FEB 20"
 export const DEW_SOLUTIONS_TO = "Present"
+export const TO = "to"
 
 // Hobbies
 export const ANIMATION = "3D Animations"
