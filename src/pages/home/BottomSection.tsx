@@ -369,7 +369,7 @@ const BottomSection = () => {
         </Box>
         <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
           <SectionHeading text={CONTACT_SECTION_HEADING} />
-          <Box>
+          <Box pad={{ horizontal: "medium" }}>
             <Box direction="row" margin={{ vertical: "xlarge" }}>
               <NameLabel>{NAME_LABEL}</NameLabel>
               <Name>{NAME}</Name>
