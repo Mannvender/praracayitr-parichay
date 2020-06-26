@@ -99,6 +99,7 @@ interface Props {
   width?: string
   wrap?: string
 }
+// @todo: add "as" prop to allow using various HTML tags with flex styles
 const Box = ({
   align = "",
   basis = "",

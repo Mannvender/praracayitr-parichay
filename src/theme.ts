@@ -11,6 +11,7 @@ const theme = {
       cyan: "#b0d3de",
       green: "#add781",
       light: "#fff",
+      heartRed: "red",
     },
     dark: {
       primary: "#363333",
@@ -21,8 +22,9 @@ const theme = {
       secondary3: "#fc8948",
       secondary4: "#fe690d",
       cyan: "#92e3fc",
-      green: "#aefd5b",
+      green: "#add781",
       light: "#272121",
+      heartRed: "red",
     },
   },
   size: {
