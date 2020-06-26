@@ -35,18 +35,18 @@ const Home = () => {
       >
         <StyledLink
           color="primary2"
-          href="https://bit.ly/mono-git"
+          href="https://bit.ly/mono-cv"
           rel="noopener noreferrer"
           target="_blank"
         >
           <SpeechBubble bgColor="primary2" pad="medium" position="right">
             <StyledFaGlobe size="1.5em" />
           </SpeechBubble>
-          <StyledLinkLabel>bit.ly/mono-git</StyledLinkLabel>
+          <StyledLinkLabel>bit.ly/mono-cv</StyledLinkLabel>
         </StyledLink>
         <StyledLink
           color="primary2"
-          href="https://www.linkedin.com/in/mannvender/"
+          href="https://bit.ly/mono-in"
           rel="noopener noreferrer"
           target="_blank"
         >
