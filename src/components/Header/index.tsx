@@ -9,15 +9,17 @@ import { Store, MODE } from "context/theme/store"
 
 const StyledFaMoon = styled(FaMoon)`
   color: ${({ theme }) => theme.color["primary3"]};
+  cursor: pointer;
 `
 const StyledFaSun = styled(FaSun)`
   color: ${({ theme }) => theme.color["primary3"]};
+  cursor: pointer;
 `
 
 const Header = () => {
   const { mode, setMode } = useContext(Store)
-  const handleDarkModeClick = () => setMode(MODE.LIGHT)
-  const handleLightModeClick = () => setMode(MODE.DARK)
+  const handleDarkModeClick = () => setMode(MODE.DARK)
+  const handleLightModeClick = () => setMode(MODE.LIGHT)
   return (
     <Box
       justify="flex-end"
@@ -26,10 +28,10 @@ const Header = () => {
       bgColor="primary2"
       pad="xlarge"
     >
-      {mode === MODE.DARK && (
+      {mode === MODE.LIGHT && (
         <StyledFaMoon size="2em" onClick={handleDarkModeClick} />
       )}
-      {mode === MODE.LIGHT && (
+      {mode === MODE.DARK && (
         <StyledFaSun size="2em" onClick={handleLightModeClick} />
       )}
     </Box>
