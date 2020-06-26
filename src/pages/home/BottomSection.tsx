@@ -29,52 +29,7 @@ import {
   SpeechBubble,
   ProgressBar,
 } from "components"
-import {
-  LEARNING_SECTION_HEADING,
-  SKILLS_SECTION_HEADING,
-  ALGORITHMS,
-  DATA_STRUCTURES,
-  JAVASCRIPT,
-  C,
-  GIT,
-  HTML_CSS,
-  MONGO_DB,
-  REACT,
-  TYPESCRIPT,
-  NODE,
-  CODING_BLOCKS,
-  CODING_BLOCKS_DESCRIPTION,
-  CODING_BLOCKS_FROM,
-  CODING_BLOCKS_TO,
-  SG_EDUTECH,
-  SG_EDUTECH_DESCRIPTION,
-  SG_EDUTECH_FROM,
-  SG_EDUTECH_TO,
-  EDUATLAS,
-  EDUATLAS_DESCRIPTION,
-  EDUATLAS_FROM,
-  EDUATLAS_TO,
-  FREELANCING,
-  FREELANCING_DESCRIPTION,
-  FREELANCING_FROM,
-  FREELANCING_TO,
-  DEW_SOLUTIONS,
-  DEW_SOLUTIONS_DESCRIPTION,
-  DEW_SOLUTIONS_FROM,
-  DEW_SOLUTIONS_TO,
-  RATING_SECTION_HEADING,
-  HOBBY_SECTION_HEADING,
-  CONTACT_SECTION_HEADING,
-  TRAVELLING,
-  ANIMATION,
-  MOVIES,
-  GAMING,
-  NAME,
-  NAME_LABEL,
-  PHONE,
-  EMAIL,
-  ADDRESS,
-} from "text/home"
+import { useText } from "hooks"
 
 // home
 const StyledFaProjectDiagram = styled(FaProjectDiagram)`
@@ -157,128 +112,129 @@ const ContactDetail = styled.p`
   margin-left: ${({ theme }) => theme.edgeSize.large};
 `
 
-const SKIILS = [
+const getSkills = (TEXT: any) => [
   {
     logo: <StyledFaProjectDiagram size="5em" />,
-    title: DATA_STRUCTURES,
+    title: TEXT.DATA_STRUCTURES,
   },
   {
     logo: <StyledFaCode size="5em" />,
-    title: ALGORITHMS,
+    title: TEXT.ALGORITHMS,
   },
   {
     logo: <StyledFaJsSquare size="5em" />,
-    title: JAVASCRIPT,
+    title: TEXT.JAVASCRIPT,
   },
   {
     logo: <StyledFaReact size="5em" />,
-    title: REACT,
+    title: TEXT.REACT,
   },
   {
     logo: <StyledFaNode size="5em" />,
-    title: NODE,
+    title: TEXT.NODE,
   },
   {
     logo: <StyledFaGit size="5em" />,
-    title: GIT,
+    title: TEXT.GIT,
   },
   {
     logo: <StyledFaDatabase size="5em" />,
-    title: MONGO_DB,
+    title: TEXT.MONGO_DB,
   },
   {
     logo: <StyledFaLaptopCode size="5em" />,
-    title: C,
+    title: TEXT.C,
   },
   {
     logo: <StyledFaCss3Alt size="5em" />,
-    title: HTML_CSS,
+    title: TEXT.HTML_CSS,
   },
   {
     logo: <StyledAiOutlineCode size="5em" />,
-    title: TYPESCRIPT,
+    title: TEXT.TYPESCRIPT,
   },
 ]
-const TIMELINE_DATA = [
+const getTimeLineData = (TEXT: any) => [
   {
     position: "5%",
     orientation: "top",
-    title: CODING_BLOCKS,
-    description: CODING_BLOCKS_DESCRIPTION,
-    from: CODING_BLOCKS_FROM,
-    to: CODING_BLOCKS_TO,
+    title: TEXT.CODING_BLOCKS,
+    description: TEXT.CODING_BLOCKS_DESCRIPTION,
+    from: TEXT.CODING_BLOCKS_FROM,
+    to: TEXT.CODING_BLOCKS_TO,
   },
   {
     position: "12%",
     orientation: "bottom",
-    title: SG_EDUTECH,
-    description: SG_EDUTECH_DESCRIPTION,
-    from: SG_EDUTECH_FROM,
-    to: SG_EDUTECH_TO,
+    title: TEXT.SG_EDUTECH,
+    description: TEXT.SG_EDUTECH_DESCRIPTION,
+    from: TEXT.SG_EDUTECH_FROM,
+    to: TEXT.SG_EDUTECH_TO,
   },
   {
     position: "38%",
     orientation: "top",
-    title: EDUATLAS,
-    description: EDUATLAS_DESCRIPTION,
-    from: EDUATLAS_FROM,
-    to: EDUATLAS_TO,
+    title: TEXT.EDUATLAS,
+    description: TEXT.EDUATLAS_DESCRIPTION,
+    from: TEXT.EDUATLAS_FROM,
+    to: TEXT.EDUATLAS_TO,
   },
   {
     position: "45%",
     orientation: "bottom",
-    title: FREELANCING,
-    description: FREELANCING_DESCRIPTION,
-    from: FREELANCING_FROM,
-    to: FREELANCING_TO,
+    title: TEXT.FREELANCING,
+    description: TEXT.FREELANCING_DESCRIPTION,
+    from: TEXT.FREELANCING_FROM,
+    to: TEXT.FREELANCING_TO,
   },
   {
     position: "68%",
     orientation: "top",
-    title: DEW_SOLUTIONS,
-    description: DEW_SOLUTIONS_DESCRIPTION,
-    from: DEW_SOLUTIONS_FROM,
-    to: DEW_SOLUTIONS_TO,
+    title: TEXT.DEW_SOLUTIONS,
+    description: TEXT.DEW_SOLUTIONS_DESCRIPTION,
+    from: TEXT.DEW_SOLUTIONS_FROM,
+    to: TEXT.DEW_SOLUTIONS_TO,
   },
 ]
-const HOBBIES = [
+const getHobbies = (TEXT: any) => [
   {
     icon: <StyledFaRoute size="5em" />,
-    title: TRAVELLING,
+    title: TEXT.TRAVELLING,
   },
   {
     icon: <StyledMdLocalMovies size="5em" />,
-    title: ANIMATION,
+    title: TEXT.ANIMATION,
   },
   {
     icon: <StyledFaTv size="5em" />,
-    title: MOVIES,
+    title: TEXT.MOVIES,
   },
   {
     icon: <StyledFaGamepad size="5em" />,
-    title: GAMING,
+    title: TEXT.GAMING,
   },
 ]
 
 const BottomSection = () => {
+  const { homepage: TEXT } = useText()
   return (
     <Box bgColor="primary" pad="xlarge">
-      <SectionHeading text={SKILLS_SECTION_HEADING} />
+      <SectionHeading text={TEXT.SKILLS_SECTION_HEADING} />
       <Box direction="row" justify="space-evenly" wrap="wrap">
-        {SKIILS.map((skill) => (
+        {getSkills(TEXT).map((skill) => (
           <Box key={skill.title} align="center" margin="xlarge">
             <CircularBackground>{skill.logo}</CircularBackground>
             <StyledP>{skill.title}</StyledP>
           </Box>
         ))}
       </Box>
-      <SectionHeading text={LEARNING_SECTION_HEADING} />
+      <SectionHeading text={TEXT.LEARNING_SECTION_HEADING} />
       <Box pad="xlarge">
-        <Timeline data={TIMELINE_DATA} />
+        <Timeline data={getTimeLineData(TEXT)} />
       </Box>
       <Box direction="row" justify="space-evenly" wrap="wrap">
         <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
-          <SectionHeading text={RATING_SECTION_HEADING} />
+          <SectionHeading text={TEXT.RATING_SECTION_HEADING} />
           <Box margin={{ vertical: "large" }}>
             <Box direction="row" margin={{ vertical: "large" }}>
               <Box
@@ -347,9 +303,9 @@ const BottomSection = () => {
           </Box>
         </Box>
         <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
-          <SectionHeading text={HOBBY_SECTION_HEADING} />
+          <SectionHeading text={TEXT.HOBBY_SECTION_HEADING} />
           <Box direction="row" wrap="wrap" margin={{ vertical: "large" }}>
-            {HOBBIES.map((hobby) => (
+            {getHobbies(TEXT).map((hobby) => (
               <Box
                 key={hobby.title}
                 basis="50%"
@@ -373,29 +329,29 @@ const BottomSection = () => {
           </Box>
         </Box>
         <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
-          <SectionHeading text={CONTACT_SECTION_HEADING} />
+          <SectionHeading text={TEXT.CONTACT_SECTION_HEADING} />
           <Box pad={{ horizontal: "medium" }}>
             <Box direction="row" margin={{ vertical: "xlarge" }}>
-              <NameLabel>{NAME_LABEL}</NameLabel>
-              <Name>{NAME}</Name>
+              <NameLabel>{TEXT.NAME_LABEL}</NameLabel>
+              <Name>{TEXT.NAME}</Name>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
               <SpeechBubble bgColor="secondary3" pad="large" radius="large">
                 <StyledFaMobile size="3em" />
               </SpeechBubble>
-              <ContactDetail>{PHONE}</ContactDetail>
+              <ContactDetail>{TEXT.PHONE}</ContactDetail>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
               <SpeechBubble bgColor="secondary3" pad="large" radius="large">
                 <StyledFaAt size="3em" />
               </SpeechBubble>
-              <ContactDetail>{EMAIL}</ContactDetail>
+              <ContactDetail>{TEXT.EMAIL}</ContactDetail>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
               <SpeechBubble bgColor="secondary3" pad="large" radius="large">
                 <StyledFaHome size="3em" />
               </SpeechBubble>
-              <ContactDetail>{ADDRESS}</ContactDetail>
+              <ContactDetail>{TEXT.ADDRESS}</ContactDetail>
             </Box>
           </Box>
         </Box>

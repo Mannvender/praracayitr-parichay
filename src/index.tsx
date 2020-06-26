@@ -3,13 +3,16 @@ import ReactDOM from "react-dom"
 import "./index.css"
 import App from "./App"
 import * as serviceWorker from "./serviceWorker"
-import { Provider } from "context/theme/store"
+import { Provider as ThemeProvider } from "context/theme/store"
+import { Provider as LangProvider } from "context/lang/store"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
-      <App />
-    </Provider>
+    <ThemeProvider>
+      <LangProvider>
+        <App />
+      </LangProvider>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 )

@@ -3,16 +3,7 @@ import React, { useContext } from "react"
 
 // project imports
 import { Box, SpeechBubble } from "components"
-import {
-  NAME,
-  HI,
-  IM,
-  AGE,
-  INTRO_HELLO,
-  INTRO_HEADING,
-  INTRO_DESCRIPTION,
-  DEVELOPER,
-} from "text/home"
+import { useText } from "hooks"
 import { Store, MODE } from "context/theme/store"
 
 // home directory imports
@@ -30,6 +21,7 @@ import {
 } from "pages/home/styles"
 
 const TopSection = () => {
+  const { homepage: TEXT } = useText()
   const { mode, setMode } = useContext(Store)
   const handleAvatarClick = () =>
     setMode(mode === MODE.LIGHT ? MODE.DARK : MODE.LIGHT)
@@ -54,7 +46,7 @@ const TopSection = () => {
             radius="round"
             rotate="45deg"
           >
-            <StyledHi>{HI}</StyledHi>
+            <StyledHi>{TEXT.HI}</StyledHi>
           </SpeechBubble>
         </Box>
         <Box direction="row" justify="flex-end" margin={{ vertical: "large" }}>
@@ -66,10 +58,10 @@ const TopSection = () => {
               radius="large"
             >
               <Box direction="row" justify="center">
-                <StyledIm>{IM}</StyledIm>
+                <StyledIm>{TEXT.IM}</StyledIm>
               </Box>
               <Box direction="row">
-                <StyledName>{NAME}</StyledName>
+                <StyledName>{TEXT.NAME}</StyledName>
               </Box>
             </SpeechBubble>
           </div>
@@ -82,7 +74,7 @@ const TopSection = () => {
               position="right"
               radius="large"
             >
-              <StyledAge>{AGE}</StyledAge>
+              <StyledAge>{TEXT.AGE}</StyledAge>
             </SpeechBubble>
           </div>
         </Box>
@@ -100,7 +92,7 @@ const TopSection = () => {
             (mode === MODE.LIGHT ? "/avatar_5.png" : "/avatar_7.png")
           }
         ></StyledImage>
-        <StyledDeveloper>{DEVELOPER}</StyledDeveloper>
+        <StyledDeveloper>{TEXT.DEVELOPER}</StyledDeveloper>
       </Box>
       <Box justify="center" basis="38%">
         <SpeechBubble
@@ -109,9 +101,9 @@ const TopSection = () => {
           position="left"
           maxWidth="xxlarge"
         >
-          <StyledIntoHello>{INTRO_HELLO}</StyledIntoHello>
-          <StyledIntoHeading>{INTRO_HEADING}</StyledIntoHeading>
-          <StyledIntoDesc>{INTRO_DESCRIPTION}</StyledIntoDesc>
+          <StyledIntoHello>{TEXT.INTRO_HELLO}</StyledIntoHello>
+          <StyledIntoHeading>{TEXT.INTRO_HEADING}</StyledIntoHeading>
+          <StyledIntoDesc>{TEXT.INTRO_DESCRIPTION}</StyledIntoDesc>
         </SpeechBubble>
       </Box>
     </Box>

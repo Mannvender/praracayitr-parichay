@@ -5,7 +5,7 @@ import { IoIosConstruct } from "react-icons/io"
 
 // project imports
 import { Box } from "components"
-import { MESSAGE } from "text/underConstruction"
+import { useText } from "hooks"
 
 const StyledIoIosConstruct = styled(IoIosConstruct)`
   color: ${({ theme }) => theme.color["primary3"]};
@@ -17,7 +17,8 @@ const Message = styled.p`
   font-size: 1.4rem;
 `
 
-const index = () => {
+const UnderConstruction = () => {
+  const { underConstruction: TEXT } = useText()
   return (
     <Box
       width="100%"
@@ -27,9 +28,9 @@ const index = () => {
       bgColor="primary"
     >
       <StyledIoIosConstruct size="16em" />
-      <Message>{MESSAGE}</Message>
+      <Message>{TEXT.MESSAGE}</Message>
     </Box>
   )
 }
 
-export default index
+export default UnderConstruction
