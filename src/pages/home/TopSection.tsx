@@ -40,9 +40,9 @@ const TopSection = () => {
     <Box bgColor="primary2" direction="row" pad="xlarge">
       <Box basis="38%">
         <Box
-          align="end"
+          align="flex-end"
           direction="row"
-          justify="end"
+          justify="flex-end"
           margin={{ vertical: "large" }}
         >
           <div>
@@ -60,7 +60,7 @@ const TopSection = () => {
             <StyledHi>{HI}</StyledHi>
           </SpeechBubble>
         </Box>
-        <Box direction="row" justify="end" margin={{ vertical: "large" }}>
+        <Box direction="row" justify="flex-end" margin={{ vertical: "large" }}>
           <div>
             <SpeechBubble
               bgColor="primary3"
@@ -77,7 +77,7 @@ const TopSection = () => {
             </SpeechBubble>
           </div>
         </Box>
-        <Box margin={{ vertical: "large" }} direction="row" justify="end">
+        <Box margin={{ vertical: "large" }} direction="row" justify="flex-end">
           <div>
             <SpeechBubble
               bgColor="secondary3"

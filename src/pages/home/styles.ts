@@ -37,6 +37,7 @@ export const StyledIm = styled.h1`
 `
 export const StyledName = styled.h1`
   color: ${({ theme }) => theme.color.primary2};
+  text-align: center;
 `
 export const StyledAge = styled.h2`
   color: ${({ theme }) => theme.color.primary3};
