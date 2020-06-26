@@ -1,10 +1,11 @@
 // lib imports
-import React from "react"
+import React, { useContext } from "react"
 import { FaMoon, FaSun } from "react-icons/fa"
 import styled from "styled-components"
 
 // project imports
 import { Box } from "components"
+import { Store } from "context/theme/store"
 
 const StyledFaMoon = styled(FaMoon)`
   color: ${({ theme }) => theme.color["primary3"]};
@@ -14,6 +15,8 @@ const StyledFaSun = styled(FaSun)`
 `
 
 const Header = () => {
+  const { mode, setMode } = useContext(Store)
+  console.log(mode)
   return (
     <Box
       justify="flex-end"

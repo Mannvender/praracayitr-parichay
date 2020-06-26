@@ -6,9 +6,8 @@ import { Box, Header } from "components"
 
 interface Props {
   children?: any
-  title?: string
 }
-const StackLayout = ({ children, title }: Props) => {
+const StackLayout = ({ children }: Props) => {
   return (
     <Box>
       <Header />
