@@ -19,12 +19,19 @@ import {
   StyledIntoHello,
   StyledName,
 } from "pages/home/styles"
+import { useAudio } from "hooks"
 
 const TopSection = () => {
+  const [playing, toogle] = useAudio(process.env.PUBLIC_URL + "/aye_ganpat.mp3")
   const { homepage: TEXT } = useText()
   const { mode, setMode } = useContext(Store)
-  const handleAvatarClick = () =>
-    setMode(mode === MODE.LIGHT ? MODE.DARK : MODE.LIGHT)
+
+  const handleAvatarClick = () => {
+    const isLightMode = mode === MODE.LIGHT
+    if ((!playing && isLightMode) || (playing && !isLightMode)) toogle()
+    setMode(isLightMode ? MODE.DARK : MODE.LIGHT)
+  }
+
   return (
     <Box bgColor="primary2" direction="row" pad="xlarge">
       <Box basis="38%">
