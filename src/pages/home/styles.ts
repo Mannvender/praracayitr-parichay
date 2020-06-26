@@ -60,6 +60,7 @@ export const StyledIntoDesc = styled.h3`
 export const StyledDeveloper = styled.h1`
   color: ${({ theme }) => theme.color.primary3};
   margin-top: ${({ theme }) => theme.edgeSize.large};
+  text-align: center;
   font-size: 48px;
   font-style: italic;
   transform: rotate(-8deg);
