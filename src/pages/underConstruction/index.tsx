@@ -26,7 +26,7 @@ const index = () => {
       justify="center"
       bgColor="primary"
     >
-      <StyledIoIosConstruct size="16rem" />
+      <StyledIoIosConstruct size="16em" />
       <Message>{MESSAGE}</Message>
     </Box>
   )

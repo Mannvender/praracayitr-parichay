@@ -27,10 +27,10 @@ const Header = () => {
       pad="xlarge"
     >
       {mode === MODE.DARK && (
-        <StyledFaMoon size="2rem" onClick={handleDarkModeClick} />
+        <StyledFaMoon size="2em" onClick={handleDarkModeClick} />
       )}
       {mode === MODE.LIGHT && (
-        <StyledFaSun size="2rem" onClick={handleLightModeClick} />
+        <StyledFaSun size="2em" onClick={handleLightModeClick} />
       )}
     </Box>
   )

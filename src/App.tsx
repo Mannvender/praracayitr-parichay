@@ -14,7 +14,6 @@ import { Store } from "context/theme/store"
 
 function App() {
   const { mode } = useContext(Store)
-  console.log(mode)
   return (
     <ThemeProvider
       theme={{

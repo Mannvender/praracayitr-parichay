@@ -159,43 +159,43 @@ const ContactDetail = styled.p`
 
 const SKIILS = [
   {
-    logo: <StyledFaProjectDiagram size="5rem" />,
+    logo: <StyledFaProjectDiagram size="5em" />,
     title: DATA_STRUCTURES,
   },
   {
-    logo: <StyledFaCode size="5rem" />,
+    logo: <StyledFaCode size="5em" />,
     title: ALGORITHMS,
   },
   {
-    logo: <StyledFaJsSquare size="5rem" />,
+    logo: <StyledFaJsSquare size="5em" />,
     title: JAVASCRIPT,
   },
   {
-    logo: <StyledFaReact size="5rem" />,
+    logo: <StyledFaReact size="5em" />,
     title: REACT,
   },
   {
-    logo: <StyledFaNode size="5rem" />,
+    logo: <StyledFaNode size="5em" />,
     title: NODE,
   },
   {
-    logo: <StyledFaGit size="5rem" />,
+    logo: <StyledFaGit size="5em" />,
     title: GIT,
   },
   {
-    logo: <StyledFaDatabase size="5rem" />,
+    logo: <StyledFaDatabase size="5em" />,
     title: MONGO_DB,
   },
   {
-    logo: <StyledFaLaptopCode size="5rem" />,
+    logo: <StyledFaLaptopCode size="5em" />,
     title: C,
   },
   {
-    logo: <StyledFaCss3Alt size="5rem" />,
+    logo: <StyledFaCss3Alt size="5em" />,
     title: HTML_CSS,
   },
   {
-    logo: <StyledAiOutlineCode size="5rem" />,
+    logo: <StyledAiOutlineCode size="5em" />,
     title: TYPESCRIPT,
   },
 ]
@@ -243,19 +243,19 @@ const TIMELINE_DATA = [
 ]
 const HOBBIES = [
   {
-    icon: <StyledFaRoute size="5rem" />,
+    icon: <StyledFaRoute size="5em" />,
     title: TRAVELLING,
   },
   {
-    icon: <StyledMdLocalMovies size="5rem" />,
+    icon: <StyledMdLocalMovies size="5em" />,
     title: ANIMATION,
   },
   {
-    icon: <StyledFaTv size="5rem" />,
+    icon: <StyledFaTv size="5em" />,
     title: MOVIES,
   },
   {
-    icon: <StyledFaGamepad size="5rem" />,
+    icon: <StyledFaGamepad size="5em" />,
     title: GAMING,
   },
 ]
@@ -292,7 +292,7 @@ const BottomSection = () => {
                 shrink="0"
                 width="large"
               >
-                <StyledFaJsSquare size="3rem" />
+                <StyledFaJsSquare size="3em" />
               </Box>
               <ProgressBar progress="80%" />
             </Box>
@@ -308,7 +308,7 @@ const BottomSection = () => {
                 shrink="0"
                 width="large"
               >
-                <StyledFaReact size="3rem" />
+                <StyledFaReact size="3em" />
               </Box>
               <ProgressBar progress="87%" />
             </Box>
@@ -324,7 +324,7 @@ const BottomSection = () => {
                 shrink="0"
                 width="large"
               >
-                <StyledFaGit size="3rem" />
+                <StyledFaGit size="3em" />
               </Box>
               <ProgressBar progress="80%" />
             </Box>
@@ -340,7 +340,7 @@ const BottomSection = () => {
                 shrink="0"
                 width="large"
               >
-                <StyledFaNode size="3rem" />
+                <StyledFaNode size="3em" />
               </Box>
               <ProgressBar progress="70%" />
             </Box>
@@ -381,19 +381,19 @@ const BottomSection = () => {
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
               <SpeechBubble bgColor="secondary3" pad="large" radius="large">
-                <StyledFaMobile size="3rem" />
+                <StyledFaMobile size="3em" />
               </SpeechBubble>
               <ContactDetail>{PHONE}</ContactDetail>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
               <SpeechBubble bgColor="secondary3" pad="large" radius="large">
-                <StyledFaAt size="3rem" />
+                <StyledFaAt size="3em" />
               </SpeechBubble>
               <ContactDetail>{EMAIL}</ContactDetail>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
               <SpeechBubble bgColor="secondary3" pad="large" radius="large">
-                <StyledFaHome size="3rem" />
+                <StyledFaHome size="3em" />
               </SpeechBubble>
               <ContactDetail>{ADDRESS}</ContactDetail>
             </Box>

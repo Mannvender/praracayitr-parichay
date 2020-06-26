@@ -87,7 +87,7 @@ interface Props {
 const Timeline = ({ data = [], ...rest }: Props) => {
   const renderDetails = (list: Array<any>) =>
     list.map((item, index) => (
-      <>
+      <Fragment key={index}>
         <DottedLine
           left={item.position}
           // @todo: create constants for 'top' and 'bottom'
@@ -101,7 +101,7 @@ const Timeline = ({ data = [], ...rest }: Props) => {
           <Box direction="row" margin="small">
             <div>
               <SpeechBubble bgColor="secondary3">
-                <StyledFaBookOpen size="2rem" />
+                <StyledFaBookOpen size="2em" />
               </SpeechBubble>
             </div>
             <Box
@@ -116,7 +116,7 @@ const Timeline = ({ data = [], ...rest }: Props) => {
             </Box>
           </Box>
         </Details>
-      </>
+      </Fragment>
     ))
 
   const renderUpperRow = () => {
@@ -134,7 +134,7 @@ const Timeline = ({ data = [], ...rest }: Props) => {
       <DataSection>{renderUpperRow()}</DataSection>
       <Line>
         {data.map((point, index) => (
-          <Point left={point.position} index={index} />
+          <Point key={index} left={point.position} index={index} />
         ))}
       </Line>
       <DataSection>{renderLowerRow()}</DataSection>
