@@ -32,7 +32,7 @@ export const StyledHi = styled.h1`
   transform: rotate(-45deg);
 `
 export const StyledIm = styled.h1`
-  color: ${({ theme }) => theme.color.secondary};
+  color: ${({ theme }) => theme.color.secondary2};
   font-size: 56px;
 `
 export const StyledName = styled.h1`

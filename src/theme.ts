@@ -5,7 +5,6 @@ const theme = {
       primary2: "#fff", //primary2
       primary3: "#7a432e", //primary3
       secondary1: "#fbc773", //secondary1
-      secondary: "#c77349", //delete
       secondary3: "#d8936c", //delete
       secondary2: "#c67645", //secondary2
       accent1: "#b0d3de", //accent1
@@ -17,7 +16,6 @@ const theme = {
       primary: "#363333",
       secondary1: "#272121",
       primary3: "#f6e9e9",
-      secondary: "#e16428",
       secondary2: "#f78e25",
       secondary3: "#fc8948",
       accent3: "#fe690d",

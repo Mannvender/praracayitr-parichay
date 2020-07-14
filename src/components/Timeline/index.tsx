@@ -20,7 +20,7 @@ const Line = styled.div<{}>`
   display: flex;
   flex-grow: 1;
   height: ${({ theme }) => theme.size.small};
-  background-color: ${({ theme }) => theme.color.secondary};
+  background-color: ${({ theme }) => theme.color.secondary2};
   border-radius: ${({ theme }) => theme.edgeSize.large};
 `
 const DottedLine = styled.div<{

@@ -42,7 +42,7 @@ const TopSection = () => {
           margin={{ vertical: "large" }}
         >
           <div>
-            <SpeechBubble bgColor="secondary" pad="large" position="right">
+            <SpeechBubble bgColor="secondary2" pad="large" position="right">
               <StyledHeart size="3em" />
             </SpeechBubble>
           </div>
