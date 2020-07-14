@@ -8,8 +8,8 @@ const theme = {
       secondary: "#c77349", //delete
       secondary3: "#d8936c", //delete
       secondary2: "#c67645", //secondary2
-      cyan: "#b0d3de", //accent1
-      green: "#add781", //accent2
+      accent1: "#b0d3de", //accent1
+      accent2: "#add781", //accent2
       accent3: "#dd8e3f", //accent-3
       heartRed: "red",
     },
@@ -21,8 +21,8 @@ const theme = {
       secondary2: "#f78e25",
       secondary3: "#fc8948",
       accent3: "#fe690d",
-      cyan: "#92e3fc",
-      green: "#add781",
+      accent1: "#92e3fc",
+      accent2: "#add781",
       primary2: "#272121",
       heartRed: "red",
     },

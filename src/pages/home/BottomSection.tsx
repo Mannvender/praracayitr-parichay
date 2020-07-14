@@ -255,7 +255,7 @@ const BottomSection = () => {
             <Box direction="row" margin={{ vertical: "large" }}>
               <Box
                 align="center"
-                bgColor="cyan"
+                bgColor="accent1"
                 border={{ size: "small" }}
                 height="large"
                 justify="center"
@@ -287,7 +287,7 @@ const BottomSection = () => {
             <Box direction="row" margin={{ vertical: "large" }}>
               <Box
                 align="center"
-                bgColor="green"
+                bgColor="accent2"
                 border={{ size: "small" }}
                 height="large"
                 justify="center"
