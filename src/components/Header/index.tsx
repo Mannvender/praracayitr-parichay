@@ -33,7 +33,7 @@ const Header = () => {
       justify="flex-end"
       direction="row"
       align="center"
-      bgColor="primary2"
+      bgColor="secondary1"
       pad="xlarge"
     >
       <Box onClick={handleColorSchemeClick} style={{ cursor: "pointer" }}>

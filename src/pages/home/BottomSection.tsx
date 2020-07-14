@@ -85,7 +85,7 @@ const StyledFaHome = styled(FaHome)`
 `
 const CircularBackground = styled.div`
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.color.primary2};
+  background-color: ${({ theme }) => theme.color.secondary1};
 `
 const StyledP = styled.p`
   color: ${({ theme }) => theme.color["primary3"]};
@@ -239,7 +239,7 @@ const BottomSection = () => {
             <Box direction="row" margin={{ vertical: "large" }}>
               <Box
                 align="center"
-                bgColor="primary2"
+                bgColor="secondary1"
                 border={{ size: "small" }}
                 height="large"
                 justify="center"
@@ -314,7 +314,7 @@ const BottomSection = () => {
               >
                 <Box
                   align="center"
-                  bgColor="primary2"
+                  bgColor="secondary1"
                   height="xlarge"
                   width="xlarge"
                   justify="center"

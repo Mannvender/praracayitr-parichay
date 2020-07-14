@@ -23,7 +23,7 @@ const Footer = () => {
       justify="center"
       direction="row"
       pad="xlarge"
-      bgColor="primary2"
+      bgColor="secondary1"
     >
       <StyledMadeWith>Made with</StyledMadeWith>
       <StyledFaHeart size="0.9em" />

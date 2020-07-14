@@ -1,21 +1,21 @@
 const theme = {
   color: {
     light: {
-      primary: "#fddfb9",
-      primary2: "#fbc773",
-      primary3: "#7a432e",
-      secondary: "#c77349",
-      secondary2: "#dd8e3f",
-      secondary3: "#d8936c",
-      secondary4: "#c67645",
-      cyan: "#b0d3de",
-      green: "#add781",
-      light: "#fff",
+      primary: "#fddfb9", //primary1
+      primary2: "#fff", //primary2
+      primary3: "#7a432e", //primary3
+      secondary1: "#fbc773", //secondary1
+      secondary: "#c77349", //delete
+      secondary3: "#d8936c", //delete
+      secondary4: "#c67645", //secondary2
+      cyan: "#b0d3de", //accent1
+      green: "#add781", //accent2
+      secondary2: "#dd8e3f", //accent-3
       heartRed: "red",
     },
     dark: {
       primary: "#363333",
-      primary2: "#272121",
+      secondary1: "#272121",
       primary3: "#f6e9e9",
       secondary: "#e16428",
       secondary2: "#f78e25",
@@ -23,7 +23,7 @@ const theme = {
       secondary4: "#fe690d",
       cyan: "#92e3fc",
       green: "#add781",
-      light: "#272121",
+      primary2: "#272121",
       heartRed: "red",
     },
   },

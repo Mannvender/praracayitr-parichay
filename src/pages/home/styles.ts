@@ -11,7 +11,7 @@ export const StyledLinkedIn = styled(FaLinkedin)`
   color: ${({ theme }) => theme.color["primary3"]};
 `
 export const StyledHeart = styled(FaHeart)`
-  color: ${({ theme }) => theme.color["primary2"]};
+  color: ${({ theme }) => theme.color["secondary1"]};
 `
 export const StyledLink = styled.a<{
   color: string
@@ -36,7 +36,7 @@ export const StyledIm = styled.h1`
   font-size: 56px;
 `
 export const StyledName = styled.h1`
-  color: ${({ theme }) => theme.color.primary2};
+  color: ${({ theme }) => theme.color.secondary1};
   text-align: center;
 `
 export const StyledAge = styled.h2`
@@ -49,13 +49,13 @@ export const StyledImage = styled.img`
   background-color: ${({ theme }) => theme.color.secondary3};
 `
 export const StyledIntoHello = styled.h3`
-  color: ${({ theme }) => theme.color.primary2};
+  color: ${({ theme }) => theme.color.secondary1};
 `
 export const StyledIntoHeading = styled.h3`
-  color: ${({ theme }) => theme.color.light};
+  color: ${({ theme }) => theme.color.primary2};
 `
 export const StyledIntoDesc = styled.h3`
-  color: ${({ theme }) => theme.color.primary2};
+  color: ${({ theme }) => theme.color.secondary1};
 `
 export const StyledDeveloper = styled.h1`
   color: ${({ theme }) => theme.color.primary3};

@@ -10,7 +10,7 @@ interface Props {
 const ProgressBar = ({ progress = "0", ...rest }: Props) => {
   return (
     <Box
-      bgColor="primary2"
+      bgColor="secondary1"
       border={{ size: "small" }}
       direction="row"
       height="large"
