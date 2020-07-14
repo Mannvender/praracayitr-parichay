@@ -11,7 +11,7 @@ const StyledFaHeart = styled(FaHeart)`
 `
 const StyledMadeWith = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary2};
   margin-right: ${({ theme }) => theme.edgeSize.medium};
   font-size: 0.8em;
 `
@@ -23,7 +23,7 @@ const Footer = () => {
       justify="center"
       direction="row"
       pad="xlarge"
-      bgColor="secondary1"
+      bgColor="primary3"
     >
       <StyledMadeWith>Made with</StyledMadeWith>
       <StyledFaHeart size="0.9em" />
