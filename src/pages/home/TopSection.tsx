@@ -47,7 +47,7 @@ const TopSection = () => {
             </SpeechBubble>
           </div>
           <SpeechBubble
-            bgColor="secondary2"
+            bgColor="accent3"
             pad="large"
             position="right"
             radius="round"
@@ -103,7 +103,7 @@ const TopSection = () => {
       </Box>
       <Box justify="center" basis="38%">
         <SpeechBubble
-          bgColor="secondary4"
+          bgColor="secondary2"
           pad="medium"
           position="left"
           maxWidth="xxlarge"
