@@ -57,7 +57,7 @@ const Details = styled.div<{
   width: 0;
 `
 const StyledFaBookOpen = styled(FaBookOpen)`
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const Title = styled.p`
   font-size: 0.9rem;
@@ -69,13 +69,13 @@ const Description = styled.p`
   font-size: 0.8rem;
   font-weight: 600;
   font-style: italic;
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.accent3};
   margin: 0;
 `
 const Time = styled.p`
   font-size: 0.8rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.primary3};
   margin: 0;
 `
 
@@ -101,7 +101,7 @@ const Timeline = ({ data = [], fromToSeparator = "-", ...rest }: Props) => {
         >
           <Box direction="row" margin="small">
             <div>
-              <SpeechBubble bgColor="primary">
+              <SpeechBubble bgColor="secondary1">
                 <StyledFaBookOpen size="2em" />
               </SpeechBubble>
             </div>

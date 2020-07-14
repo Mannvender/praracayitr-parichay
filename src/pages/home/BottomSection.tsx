@@ -33,34 +33,34 @@ import { useText } from "hooks"
 
 // home
 const StyledFaProjectDiagram = styled(FaProjectDiagram)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaCode = styled(FaCode)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaJsSquare = styled(FaJsSquare)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaReact = styled(FaReact)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaNode = styled(FaNode)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaGit = styled(FaGit)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaDatabase = styled(FaDatabase)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaLaptopCode = styled(FaLaptopCode)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaCss3Alt = styled(FaCss3Alt)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledAiOutlineCode = styled(AiOutlineCode)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaRoute = styled(FaRoute)`
   color: ${({ theme }) => theme.color["primary3"]};
@@ -75,13 +75,13 @@ const StyledFaGamepad = styled(FaGamepad)`
   color: ${({ theme }) => theme.color["primary3"]};
 `
 const StyledFaMobile = styled(FaMobile)`
-  color: ${({ theme }) => theme.color["primary"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaAt = styled(FaAt)`
-  color: ${({ theme }) => theme.color["primary"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaHome = styled(FaHome)`
-  color: ${({ theme }) => theme.color["primary"]};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const CircularBackground = styled.div`
   border-radius: 50%;
@@ -98,7 +98,7 @@ const HobbyTitle = styled.p`
   text-align: center;
 `
 const NameLabel = styled.h2`
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.accent3};
   margin-right: ${({ theme }) => theme.edgeSize.medium};
 `
 const Name = styled.h2`
@@ -336,19 +336,19 @@ const BottomSection = () => {
               <Name>{TEXT.NAME}</Name>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
-              <SpeechBubble bgColor="primary" pad="large" radius="large">
+              <SpeechBubble bgColor="secondary1" pad="large" radius="large">
                 <StyledFaMobile size="3em" />
               </SpeechBubble>
               <ContactDetail>{TEXT.PHONE}</ContactDetail>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
-              <SpeechBubble bgColor="primary" pad="large" radius="large">
+              <SpeechBubble bgColor="secondary1" pad="large" radius="large">
                 <StyledFaAt size="3em" />
               </SpeechBubble>
               <ContactDetail>{TEXT.EMAIL}</ContactDetail>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
-              <SpeechBubble bgColor="primary" pad="large" radius="large">
+              <SpeechBubble bgColor="secondary1" pad="large" radius="large">
                 <StyledFaHome size="3em" />
               </SpeechBubble>
               <ContactDetail>{TEXT.ADDRESS}</ContactDetail>
