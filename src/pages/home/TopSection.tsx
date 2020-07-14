@@ -76,7 +76,7 @@ const TopSection = () => {
         <Box margin={{ vertical: "large" }} direction="row" justify="flex-end">
           <div>
             <SpeechBubble
-              bgColor="secondary3"
+              bgColor="primary"
               pad="large"
               position="right"
               radius="large"

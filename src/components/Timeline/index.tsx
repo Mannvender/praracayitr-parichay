@@ -69,13 +69,13 @@ const Description = styled.p`
   font-size: 0.8rem;
   font-weight: 600;
   font-style: italic;
-  color: ${({ theme }) => theme.color.secondary3};
+  color: ${({ theme }) => theme.color.primary};
   margin: 0;
 `
 const Time = styled.p`
   font-size: 0.8rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.secondary3};
+  color: ${({ theme }) => theme.color.primary};
   margin: 0;
 `
 
@@ -101,7 +101,7 @@ const Timeline = ({ data = [], fromToSeparator = "-", ...rest }: Props) => {
         >
           <Box direction="row" margin="small">
             <div>
-              <SpeechBubble bgColor="secondary3">
+              <SpeechBubble bgColor="primary">
                 <StyledFaBookOpen size="2em" />
               </SpeechBubble>
             </div>

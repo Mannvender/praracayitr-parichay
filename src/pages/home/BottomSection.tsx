@@ -98,7 +98,7 @@ const HobbyTitle = styled.p`
   text-align: center;
 `
 const NameLabel = styled.h2`
-  color: ${({ theme }) => theme.color.secondary3};
+  color: ${({ theme }) => theme.color.primary};
   margin-right: ${({ theme }) => theme.edgeSize.medium};
 `
 const Name = styled.h2`
@@ -336,19 +336,19 @@ const BottomSection = () => {
               <Name>{TEXT.NAME}</Name>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
-              <SpeechBubble bgColor="secondary3" pad="large" radius="large">
+              <SpeechBubble bgColor="primary" pad="large" radius="large">
                 <StyledFaMobile size="3em" />
               </SpeechBubble>
               <ContactDetail>{TEXT.PHONE}</ContactDetail>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
-              <SpeechBubble bgColor="secondary3" pad="large" radius="large">
+              <SpeechBubble bgColor="primary" pad="large" radius="large">
                 <StyledFaAt size="3em" />
               </SpeechBubble>
               <ContactDetail>{TEXT.EMAIL}</ContactDetail>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
-              <SpeechBubble bgColor="secondary3" pad="large" radius="large">
+              <SpeechBubble bgColor="primary" pad="large" radius="large">
                 <StyledFaHome size="3em" />
               </SpeechBubble>
               <ContactDetail>{TEXT.ADDRESS}</ContactDetail>

@@ -46,7 +46,7 @@ export const StyledImage = styled.img`
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.color.secondary3};
+  background-color: ${({ theme }) => theme.color.primary};
 `
 export const StyledIntoHello = styled.h3`
   color: ${({ theme }) => theme.color.secondary1};
