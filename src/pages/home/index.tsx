@@ -29,39 +29,39 @@ const Home = () => {
         direction="row"
         height="large"
         justify="center"
-        pad={{ horizontal: "xlarge" }}
+        pad="xlarge"
         shrink="0"
         textTransform="uppercase"
       >
         <StyledLink
-          color="secondary1"
+          color="accent1"
           href="https://bit.ly/mono-cv"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SpeechBubble bgColor="secondary1" pad="medium" position="right">
+          <SpeechBubble bgColor="accent1" pad="medium" position="right">
             <StyledFaGlobe size="1.5em" />
           </SpeechBubble>
           <StyledLinkLabel>bit.ly/mono-cv</StyledLinkLabel>
         </StyledLink>
         <StyledLink
-          color="secondary1"
+          color="accent1"
           href="https://bit.ly/mono-in"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SpeechBubble bgColor="secondary1" pad="medium" position="right">
+          <SpeechBubble bgColor="accent1" pad="medium" position="right">
             <StyledLinkedIn size="1.5em" />
           </SpeechBubble>
           <StyledLinkLabel>/mannvender</StyledLinkLabel>
         </StyledLink>
         <StyledLink
-          color="secondary1"
+          color="accent1"
           href="https://bit.ly/mono-git"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SpeechBubble bgColor="secondary1" pad="medium" position="right">
+          <SpeechBubble bgColor="accent1" pad="medium" position="right">
             <StyledGithub size="1.5em" />
           </SpeechBubble>
           <StyledLinkLabel>/mannvender</StyledLinkLabel>

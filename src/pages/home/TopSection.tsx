@@ -33,7 +33,7 @@ const TopSection = () => {
   }
 
   return (
-    <Box bgColor="secondary1" direction="row" pad="xlarge">
+    <Box bgColor="primary2" direction="row" pad="xlarge">
       <Box basis="38%">
         <Box
           align="flex-end"
@@ -42,12 +42,12 @@ const TopSection = () => {
           margin={{ vertical: "large" }}
         >
           <div>
-            <SpeechBubble bgColor="secondary2" pad="large" position="right">
+            <SpeechBubble bgColor="primary" pad="large" position="right">
               <StyledHeart size="3em" />
             </SpeechBubble>
           </div>
           <SpeechBubble
-            bgColor="accent3"
+            bgColor="primary"
             pad="large"
             position="right"
             radius="round"
@@ -59,7 +59,7 @@ const TopSection = () => {
         <Box direction="row" justify="flex-end" margin={{ vertical: "large" }}>
           <div>
             <SpeechBubble
-              bgColor="primary3"
+              bgColor="secondary1"
               pad="large"
               position="right"
               radius="large"
@@ -103,7 +103,7 @@ const TopSection = () => {
       </Box>
       <Box justify="center" basis="38%">
         <SpeechBubble
-          bgColor="secondary2"
+          bgColor="secondary1"
           pad="medium"
           position="left"
           maxWidth="xxlarge"
