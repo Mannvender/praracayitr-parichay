@@ -33,6 +33,8 @@ const StyledDiv = styled(animated.div)<{
   height: string
   justify: string
   margin: object | string
+  maxHeight: string
+  maxWidth: string
   pad: object | string
   radius: string
   shrink: string
@@ -48,6 +50,8 @@ const StyledDiv = styled(animated.div)<{
   flex-direction: ${({ direction }) => direction};
   height: ${({ theme, height }) => theme.size[height] || height};
   width: ${({ theme, width }) => theme.size[width] || width};
+  height: ${({ theme, maxHeight }) => theme.size[maxHeight] || maxHeight};
+  width: ${({ theme, maxWidth }) => theme.size[maxWidth] || maxWidth};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
   align-items: ${({ align }) => align};
   justify-content: ${({ justify }) => justify};
@@ -90,6 +94,8 @@ interface Props {
   grow?: string
   justify?: string
   margin?: string | object
+  maxHeight?: string
+  maxWidth?: string
   onClick?: () => void
   height?: string
   pad?: string | object
@@ -112,6 +118,8 @@ const Box = ({
   height = "",
   justify = "",
   margin = {},
+  maxHeight = "",
+  maxWidth = "",
   onClick = () => {},
   pad = {},
   radius = "",
@@ -133,6 +141,8 @@ const Box = ({
       height={height}
       justify={justify}
       margin={margin}
+      maxHeight={maxHeight}
+      maxWidth={maxWidth}
       onClick={onClick}
       pad={pad}
       radius={radius}
