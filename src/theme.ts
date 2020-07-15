@@ -30,6 +30,7 @@ const theme = {
       xlarge: "128px",
       xxlarge: "328px",
       xxxlarge: "400px",
+      twoPowTen: "1024px",
     },
   },
   edgeSize: {
