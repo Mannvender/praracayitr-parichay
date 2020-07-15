@@ -1,5 +1,6 @@
 // lib imports
 import React, { useContext } from "react"
+import { useSpring } from "react-spring"
 
 // project imports
 import { Box, SpeechBubble } from "components"
@@ -25,9 +26,15 @@ const TopSection = () => {
   const [playing, toogle] = useAudio(process.env.PUBLIC_URL + "/aye_ganpat.mp3")
   const { homepage: TEXT } = useText()
   const { mode, setMode } = useContext(Store)
+  const isLightMode = mode === MODE.LIGHT
+
+  const { transform, display } = useSpring({
+    display: isLightMode ? "block" : "none",
+    transform: `perspective(600px) rotateX(${isLightMode ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  })
 
   const handleAvatarClick = () => {
-    const isLightMode = mode === MODE.LIGHT
     if ((!playing && isLightMode) || (playing && !isLightMode)) toogle()
     setMode(isLightMode ? MODE.DARK : MODE.LIGHT)
   }
@@ -93,12 +100,25 @@ const TopSection = () => {
         pad="xlarge"
       >
         <StyledImage
+          alt="cooler avatar"
+          src={process.env.PUBLIC_URL + "/avatar_7.png"}
+          style={{
+            display: display.interpolate((d) =>
+              d === "none" ? "block" : "none"
+            ),
+            transform,
+          }}
+        />
+        <StyledImage
           alt="avatar"
-          src={
-            process.env.PUBLIC_URL +
-            (mode === MODE.LIGHT ? "/avatar_5.png" : "/avatar_7.png")
-          }
-        ></StyledImage>
+          src={process.env.PUBLIC_URL + "/avatar_5.png"}
+          style={{
+            display,
+            transform: transform.interpolate(
+              (t) => `${t} rotateX(180deg)`
+            ) as string,
+          }}
+        />
         <StyledDeveloper>{TEXT.DEVELOPER}</StyledDeveloper>
       </Box>
       <Box justify="center" basis="38%">

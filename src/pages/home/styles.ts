@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { FaGlobe, FaGithub, FaLinkedin, FaHeart } from "react-icons/fa"
+import { animated } from "react-spring"
 
 export const StyledFaGlobe = styled(FaGlobe)`
   color: ${({ theme }) => theme.color.primary};
@@ -42,7 +43,7 @@ export const StyledName = styled.h1`
 export const StyledAge = styled.h2`
   color: ${({ theme }) => theme.color.primary3};
 `
-export const StyledImage = styled.img`
+export const StyledImage = styled(animated.img)`
   height: 300px;
   width: 300px;
   border-radius: 50%;
