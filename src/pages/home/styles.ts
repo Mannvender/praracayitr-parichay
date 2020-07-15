@@ -2,16 +2,16 @@ import styled from "styled-components"
 import { FaGlobe, FaGithub, FaLinkedin, FaHeart } from "react-icons/fa"
 
 export const StyledFaGlobe = styled(FaGlobe)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary};
 `
 export const StyledGithub = styled(FaGithub)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary};
 `
 export const StyledLinkedIn = styled(FaLinkedin)`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.primary};
 `
 export const StyledHeart = styled(FaHeart)`
-  color: ${({ theme }) => theme.color.primary2};
+  color: ${({ theme }) => theme.color.primary3};
 `
 export const StyledLink = styled.a<{
   color: string
@@ -27,7 +27,7 @@ export const StyledLinkLabel = styled.h3`
     `0 ${theme.edgeSize.xlarge} 0 ${theme.edgeSize.medium}`};
 `
 export const StyledHi = styled.h1`
-  color: ${({ theme }) => theme.color.primary2};
+  color: ${({ theme }) => theme.color.primary3};
   font-size: 56px;
   transform: rotate(-45deg);
 `
@@ -36,7 +36,7 @@ export const StyledIm = styled.h1`
   font-size: 56px;
 `
 export const StyledName = styled.h1`
-  color: ${({ theme }) => theme.color.primary3};
+  color: ${({ theme }) => theme.color.accent1};
   text-align: center;
 `
 export const StyledAge = styled.h2`
@@ -49,16 +49,16 @@ export const StyledImage = styled.img`
   background-color: ${({ theme }) => theme.color.primary};
 `
 export const StyledIntoHello = styled.h3`
-  color: ${({ theme }) => theme.color.secondary2};
+  color: ${({ theme }) => theme.color.primary3};
 `
 export const StyledIntoHeading = styled.h3`
-  color: ${({ theme }) => theme.color.primary3};
+  color: ${({ theme }) => theme.color.accent1};
 `
 export const StyledIntoDesc = styled.h3`
-  color: ${({ theme }) => theme.color.secondary2};
+  color: ${({ theme }) => theme.color.primary3};
 `
 export const StyledDeveloper = styled.h1`
-  color: ${({ theme }) => theme.color.primary3};
+  color: ${({ theme }) => theme.color.secondary1};
   margin-top: ${({ theme }) => theme.edgeSize.large};
   text-align: center;
   font-size: 48px;

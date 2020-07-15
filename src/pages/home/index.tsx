@@ -25,7 +25,7 @@ const Home = () => {
       <TopSection />
       <Box
         align="center"
-        bgColor="primary3"
+        bgColor="primary"
         direction="row"
         height="large"
         justify="center"
@@ -34,34 +34,34 @@ const Home = () => {
         textTransform="uppercase"
       >
         <StyledLink
-          color="accent1"
+          color="primary3"
           href="https://bit.ly/mono-cv"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SpeechBubble bgColor="accent1" pad="medium" position="right">
+          <SpeechBubble bgColor="primary3" pad="medium" position="right">
             <StyledFaGlobe size="1.5em" />
           </SpeechBubble>
           <StyledLinkLabel>bit.ly/mono-cv</StyledLinkLabel>
         </StyledLink>
         <StyledLink
-          color="accent1"
+          color="primary3"
           href="https://bit.ly/mono-in"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SpeechBubble bgColor="accent1" pad="medium" position="right">
+          <SpeechBubble bgColor="primary3" pad="medium" position="right">
             <StyledLinkedIn size="1.5em" />
           </SpeechBubble>
           <StyledLinkLabel>/mannvender</StyledLinkLabel>
         </StyledLink>
         <StyledLink
-          color="accent1"
+          color="primary3"
           href="https://bit.ly/mono-git"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SpeechBubble bgColor="accent1" pad="medium" position="right">
+          <SpeechBubble bgColor="primary3" pad="medium" position="right">
             <StyledGithub size="1.5em" />
           </SpeechBubble>
           <StyledLinkLabel>/mannvender</StyledLinkLabel>

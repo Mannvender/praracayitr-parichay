@@ -18,7 +18,7 @@ const ProgressBar = ({ progress = "0", ...rest }: Props) => {
       width="100%"
       {...rest}
     >
-      <Box height="100%" radius="large" width={progress} bgColor="primary3" />
+      <Box height="100%" radius="large" width={progress} bgColor="primary2" />
     </Box>
   )
 }

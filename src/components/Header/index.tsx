@@ -9,13 +9,13 @@ import { Store as ThemeStore, MODE } from "context/theme/store"
 import { Store as LangStore, LANG } from "context/lang/store"
 
 const StyledFaMoon = styled(FaMoon)`
-  color: ${({ theme }) => theme.color.primary2};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledFaSun = styled(FaSun)`
-  color: ${({ theme }) => theme.color.primary2};
+  color: ${({ theme }) => theme.color.primary3};
 `
 const StyledLanguageLable = styled.h2`
-  color: ${({ theme }) => theme.color.primary2};
+  color: ${({ theme }) => theme.color.primary3};
 `
 
 const Header = () => {
@@ -33,7 +33,7 @@ const Header = () => {
       justify="flex-end"
       direction="row"
       align="center"
-      bgColor="primary3"
+      bgColor="primary"
       pad="xlarge"
     >
       <Box onClick={handleColorSchemeClick} style={{ cursor: "pointer" }}>

@@ -13,13 +13,13 @@ const UnderlinedDiv = styled.div<{
   display: flex;
   flex-grow: ${({ grow }) => grow};
   border-bottom: ${({ theme }) =>
-    `${theme.edgeSize.small} solid ${theme.color.primary3}`};
+    `${theme.edgeSize.small} solid ${theme.color.secondary1}`};
 `
 const StyledText = styled.h2`
   border-bottom: ${({ theme }) =>
-    `${theme.edgeSize.small} solid ${theme.color.primary3}`};
+    `${theme.edgeSize.small} solid ${theme.color.secondary1}`};
   margin-right: ${({ theme }) => theme.edgeSize.large};
-  color: ${({ theme }) => theme.color.primary3};
+  color: ${({ theme }) => theme.color.secondary1};
   text-transform: uppercase;
 `
 
@@ -27,7 +27,11 @@ interface Props {
   text?: string
   color?: string
 }
-const SectionHeading = ({ color = "primary3", text = "", ...rest }: Props) => {
+const SectionHeading = ({
+  color = "secondary1",
+  text = "",
+  ...rest
+}: Props) => {
   return (
     <StyledDiv textColor={color} {...rest}>
       <StyledText>{text}</StyledText>

@@ -85,30 +85,30 @@ const StyledFaHome = styled(FaHome)`
 `
 const CircularBackground = styled.div`
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.color.secondary1};
+  background-color: ${({ theme }) => theme.color.primary2};
 `
 const StyledP = styled.p`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.secondary1};
   font-weight: 600;
 `
 const HobbyTitle = styled.p`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.secondary1};
   font-weight: 600;
   margin: 0;
   text-align: center;
 `
 const NameLabel = styled.h2`
-  color: ${({ theme }) => theme.color.accent3};
+  color: ${({ theme }) => theme.color.accent1};
   margin-right: ${({ theme }) => theme.edgeSize.medium};
 `
 const Name = styled.h2`
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.secondary1};
 `
 const ContactDetail = styled.p`
   font-size: 1.4rem;
   margin: 0;
   font-weight: 600;
-  color: ${({ theme }) => theme.color["primary3"]};
+  color: ${({ theme }) => theme.color.secondary1};
   margin-left: ${({ theme }) => theme.edgeSize.large};
 `
 
@@ -218,7 +218,7 @@ const getHobbies = (TEXT: any) => [
 const BottomSection = () => {
   const { homepage: TEXT } = useText()
   return (
-    <Box bgColor="primary" pad="xlarge">
+    <Box bgColor="primary3" pad="xlarge">
       <SectionHeading text={TEXT.SKILLS_SECTION_HEADING} />
       <Box direction="row" justify="space-evenly" wrap="wrap">
         {getSkills(TEXT).map((skill) => (
@@ -255,7 +255,7 @@ const BottomSection = () => {
             <Box direction="row" margin={{ vertical: "large" }}>
               <Box
                 align="center"
-                bgColor="accent1"
+                bgColor="secondary1"
                 border={{ size: "small" }}
                 height="large"
                 justify="center"
@@ -271,7 +271,7 @@ const BottomSection = () => {
             <Box direction="row" margin={{ vertical: "large" }}>
               <Box
                 align="center"
-                bgColor="accent3"
+                bgColor="secondary1"
                 border={{ size: "small" }}
                 height="large"
                 justify="center"
@@ -287,7 +287,7 @@ const BottomSection = () => {
             <Box direction="row" margin={{ vertical: "large" }}>
               <Box
                 align="center"
-                bgColor="accent2"
+                bgColor="secondary1"
                 border={{ size: "small" }}
                 height="large"
                 justify="center"

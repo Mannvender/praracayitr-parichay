@@ -11,7 +11,7 @@ const StyledFaHeart = styled(FaHeart)`
 `
 const StyledMadeWith = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.color.primary2};
+  color: ${({ theme }) => theme.color.secondary1};
   margin-right: ${({ theme }) => theme.edgeSize.medium};
   font-size: 0.8em;
 `

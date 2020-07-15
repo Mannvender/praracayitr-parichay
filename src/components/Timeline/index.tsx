@@ -20,7 +20,7 @@ const Line = styled.div<{}>`
   display: flex;
   flex-grow: 1;
   height: ${({ theme }) => theme.size.small};
-  background-color: ${({ theme }) => theme.color.secondary2};
+  background-color: ${({ theme }) => theme.color.primary2};
   border-radius: ${({ theme }) => theme.edgeSize.large};
 `
 const DottedLine = styled.div<{
@@ -32,7 +32,7 @@ const DottedLine = styled.div<{
   height: ${({ theme }) => theme.size.large};
   left: ${({ left }) => left};
   top: ${({ top }) => top};
-  border: ${({ theme }) => `4px dashed ${theme.color.primary3}`};
+  border: ${({ theme }) => `4px dashed ${theme.color.primary2}`};
   transform: translateX(-${({ index }) => index * 100}%);
 `
 const Point = styled.div<{
@@ -62,20 +62,20 @@ const StyledFaBookOpen = styled(FaBookOpen)`
 const Title = styled.p`
   font-size: 0.9rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.primary3};
+  color: ${({ theme }) => theme.color.secondary1};
   margin: 0;
 `
 const Description = styled.p`
   font-size: 0.8rem;
   font-weight: 600;
   font-style: italic;
-  color: ${({ theme }) => theme.color.accent3};
+  color: ${({ theme }) => theme.color.accent1};
   margin: 0;
 `
 const Time = styled.p`
   font-size: 0.8rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.primary3};
+  color: ${({ theme }) => theme.color.secondary1};
   margin: 0;
 `
 
