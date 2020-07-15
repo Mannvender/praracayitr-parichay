@@ -83,7 +83,9 @@ const StyledFaAt = styled(FaAt)`
 const StyledFaHome = styled(FaHome)`
   color: ${({ theme }) => theme.color.primary3};
 `
-const CircularBackground = styled.div`
+const CircularBackground = styled(Box)`
+  height: 5em;
+  width: 5em;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.primary2};
 `
@@ -114,43 +116,43 @@ const ContactDetail = styled.p`
 
 const getSkills = (TEXT: any) => [
   {
-    logo: <StyledFaProjectDiagram size="5em" />,
+    logo: <StyledFaProjectDiagram size="3.5em" />,
     title: TEXT.DATA_STRUCTURES,
   },
   {
-    logo: <StyledFaCode size="5em" />,
+    logo: <StyledFaCode size="3.5em" />,
     title: TEXT.ALGORITHMS,
   },
   {
-    logo: <StyledFaJsSquare size="5em" />,
+    logo: <StyledFaJsSquare size="3.5em" />,
     title: TEXT.JAVASCRIPT,
   },
   {
-    logo: <StyledFaReact size="5em" />,
+    logo: <StyledFaReact size="3.5em" />,
     title: TEXT.REACT,
   },
   {
-    logo: <StyledFaNode size="5em" />,
+    logo: <StyledFaNode size="3.5em" />,
     title: TEXT.NODE,
   },
   {
-    logo: <StyledFaGit size="5em" />,
+    logo: <StyledFaGit size="3.5em" />,
     title: TEXT.GIT,
   },
   {
-    logo: <StyledFaDatabase size="5em" />,
+    logo: <StyledFaDatabase size="3.5em" />,
     title: TEXT.MONGO_DB,
   },
   {
-    logo: <StyledFaLaptopCode size="5em" />,
+    logo: <StyledFaLaptopCode size="3.5em" />,
     title: TEXT.C,
   },
   {
-    logo: <StyledFaCss3Alt size="5em" />,
+    logo: <StyledFaCss3Alt size="3.5em" />,
     title: TEXT.HTML_CSS,
   },
   {
-    logo: <StyledAiOutlineCode size="5em" />,
+    logo: <StyledAiOutlineCode size="3.5em" />,
     title: TEXT.TYPESCRIPT,
   },
 ]
@@ -223,7 +225,9 @@ const BottomSection = () => {
       <Box direction="row" justify="space-evenly" wrap="wrap">
         {getSkills(TEXT).map((skill) => (
           <Box key={skill.title} align="center" margin="xlarge">
-            <CircularBackground>{skill.logo}</CircularBackground>
+            <CircularBackground align="center" justify="center">
+              {skill.logo}
+            </CircularBackground>
             <StyledP>{skill.title}</StyledP>
           </Box>
         ))}
