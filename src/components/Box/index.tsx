@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled, { css } from "styled-components"
+import { animated } from "react-spring"
 
 interface ParserArgs {
   theme: any
@@ -22,7 +23,7 @@ const parseBorder = ({ border, theme }: BorderParserArgs): string => {
   }`
 }
 
-const StyledDiv = styled.div<{
+const StyledDiv = styled(animated.div)<{
   align: string
   basis: string
   bgColor: string
