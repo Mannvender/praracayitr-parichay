@@ -220,7 +220,7 @@ const getHobbies = (TEXT: any) => [
 const BottomSection = () => {
   const { homepage: TEXT } = useText()
   return (
-    <Box bgColor="primary3" pad="xlarge">
+    <Box pad="xlarge">
       <SectionHeading text={TEXT.SKILLS_SECTION_HEADING} />
       <Box direction="row" justify="space-evenly" wrap="wrap">
         {getSkills(TEXT).map((skill) => (

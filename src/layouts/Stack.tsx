@@ -15,7 +15,7 @@ const StackLayout = ({ children }: Props) => {
     config: config.slow,
   })
   return (
-    <Box style={animationProps}>
+    <Box style={animationProps} bgColor="primary3">
       <Header />
       {children}
       <Footer />

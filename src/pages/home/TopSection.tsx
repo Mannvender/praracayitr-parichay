@@ -40,7 +40,7 @@ const TopSection = () => {
   }
 
   return (
-    <Box bgColor="primary3" direction="row" pad="xlarge">
+    <Box direction="row" pad="xlarge">
       <Box basis="38%">
         <Box
           align="flex-end"

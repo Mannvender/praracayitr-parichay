@@ -18,13 +18,7 @@ const StyledMadeWith = styled.p`
 
 const Footer = () => {
   return (
-    <Box
-      align="center"
-      justify="center"
-      direction="row"
-      pad="xlarge"
-      bgColor="primary3"
-    >
+    <Box align="center" justify="center" direction="row" pad="xlarge">
       <StyledMadeWith>Made with</StyledMadeWith>
       <StyledFaHeart size="0.9em" />
     </Box>
