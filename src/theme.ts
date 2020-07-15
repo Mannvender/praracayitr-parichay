@@ -1,21 +1,21 @@
 const theme = {
   color: {
     light: {
-      primary: "#14031A", //primary1
-      primary2: "#949494", //primary1
-      primary3: "#fff", //primary3
-      secondary1: "#5A4848", //secondary1
-      secondary2: "#78BB61", //secondary2
-      accent1: "#FF7521", //accent1
+      primary: "#14031A",
+      primary2: "#949494",
+      primary3: "#fff",
+      secondary1: "#5A4848",
+      secondary2: "#78BB61",
+      accent1: "#FF7521",
       heartRed: "red",
     },
     dark: {
-      primary: "#7a432e",
-      primary2: "#7a432e",
-      primary3: "#fddfb9",
-      secondary1: "#c67645",
-      secondary2: "#fbc773",
-      accent1: "#add781",
+      primary: "#2E5C18",
+      primary2: "#2E5C18",
+      primary3: "#000000",
+      secondary1: "#3E432E",
+      secondary2: "#616F39",
+      accent1: "#A7D129",
       heartRed: "red",
     },
   },
