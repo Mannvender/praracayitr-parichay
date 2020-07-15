@@ -29,6 +29,7 @@ const theme = {
       large: "64px",
       xlarge: "128px",
       xxlarge: "328px",
+      xxxlarge: "400px",
     },
   },
   edgeSize: {
