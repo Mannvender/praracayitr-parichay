@@ -59,5 +59,5 @@ export const GAMING = "PC Gaming"
 // Contact Details
 export const NAME_LABEL = "Name:"
 export const PHONE = "+91 7217855864"
-export const EMAIL = "mannvender001@gmail"
+export const EMAIL = "mannvender001&shy;@gmail"
 export const ADDRESS = "Sector 45, Gurugram"

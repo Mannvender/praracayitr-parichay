@@ -117,14 +117,6 @@ export const JustifyCenterToStart = styled(Box)`
   }
 `
 
-export const SkillsContainer = styled(Box)`
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  @media (min-width: 576px) {
-    flex-wrap: wrap;
-  }
-`
-
 export const StyledFaProjectDiagram = styled(FaProjectDiagram)`
   color: ${({ theme }) => theme.color.primary3};
 `
@@ -205,4 +197,5 @@ export const ContactDetail = styled.p`
   font-weight: 600;
   color: ${({ theme }) => theme.color.secondary1};
   margin-left: ${({ theme }) => theme.edgeSize.large};
+  text-align: left;
 `

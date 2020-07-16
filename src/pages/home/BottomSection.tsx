@@ -38,7 +38,6 @@ import {
   ContactDetail,
   StyledFaAt,
   StyledFaHome,
-  SkillsContainer,
 } from "pages/home/styles"
 
 const getSkills = (TEXT: any) => [
@@ -178,10 +177,16 @@ const BottomSection = () => {
     )
   }
 
+  function createMarkup() {
+    return {
+      __html: TEXT.EMAIL,
+    }
+  }
+
   return (
     <Box pad="xlarge" maxWidth="twoPowTen" margin="0 auto">
       <SectionHeading text={TEXT.SKILLS_SECTION_HEADING} />
-      <SkillsContainer direction="row" justify="space-evenly">
+      <Box direction="row" justify="space-evenly" wrap="wrap">
         {getSkills(TEXT).map((skill) => (
           <Box key={skill.title} align="center" margin="xlarge" shrink="0">
             <CircularBackground align="center" justify="center">
@@ -190,11 +195,16 @@ const BottomSection = () => {
             <StyledP>{skill.title}</StyledP>
           </Box>
         ))}
-      </SkillsContainer>
+      </Box>
       <SectionHeading text={TEXT.LEARNING_SECTION_HEADING} />
       <Box pad="xlarge">{renderTimeline()}</Box>
       <Box direction="row" justify="space-evenly" wrap="wrap">
-        <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
+        <Box
+          basis="30%"
+          grow="1"
+          margin={{ horizontal: "large" }}
+          minWidth="xxlarge"
+        >
           <SectionHeading text={TEXT.RATING_SECTION_HEADING} />
           <Box margin={{ vertical: "large" }}>
             <Box direction="row" margin={{ vertical: "large" }}>
@@ -263,7 +273,12 @@ const BottomSection = () => {
             </Box>
           </Box>
         </Box>
-        <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>
+        <Box
+          basis="30%"
+          grow="1"
+          margin={{ horizontal: "large" }}
+          minWidth="xxlarge"
+        >
           <SectionHeading text={TEXT.HOBBY_SECTION_HEADING} />
           <Box direction="row" wrap="wrap" margin={{ vertical: "large" }}>
             {getHobbies(TEXT).map((hobby) => (
@@ -306,7 +321,7 @@ const BottomSection = () => {
               <SpeechBubble bgColor="secondary1" pad="large" radius="large">
                 <StyledFaAt size="3em" />
               </SpeechBubble>
-              <ContactDetail>{TEXT.EMAIL}</ContactDetail>
+              <ContactDetail dangerouslySetInnerHTML={createMarkup()} />
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
               <SpeechBubble bgColor="secondary1" pad="large" radius="large">
