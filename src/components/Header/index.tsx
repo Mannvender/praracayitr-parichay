@@ -36,7 +36,11 @@ const Header = () => {
       bgColor="primary"
       pad="xlarge"
     >
-      <Box onClick={handleColorSchemeClick} style={{ cursor: "pointer" }}>
+      <Box
+        onClick={handleColorSchemeClick}
+        style={{ cursor: "pointer" }}
+        margin={{ horizontal: "large" }}
+      >
         {mode === MODE.LIGHT && <StyledFaMoon size="2em" />}
         {mode === MODE.DARK && <StyledFaSun size="2em" />}
       </Box>
