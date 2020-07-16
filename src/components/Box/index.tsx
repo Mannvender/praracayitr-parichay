@@ -35,6 +35,8 @@ const StyledDiv = styled(animated.div)<{
   margin: object | string
   maxHeight: string
   maxWidth: string
+  minHeight: string
+  minWidth: string
   pad: object | string
   radius: string
   shrink: string
@@ -52,6 +54,8 @@ const StyledDiv = styled(animated.div)<{
   width: ${({ theme, width }) => theme.size[width] || width};
   max-height: ${({ theme, maxHeight }) => theme.size[maxHeight] || maxHeight};
   max-width: ${({ theme, maxWidth }) => theme.size[maxWidth] || maxWidth};
+  min-height: ${({ theme, minHeight }) => theme.size[minHeight] || minHeight};
+  min-width: ${({ theme, minWidth }) => theme.size[minWidth] || minWidth};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
   align-items: ${({ align }) => align};
   justify-content: ${({ justify }) => justify};
@@ -96,6 +100,8 @@ interface Props {
   margin?: string | object
   maxHeight?: string
   maxWidth?: string
+  minHeight?: string
+  minWidth?: string
   onClick?: () => void
   height?: string
   pad?: string | object
@@ -120,6 +126,8 @@ const Box = ({
   margin = {},
   maxHeight = "",
   maxWidth = "",
+  minHeight = "",
+  minWidth = "",
   onClick = () => {},
   pad = {},
   radius = "",
@@ -143,6 +151,8 @@ const Box = ({
       margin={margin}
       maxHeight={maxHeight}
       maxWidth={maxWidth}
+      minHeight={minHeight}
+      minWidth={minWidth}
       onClick={onClick}
       pad={pad}
       radius={radius}
