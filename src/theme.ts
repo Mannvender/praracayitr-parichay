@@ -51,7 +51,6 @@ const theme = {
       large: "8px",
       xlarge: "16px",
       xxlarge: "24px",
-      round: "50%",
     },
     medium: {
       small: "4px",
@@ -59,6 +58,12 @@ const theme = {
       large: "16px",
       xlarge: "32px",
       xxlarge: "48px",
+    },
+  },
+  border: {
+    medium: {
+      medium: "8px",
+      large: "16px",
       round: "50%",
     },
   },

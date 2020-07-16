@@ -14,14 +14,14 @@ const DataSection = styled.div`
   display: flex;
   flex-grow: 1;
   height: ${({ theme }) => theme.size.xlarge};
-  border-radius: ${({ theme }) => theme.edgeSize.large};
+  border-radius: ${({ theme }) => theme.border.large};
 `
 const Line = styled.div<{}>`
   display: flex;
   flex-grow: 1;
   height: ${({ theme }) => theme.size.small};
   background-color: ${({ theme }) => theme.color.primary2};
-  border-radius: ${({ theme }) => theme.edgeSize.large};
+  border-radius: ${({ theme }) => theme.border.large};
 `
 const DottedLine = styled.div<{
   left: string

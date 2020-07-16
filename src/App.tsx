@@ -22,6 +22,7 @@ function App() {
         color: theme.color[mode],
         size: isMobileDevice ? theme.size.small : theme.size.medium,
         edgeSize: isMobileDevice ? theme.edgeSize.small : theme.edgeSize.medium,
+        border: theme.border.medium,
       }}
     >
       <Router>

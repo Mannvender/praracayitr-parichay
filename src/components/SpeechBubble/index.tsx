@@ -21,7 +21,7 @@ const StyledDiv = styled.div<{
   max-width: ${({ theme, maxWidth }) => theme.size[maxWidth] || maxWidth};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
   position: relative;
-  border-radius: ${({ theme, radius }) => theme.edgeSize[radius] || radius};
+  border-radius: ${({ theme, radius }) => theme.border[radius] || radius};
   padding: 15px;
   padding: ${({ theme, pad }) => theme.edgeSize[pad] || pad};
 
