@@ -21,7 +21,7 @@ function App() {
       theme={{
         color: theme.color[mode],
         size: isMobileDevice ? theme.size.small : theme.size.medium,
-        edgeSize: theme.edgeSize.medium,
+        edgeSize: isMobileDevice ? theme.edgeSize.small : theme.edgeSize.medium,
       }}
     >
       <Router>

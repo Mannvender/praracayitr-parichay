@@ -45,6 +45,14 @@ const theme = {
     },
   },
   edgeSize: {
+    small: {
+      small: "2px",
+      medium: "4px",
+      large: "8px",
+      xlarge: "16px",
+      xxlarge: "24px",
+      round: "50%",
+    },
     medium: {
       small: "4px",
       medium: "8px",
