@@ -29,6 +29,7 @@ const theme = {
       xlarge: "112px",
       xxlarge: "256px",
       xxxlarge: "348px",
+      x4large: "428px",
       twoPowTen: "1024px",
     },
     // by default size choosen by user is medium
@@ -41,6 +42,7 @@ const theme = {
       xlarge: "128px",
       xxlarge: "328px",
       xxxlarge: "400px",
+      x4large: "556px",
       twoPowTen: "1024px",
     },
   },
