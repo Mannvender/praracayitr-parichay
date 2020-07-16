@@ -1,25 +1,5 @@
 // lib imports
 import React from "react"
-import styled from "styled-components"
-import {
-  FaProjectDiagram,
-  FaCode,
-  FaJsSquare,
-  FaReact,
-  FaNode,
-  FaGit,
-  FaDatabase,
-  FaLaptopCode,
-  FaCss3Alt,
-  FaRoute,
-  FaTv,
-  FaGamepad,
-  FaMobile,
-  FaAt,
-  FaHome,
-} from "react-icons/fa"
-import { AiOutlineCode } from "react-icons/ai"
-import { MdLocalMovies } from "react-icons/md"
 
 // project imports
 import {
@@ -31,88 +11,33 @@ import {
 } from "components"
 import { useText } from "hooks"
 
-// home
-const StyledFaProjectDiagram = styled(FaProjectDiagram)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaCode = styled(FaCode)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaJsSquare = styled(FaJsSquare)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaReact = styled(FaReact)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaNode = styled(FaNode)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaGit = styled(FaGit)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaDatabase = styled(FaDatabase)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaLaptopCode = styled(FaLaptopCode)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaCss3Alt = styled(FaCss3Alt)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledAiOutlineCode = styled(AiOutlineCode)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaRoute = styled(FaRoute)`
-  color: ${({ theme }) => theme.color["primary3"]};
-`
-const StyledMdLocalMovies = styled(MdLocalMovies)`
-  color: ${({ theme }) => theme.color["primary3"]};
-`
-const StyledFaTv = styled(FaTv)`
-  color: ${({ theme }) => theme.color["primary3"]};
-`
-const StyledFaGamepad = styled(FaGamepad)`
-  color: ${({ theme }) => theme.color["primary3"]};
-`
-const StyledFaMobile = styled(FaMobile)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaAt = styled(FaAt)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const StyledFaHome = styled(FaHome)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const CircularBackground = styled(Box)`
-  height: 5em;
-  width: 5em;
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.color.primary2};
-`
-const StyledP = styled.p`
-  color: ${({ theme }) => theme.color.secondary1};
-  font-weight: 600;
-`
-const HobbyTitle = styled.p`
-  color: ${({ theme }) => theme.color.secondary1};
-  font-weight: 600;
-  margin: 0;
-  text-align: center;
-`
-const NameLabel = styled.h2`
-  color: ${({ theme }) => theme.color.accent1};
-  margin-right: ${({ theme }) => theme.edgeSize.medium};
-`
-const Name = styled.h2`
-  color: ${({ theme }) => theme.color.secondary1};
-`
-const ContactDetail = styled.p`
-  font-size: 1.4rem;
-  margin: 0;
-  font-weight: 600;
-  color: ${({ theme }) => theme.color.secondary1};
-  margin-left: ${({ theme }) => theme.edgeSize.large};
-`
+// homepage directory imports
+import {
+  StyledFaProjectDiagram,
+  StyledFaCode,
+  StyledFaJsSquare,
+  StyledFaReact,
+  StyledFaNode,
+  StyledFaGit,
+  StyledFaLaptopCode,
+  StyledFaCss3Alt,
+  StyledAiOutlineCode,
+  StyledFaDatabase,
+  StyledFaRoute,
+  StyledMdLocalMovies,
+  StyledFaTv,
+  StyledFaGamepad,
+  CircularBackground,
+  StyledP,
+  Name,
+  NameLabel,
+  HobbyTitle,
+  StyledFaMobile,
+  ContactDetail,
+  StyledFaAt,
+  StyledFaHome,
+  SkillsContainer,
+} from "pages/home/styles"
 
 const getSkills = (TEXT: any) => [
   {
@@ -222,16 +147,16 @@ const BottomSection = () => {
   return (
     <Box pad="xlarge" maxWidth="twoPowTen" margin="0 auto">
       <SectionHeading text={TEXT.SKILLS_SECTION_HEADING} />
-      <Box direction="row" justify="space-evenly" wrap="wrap">
+      <SkillsContainer direction="row" justify="space-evenly">
         {getSkills(TEXT).map((skill) => (
-          <Box key={skill.title} align="center" margin="xlarge">
+          <Box key={skill.title} align="center" margin="xlarge" shrink="0">
             <CircularBackground align="center" justify="center">
               {skill.logo}
             </CircularBackground>
             <StyledP>{skill.title}</StyledP>
           </Box>
         ))}
-      </Box>
+      </SkillsContainer>
       <SectionHeading text={TEXT.LEARNING_SECTION_HEADING} />
       <Box pad="xlarge">
         <Timeline data={getTimeLineData(TEXT)} fromToSeparator={TEXT.TO} />

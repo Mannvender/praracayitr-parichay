@@ -2,6 +2,25 @@ import styled from "styled-components"
 import { FaGlobe, FaGithub, FaLinkedin, FaHeart } from "react-icons/fa"
 import { animated } from "react-spring"
 import { Box, Heading } from "components"
+import {
+  FaProjectDiagram,
+  FaCode,
+  FaJsSquare,
+  FaReact,
+  FaNode,
+  FaGit,
+  FaDatabase,
+  FaLaptopCode,
+  FaCss3Alt,
+  FaRoute,
+  FaTv,
+  FaGamepad,
+  FaMobile,
+  FaAt,
+  FaHome,
+} from "react-icons/fa"
+import { AiOutlineCode } from "react-icons/ai"
+import { MdLocalMovies } from "react-icons/md"
 
 export const StyledFaGlobe = styled(FaGlobe)`
   color: ${({ theme }) => theme.color.primary};
@@ -96,4 +115,94 @@ export const JustifyCenterToStart = styled(Box)`
   @media (min-width: 992px) {
     justify-content: flex-start;
   }
+`
+
+export const SkillsContainer = styled(Box)`
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  @media (min-width: 576px) {
+    flex-wrap: wrap;
+  }
+`
+
+export const StyledFaProjectDiagram = styled(FaProjectDiagram)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaCode = styled(FaCode)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaJsSquare = styled(FaJsSquare)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaReact = styled(FaReact)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaNode = styled(FaNode)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaGit = styled(FaGit)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaDatabase = styled(FaDatabase)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaLaptopCode = styled(FaLaptopCode)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaCss3Alt = styled(FaCss3Alt)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledAiOutlineCode = styled(AiOutlineCode)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaRoute = styled(FaRoute)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledMdLocalMovies = styled(MdLocalMovies)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaTv = styled(FaTv)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaGamepad = styled(FaGamepad)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaMobile = styled(FaMobile)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaAt = styled(FaAt)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const StyledFaHome = styled(FaHome)`
+  color: ${({ theme }) => theme.color.primary3};
+`
+export const CircularBackground = styled(Box)`
+  height: ${({ theme }) => theme.size.xlarge};
+  width: ${({ theme }) => theme.size.xlarge};
+  border-radius: ${({ theme }) => theme.border.round};
+  background-color: ${({ theme }) => theme.color.primary2};
+`
+export const StyledP = styled.p`
+  color: ${({ theme }) => theme.color.secondary1};
+  font-weight: 600;
+`
+export const HobbyTitle = styled.p`
+  color: ${({ theme }) => theme.color.secondary1};
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+`
+export const NameLabel = styled.h2`
+  color: ${({ theme }) => theme.color.accent1};
+  margin-right: ${({ theme }) => theme.edgeSize.medium};
+`
+export const Name = styled.h2`
+  color: ${({ theme }) => theme.color.secondary1};
+`
+export const ContactDetail = styled.p`
+  font-size: ${({ theme }) => theme.text.xlarge};
+  margin: 0;
+  font-weight: 600;
+  color: ${({ theme }) => theme.color.secondary1};
+  margin-left: ${({ theme }) => theme.edgeSize.large};
 `
