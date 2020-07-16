@@ -90,7 +90,7 @@ interface Props {
   bgColor?: string
   border?: object
   children?: any
-  direction?: string
+  direction?: "row" | "column"
   grow?: string
   justify?: string
   margin?: string | object
