@@ -69,13 +69,14 @@ const theme = {
   },
   text: {
     small: {
-      xsmall: "13px",
-      small: "16px",
-      medium: "18px",
-      large: "21px",
-      xlarge: "24px",
-      xxlarge: "32px",
-      xxxlarge: "56px",
+      xsmall: "8px",
+      small: "12px",
+      medium: "16px",
+      large: "18px",
+      xlarge: "21px",
+      xxlarge: "24px",
+      xxxlarge: "42px",
+      x4large: "46px",
     },
     medium: {
       xsmall: "13px",
@@ -84,7 +85,8 @@ const theme = {
       large: "21px",
       xlarge: "24px",
       xxlarge: "32px",
-      xxxlarge: "56px",
+      xxxlarge: "48px",
+      x4large: "56px",
     },
   },
 }
