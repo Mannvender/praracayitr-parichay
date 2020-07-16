@@ -20,6 +20,17 @@ const theme = {
     },
   },
   size: {
+    small: {
+      hair: "1px",
+      xsmall: "6px",
+      small: "12px",
+      medium: "24px",
+      large: "56px",
+      xlarge: "112px",
+      xxlarge: "312px",
+      xxxlarge: "348px",
+      twoPowTen: "1024px",
+    },
     // by default size choosen by user is medium
     medium: {
       hair: "1px",
@@ -39,6 +50,7 @@ const theme = {
       medium: "8px",
       large: "16px",
       xlarge: "32px",
+      xxlarge: "48px",
       round: "50%",
     },
   },

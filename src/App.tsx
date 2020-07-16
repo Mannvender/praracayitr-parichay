@@ -11,14 +11,16 @@ import PublicRoute from "routes/Public"
 import PublicOnlyRoute from "routes/PublicOnly"
 import PrivateRoute from "routes/Private"
 import { Store } from "context/theme/store"
+import isMobile from "utils/is-mobile"
 
 function App() {
   const { mode } = useContext(Store)
+  const isMobileDevice = isMobile()
   return (
     <ThemeProvider
       theme={{
         color: theme.color[mode],
-        size: theme.size.medium,
+        size: isMobileDevice ? theme.size.small : theme.size.medium,
         edgeSize: theme.edgeSize.medium,
       }}
     >
