@@ -9,7 +9,8 @@ import {
   SpeechBubble,
   ProgressBar,
 } from "components"
-import { useText } from "hooks"
+import { useText, useWindowSize } from "hooks"
+import { isMobileDevice, isMediumDevice } from 'utils/device-identifiers'
 
 // homepage directory imports
 import {
@@ -144,6 +145,9 @@ const getHobbies = (TEXT: any) => [
 
 const BottomSection = () => {
   const { homepage: TEXT } = useText()
+  const { width } = useWindowSize()
+  const isMobile = isMobileDevice(width)
+  const isMedium = isMediumDevice(width)
   return (
     <Box pad="xlarge" maxWidth="twoPowTen" margin="0 auto">
       <SectionHeading text={TEXT.SKILLS_SECTION_HEADING} />
@@ -159,7 +163,11 @@ const BottomSection = () => {
       </SkillsContainer>
       <SectionHeading text={TEXT.LEARNING_SECTION_HEADING} />
       <Box pad="xlarge">
-        <Timeline data={getTimeLineData(TEXT)} fromToSeparator={TEXT.TO} />
+        <Timeline
+          data={getTimeLineData(TEXT)}
+          fromToSeparator={TEXT.TO}
+          orientation={isMedium ? "vertical" : "horizontal"}
+        />
       </Box>
       <Box direction="row" justify="space-evenly" wrap="wrap">
         <Box basis="30%" grow="1" margin={{ horizontal: "large" }}>

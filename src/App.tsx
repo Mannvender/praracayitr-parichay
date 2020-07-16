@@ -12,20 +12,21 @@ import PublicOnlyRoute from "routes/PublicOnly"
 import PrivateRoute from "routes/Private"
 import { Store } from "context/theme/store"
 import { useWindowSize } from 'hooks'
+import { isMobileDevice } from 'utils/device-identifiers'
 
 function App() {
   const { mode } = useContext(Store)
   const { width } = useWindowSize()
-  const isMobileDevice = width <= 992
+  const isMobile = isMobileDevice(width)
 
   return (
     <ThemeProvider
       theme={{
         color: theme.color[mode],
-        size: isMobileDevice ? theme.size.small : theme.size.medium,
-        edgeSize: isMobileDevice ? theme.edgeSize.small : theme.edgeSize.medium,
+        size: isMobile ? theme.size.small : theme.size.medium,
+        edgeSize: isMobile ? theme.edgeSize.small : theme.edgeSize.medium,
         border: theme.border.medium,
-        text: isMobileDevice ? theme.text.small : theme.text.medium,
+        text: isMobile ? theme.text.small : theme.text.medium,
       }}
     >
       <Router>
