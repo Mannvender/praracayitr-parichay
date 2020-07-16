@@ -11,11 +11,13 @@ import PublicRoute from "routes/Public"
 import PublicOnlyRoute from "routes/PublicOnly"
 import PrivateRoute from "routes/Private"
 import { Store } from "context/theme/store"
-import isMobile from "utils/is-mobile"
+import { useWindowSize } from 'hooks'
 
 function App() {
   const { mode } = useContext(Store)
-  const isMobileDevice = isMobile()
+  const { width } = useWindowSize()
+  const isMobileDevice = width <= 992
+
   return (
     <ThemeProvider
       theme={{
