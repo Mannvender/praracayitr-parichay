@@ -3,8 +3,6 @@ import React, { Fragment } from "react"
 
 // project imports
 import { Box, SpeechBubble } from "components"
-import isMobile from "utils/is-mobile"
-import UnderConstruction from "pages/underConstruction"
 
 // home directory imports
 import BottomSection from "pages/home/BottomSection"
@@ -18,9 +16,7 @@ import {
 } from "pages/home/styles"
 
 const Home = () => {
-  return isMobile() ? (
-    <UnderConstruction />
-  ) : (
+  return (
     <Fragment>
       <TopSection />
       <Box

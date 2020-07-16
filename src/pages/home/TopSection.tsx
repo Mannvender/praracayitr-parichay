@@ -3,22 +3,24 @@ import React, { useContext } from "react"
 import { useSpring } from "react-spring"
 
 // project imports
-import { Box, SpeechBubble } from "components"
+import { Box, Heading, SpeechBubble } from "components"
 import { useText } from "hooks"
 import { Store, MODE } from "context/theme/store"
 
 // home directory imports
 import {
-  StyledAge,
   StyledDeveloper,
   StyledHeart,
   StyledHi,
-  StyledIm,
   StyledImage,
   StyledIntoDesc,
   StyledIntoHeading,
   StyledIntoHello,
-  StyledName,
+  TopSectionContainer as Container,
+  TopSectionLeftRightContainer as LeftRight,
+  TopSectionMiddleContainer as Middle,
+  JustifyCenterToEnd as LeftMessage,
+  JustifyCenterToStart as RightMessage,
 } from "pages/home/styles"
 import { useAudio } from "hooks"
 
@@ -40,12 +42,16 @@ const TopSection = () => {
   }
 
   return (
-    <Box direction="row" pad="xlarge" margin="0 auto" maxWidth="twoPowTen">
-      <Box basis="38%">
-        <Box
+    <Container
+      direction="row"
+      pad="xxlarge"
+      margin="0 auto"
+      maxWidth="twoPowTen"
+    >
+      <LeftRight>
+        <LeftMessage
           align="flex-end"
           direction="row"
-          justify="flex-end"
           margin={{ vertical: "large" }}
         >
           <div>
@@ -60,10 +66,12 @@ const TopSection = () => {
             radius="round"
             rotate="45deg"
           >
-            <StyledHi>{TEXT.HI}</StyledHi>
+            <StyledHi color="primary3" size="x4large">
+              {TEXT.HI}
+            </StyledHi>
           </SpeechBubble>
-        </Box>
-        <Box direction="row" justify="flex-end" margin={{ vertical: "large" }}>
+        </LeftMessage>
+        <LeftMessage direction="row" margin={{ vertical: "large" }}>
           <div>
             <SpeechBubble
               bgColor="secondary1"
@@ -72,15 +80,19 @@ const TopSection = () => {
               radius="large"
             >
               <Box direction="row" justify="center">
-                <StyledIm>{TEXT.IM}</StyledIm>
+                <Heading color="primary3" size="x4large">
+                  {TEXT.IM}
+                </Heading>
               </Box>
               <Box direction="row">
-                <StyledName>{TEXT.NAME}</StyledName>
+                <Heading color="accent1" size="xxlarge" textAlign="center">
+                  {TEXT.NAME}
+                </Heading>
               </Box>
             </SpeechBubble>
           </div>
-        </Box>
-        <Box margin={{ vertical: "large" }} direction="row" justify="flex-end">
+        </LeftMessage>
+        <LeftMessage margin={{ vertical: "large" }} direction="row">
           <div>
             <SpeechBubble
               bgColor="primary"
@@ -88,13 +100,16 @@ const TopSection = () => {
               position="right"
               radius="large"
             >
-              <StyledAge>{TEXT.AGE}</StyledAge>
+              <Heading color="primary3" size="xlarge">
+                {TEXT.AGE}
+              </Heading>
             </SpeechBubble>
           </div>
-        </Box>
-      </Box>
-      <Box
+        </LeftMessage>
+      </LeftRight>
+      <Middle
         onClick={handleAvatarClick}
+        align="center"
         justify="center"
         style={{ cursor: "pointer" }}
         pad="xlarge"
@@ -119,21 +134,30 @@ const TopSection = () => {
             ) as string,
           }}
         />
-        <StyledDeveloper>{TEXT.DEVELOPER}</StyledDeveloper>
-      </Box>
-      <Box justify="center" basis="38%">
-        <SpeechBubble
-          bgColor="secondary1"
-          pad="medium"
-          position="left"
-          maxWidth="xxlarge"
+        <StyledDeveloper
+          color="secondary1"
+          margin={{ vertical: "large" }}
+          size="xxxlarge"
+          textAlign="center"
         >
-          <StyledIntoHello>{TEXT.INTRO_HELLO}</StyledIntoHello>
-          <StyledIntoHeading>{TEXT.INTRO_HEADING}</StyledIntoHeading>
-          <StyledIntoDesc>{TEXT.INTRO_DESCRIPTION}</StyledIntoDesc>
-        </SpeechBubble>
-      </Box>
-    </Box>
+          {TEXT.DEVELOPER}
+        </StyledDeveloper>
+      </Middle>
+      <LeftRight justify="center">
+        <RightMessage direction="row" margin={{ vertical: "large" }}>
+          <SpeechBubble
+            bgColor="secondary1"
+            pad="large"
+            position="left"
+            maxWidth="xxlarge"
+          >
+            <StyledIntoHello>{TEXT.INTRO_HELLO}</StyledIntoHello>
+            <StyledIntoHeading>{TEXT.INTRO_HEADING}</StyledIntoHeading>
+            <StyledIntoDesc>{TEXT.INTRO_DESCRIPTION}</StyledIntoDesc>
+          </SpeechBubble>
+        </RightMessage>
+      </LeftRight>
+    </Container>
   )
 }
 
