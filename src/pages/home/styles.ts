@@ -17,16 +17,23 @@ export const StyledHeart = styled(FaHeart)`
 `
 export const StyledLink = styled.a<{
   color: string
+  pad: string
 }>`
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-basis: 100%;
+  padding: ${({ theme, pad }) => theme.edgeSize[pad]};
 
   color: ${({ theme, color }) => theme.color[color]};
   text-decoration: none;
+  @media (min-width: 992px) {
+    flex-basis: 252px;
+    padding: ${({ theme, pad }) => theme.edgeSize[pad] || pad} 0;
+  }
 `
 export const StyledLinkLabel = styled.h3`
-  margin: ${({ theme }) =>
-    `0 ${theme.edgeSize.xlarge} 0 ${theme.edgeSize.medium}`};
+  margin-left: ${({ theme }) => theme.edgeSize.medium};
 `
 export const StyledHi = styled(Heading)`
   transform: rotate(-45deg);

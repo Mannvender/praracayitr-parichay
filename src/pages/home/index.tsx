@@ -20,18 +20,17 @@ const Home = () => {
     <Fragment>
       <TopSection />
       <Box
-        align="center"
         bgColor="primary"
         direction="row"
-        height="large"
         justify="center"
-        pad="xlarge"
         shrink="0"
         textTransform="uppercase"
+        wrap="wrap"
       >
         <StyledLink
           color="primary3"
           href="https://bit.ly/mono-cv"
+          pad="xlarge"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -43,6 +42,7 @@ const Home = () => {
         <StyledLink
           color="primary3"
           href="https://bit.ly/mono-in"
+          pad="0"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -54,6 +54,7 @@ const Home = () => {
         <StyledLink
           color="primary3"
           href="https://bit.ly/mono-git"
+          pad="xlarge"
           rel="noopener noreferrer"
           target="_blank"
         >
