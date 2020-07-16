@@ -1,10 +1,9 @@
 // lib imports
 import React, { Fragment } from "react"
 import styled, { css } from "styled-components"
-import { FaBookOpen } from "react-icons/fa"
 
 // project imports
-import { Box, SpeechBubble } from "components"
+import { Comment } from "components"
 
 const StyledDiv = styled.div<{
   isHorizontal: boolean
@@ -125,28 +124,6 @@ const Details = styled.div<{
       transform: translateX(-${({ isTop }) => (isTop ? 450 : 0)}%);
     `}
 `
-const StyledFaBookOpen = styled(FaBookOpen)`
-  color: ${({ theme }) => theme.color.primary3};
-`
-const Title = styled.p`
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: ${({ theme }) => theme.color.secondary1};
-  margin: 0;
-`
-const Description = styled.p`
-  font-size: 0.8rem;
-  font-weight: 600;
-  font-style: italic;
-  color: ${({ theme }) => theme.color.accent1};
-  margin: 0;
-`
-const Time = styled.p`
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: ${({ theme }) => theme.color.secondary1};
-  margin: 0;
-`
 
 interface Props {
   // @todo: define shape of array of object
@@ -193,23 +170,11 @@ const Timeline = ({
           isTop={item.orientation === "top"}
           isHorizontal={isHorizontal}
         >
-          <Box direction="row" margin="small">
-            <div>
-              <SpeechBubble bgColor="secondary1">
-                <StyledFaBookOpen size="2em" />
-              </SpeechBubble>
-            </div>
-            <Box
-              margin={{ horizontal: "medium" }}
-              style={{ minWidth: "200px" }}
-            >
-              <Title>{item.title}</Title>
-              <Description>{item.description}</Description>
-              <Time>
-                - {item.from} {fromToSeparator} {item.to}
-              </Time>
-            </Box>
-          </Box>
+          <Comment
+            title={item.title}
+            description={item.description}
+            time={item.from + fromToSeparator + item.to}
+          />
         </Details>
       </Fragment>
     ))

@@ -6,6 +6,7 @@ import ProgressBar from "components/ProgressBar"
 import Header from "components/Header"
 import Footer from "components/Footer"
 import Heading from "components/Heading"
+import Comment from 'components/Comment'
 
 export {
   Box,
@@ -16,4 +17,5 @@ export {
   Header,
   Footer,
   Heading,
+  Comment
 }
