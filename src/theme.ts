@@ -67,6 +67,26 @@ const theme = {
       round: "50%",
     },
   },
+  text: {
+    small: {
+      xsmall: "13px",
+      small: "16px",
+      medium: "18px",
+      large: "21px",
+      xlarge: "24px",
+      xxlarge: "32px",
+      xxxlarge: "56px",
+    },
+    medium: {
+      xsmall: "13px",
+      small: "16px",
+      medium: "18px",
+      large: "21px",
+      xlarge: "24px",
+      xxlarge: "32px",
+      xxxlarge: "56px",
+    },
+  },
 }
 
 export default theme

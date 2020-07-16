@@ -5,6 +5,7 @@ import Timeline from "components/Timeline"
 import ProgressBar from "components/ProgressBar"
 import Header from "components/Header"
 import Footer from "components/Footer"
+import Heading from "components/Heading"
 
 export {
   Box,
@@ -14,4 +15,5 @@ export {
   ProgressBar,
   Header,
   Footer,
+  Heading,
 }

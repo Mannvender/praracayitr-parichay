@@ -23,6 +23,7 @@ function App() {
         size: isMobileDevice ? theme.size.small : theme.size.medium,
         edgeSize: isMobileDevice ? theme.edgeSize.small : theme.edgeSize.medium,
         border: theme.border.medium,
+        text: isMobileDevice ? theme.text.small : theme.text.medium,
       }}
     >
       <Router>
