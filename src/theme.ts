@@ -27,7 +27,7 @@ const theme = {
       medium: "24px",
       large: "56px",
       xlarge: "112px",
-      xxlarge: "312px",
+      xxlarge: "256px",
       xxxlarge: "348px",
       twoPowTen: "1024px",
     },

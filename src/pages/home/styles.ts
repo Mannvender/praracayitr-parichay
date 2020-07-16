@@ -44,9 +44,9 @@ export const StyledAge = styled.h2`
   color: ${({ theme }) => theme.color.primary3};
 `
 export const StyledImage = styled(animated.img)`
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
+  height: ${({ theme }) => theme.size.xxlarge};
+  width: ${({ theme }) => theme.size.xxlarge};
+  border-radius: ${({ theme }) => theme.border.round};
   background-color: ${({ theme }) => theme.color.primary};
 `
 export const StyledIntoHello = styled.h3`
