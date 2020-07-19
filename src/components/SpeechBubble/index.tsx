@@ -99,7 +99,7 @@ interface Props {
   height?: string
   maxWidth?: string
   pad?: string
-  position?: string
+  position?: "top" | "right" | "bottom" | "left"
   radius?: string
   rotate?: string
   style?: object
