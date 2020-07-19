@@ -20,7 +20,7 @@ const StyledFaSun = styled(FaSun)`
 `
 const StyledLanguageLable = styled.h2`
   color: ${({ theme }) => theme.color.primary3};
-  height: ${({ theme }) => theme.text.xxlarge};
+  font-size: ${({ theme }) => theme.text.xxlarge};
 `
 
 const Header = () => {
