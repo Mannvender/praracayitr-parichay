@@ -22,11 +22,14 @@ import {
   JustifyCenterToEnd as LeftMessage,
   JustifyCenterToStart as RightMessage,
 } from "pages/home/styles"
-import { useAudio } from "hooks"
+import { useAudio, useWindowSize } from "hooks"
+import { isMediumDevice } from "utils/device-identifiers"
 
 const TopSection = () => {
   const [playing, toogle] = useAudio(process.env.PUBLIC_URL + "/aye_ganpat.mp3")
   const { homepage: TEXT } = useText()
+  const { width } = useWindowSize()
+  const isMedium = isMediumDevice(width)
   const { mode, setMode } = useContext(Store)
   const isLightMode = mode === MODE.LIGHT
 
@@ -55,7 +58,11 @@ const TopSection = () => {
           margin={{ vertical: "large" }}
         >
           <div>
-            <SpeechBubble bgColor="primary" pad="large" position="right">
+            <SpeechBubble
+              bgColor="primary"
+              pad="large"
+              position={isMedium ? "bottom" : "right"}
+            >
               <StyledHeart size="3em" />
             </SpeechBubble>
           </div>
@@ -76,7 +83,7 @@ const TopSection = () => {
             <SpeechBubble
               bgColor="secondary1"
               pad="large"
-              position="right"
+              position={isMedium ? "bottom" : "right"}
               radius="large"
             >
               <Box direction="row" justify="center">
@@ -97,7 +104,7 @@ const TopSection = () => {
             <SpeechBubble
               bgColor="primary"
               pad="large"
-              position="right"
+              position={isMedium ? "bottom" : "right"}
               radius="medium"
             >
               <Heading color="primary3" size="xlarge">
@@ -148,7 +155,7 @@ const TopSection = () => {
           <SpeechBubble
             bgColor="secondary1"
             pad="large"
-            position="left"
+            position={isMedium ? "top" : "left"}
             maxWidth="xxlarge"
           >
             <StyledIntoHello>{TEXT.INTRO_HELLO}</StyledIntoHello>
