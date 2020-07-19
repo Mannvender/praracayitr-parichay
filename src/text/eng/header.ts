@@ -1,0 +1,1 @@
+export const TITLE = 'Maan\'s web presence'
