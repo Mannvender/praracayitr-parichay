@@ -98,7 +98,7 @@ const TopSection = () => {
               bgColor="primary"
               pad="large"
               position="right"
-              radius="large"
+              radius="medium"
             >
               <Heading color="primary3" size="xlarge">
                 {TEXT.AGE}

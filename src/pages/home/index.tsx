@@ -34,7 +34,12 @@ const Home = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SpeechBubble bgColor="primary3" pad="medium" position="right">
+          <SpeechBubble
+            bgColor="primary3"
+            pad="medium"
+            position="right"
+            radius="small"
+          >
             <StyledFaGlobe size="1.5em" />
           </SpeechBubble>
           <StyledLinkLabel>bit.ly/mono-cv</StyledLinkLabel>
@@ -46,7 +51,12 @@ const Home = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SpeechBubble bgColor="primary3" pad="medium" position="right">
+          <SpeechBubble
+            bgColor="primary3"
+            pad="medium"
+            position="right"
+            radius="small"
+          >
             <StyledLinkedIn size="1.5em" />
           </SpeechBubble>
           <StyledLinkLabel>/mannvender</StyledLinkLabel>
@@ -58,7 +68,12 @@ const Home = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SpeechBubble bgColor="primary3" pad="medium" position="right">
+          <SpeechBubble
+            bgColor="primary3"
+            pad="medium"
+            position="right"
+            radius="small"
+          >
             <StyledGithub size="1.5em" />
           </SpeechBubble>
           <StyledLinkLabel>/mannvender</StyledLinkLabel>

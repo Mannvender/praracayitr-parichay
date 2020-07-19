@@ -39,7 +39,7 @@ const Comment = ({ title = "", description = "", time = "" }: Props) => {
   return (
     <Box direction="row" margin="small">
       <div>
-        <SpeechBubble bgColor="secondary1" pad="medium">
+        <SpeechBubble bgColor="secondary1" pad="medium" radius="small">
           <StyledFaBookOpen size="2em" />
         </SpeechBubble>
       </div>

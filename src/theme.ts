@@ -64,6 +64,7 @@ const theme = {
   },
   border: {
     medium: {
+      small: "6px",
       medium: "8px",
       large: "16px",
       round: "50%",

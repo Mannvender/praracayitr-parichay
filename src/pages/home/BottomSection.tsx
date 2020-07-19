@@ -312,19 +312,19 @@ const BottomSection = () => {
               <Name>{TEXT.NAME}</Name>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
-              <SpeechBubble bgColor="secondary1" pad="large" radius="large">
+              <SpeechBubble bgColor="secondary1" pad="large" radius="medium">
                 <StyledFaMobile size="3em" />
               </SpeechBubble>
               <ContactDetail>{TEXT.PHONE}</ContactDetail>
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
-              <SpeechBubble bgColor="secondary1" pad="large" radius="large">
+              <SpeechBubble bgColor="secondary1" pad="large" radius="medium">
                 <StyledFaAt size="3em" />
               </SpeechBubble>
               <ContactDetail dangerouslySetInnerHTML={createMarkup()} />
             </Box>
             <Box direction="row" align="center" margin={{ vertical: "medium" }}>
-              <SpeechBubble bgColor="secondary1" pad="large" radius="large">
+              <SpeechBubble bgColor="secondary1" pad="large" radius="medium">
                 <StyledFaHome size="3em" />
               </SpeechBubble>
               <ContactDetail>{TEXT.ADDRESS}</ContactDetail>
