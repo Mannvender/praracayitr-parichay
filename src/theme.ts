@@ -4,6 +4,7 @@ const theme = {
       primary: "#14031A",
       primary2: "#949494",
       primary3: "#fff",
+      primary4: "#373737",
       secondary1: "#5A4848",
       secondary2: "#78BB61",
       accent1: "#FF7521",
@@ -13,6 +14,7 @@ const theme = {
       primary: "#2E5C18",
       primary2: "#2E5C18",
       primary3: "#000000",
+      primary4: "#c7c7c7",
       secondary1: "#3E432E",
       secondary2: "#616F39",
       accent1: "#A7D129",
@@ -30,6 +32,7 @@ const theme = {
       xxlarge: "256px",
       xxxlarge: "348px",
       x4large: "428px",
+      article: '744px',
       twoPowTen: "1024px",
     },
     // by default size choosen by user is medium
@@ -43,6 +46,7 @@ const theme = {
       xxlarge: "328px",
       xxxlarge: "400px",
       x4large: "556px",
+      article: '744px',
       twoPowTen: "1024px",
     },
   },
@@ -53,6 +57,7 @@ const theme = {
       large: "8px",
       xlarge: "16px",
       xxlarge: "24px",
+      xxxlarge: "28px",
     },
     medium: {
       small: "4px",
@@ -60,6 +65,7 @@ const theme = {
       large: "16px",
       xlarge: "32px",
       xxlarge: "48px",
+      xxxlarge: "56px",
     },
   },
   border: {
