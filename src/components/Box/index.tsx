@@ -7,8 +7,8 @@ interface ParserArgs {
   spacing: any
 }
 const parseSpacing = ({ spacing, theme }: ParserArgs): string => {
-  return `${theme.edgeSize[spacing.vertical] || 0} ${
-    theme.edgeSize[spacing.horizontal] || 0
+  return `${theme.edgeSize[spacing.vertical] || spacing.vertical || 0} ${
+    theme.edgeSize[spacing.horizontal] || spacing.horizontal || 0
   }`
 }
 
@@ -94,6 +94,7 @@ interface Props {
   bgColor?: string
   border?: object
   children?: any
+  dangerouslySetInnerHTML?: any
   direction?: "row" | "column"
   grow?: string
   justify?: string
@@ -119,6 +120,7 @@ const Box = ({
   bgColor = "",
   border = {},
   children,
+  dangerouslySetInnerHTML,
   direction = "column",
   grow = "",
   height = "",
@@ -144,6 +146,7 @@ const Box = ({
       basis={basis}
       bgColor={bgColor}
       border={border}
+      dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       direction={direction}
       grow={grow}
       height={height}
