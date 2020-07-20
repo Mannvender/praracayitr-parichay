@@ -3,9 +3,10 @@ import React from "react"
 import styled from "styled-components"
 
 // project imports
-import { Box } from "components"
+import { Box, Sharing } from "components"
 import { useText } from "hooks"
 
+const { Whatsapp, Email, Twitter, Facebook } = Sharing
 const Container = styled(Box)`
   /* CSS Normalization */
   color: ${({ theme }) => theme.color.primary4};
@@ -74,8 +75,10 @@ const SmallText = styled.p`
   margin-right: ${({ theme }) => theme.edgeSize.large};
 `
 
+const shareLink = window.location.toString()
+
 const Article = () => {
-  const { articles: ARTICLES } = useText()
+  const { articles: ARTICLES, article: TEXT } = useText()
   function createMarkup() {
     return {
       __html: ARTICLES.A_1.CONTENT,
@@ -93,18 +96,40 @@ const Article = () => {
         <SmallText>{ARTICLES.A_1.TIME_TO_READ}</SmallText>
       </Box>
       <div dangerouslySetInnerHTML={createMarkup()} />
-      <Box direction="row" wrap="wrap">
+      <Box direction="row" wrap="wrap" margin={{ vertical: "large" }}>
         {ARTICLES.A_1.TAGS.map((tag) => (
           <Box
+            color="primary3"
             radius="medium"
             bgColor="primary2"
-            border={{ color: "primary3", size: "small", radius: "small" }}
+            border={{ color: "primary3", size: "small" }}
             pad="medium"
             margin="0 0.6em 0.6em 0"
           >
             {tag}
           </Box>
         ))}
+      </Box>
+      <Box direction="row">
+        <Whatsapp url={shareLink} text={TEXT.SHARE_MESSAGE} size="2em" />
+        <Twitter
+          url={shareLink}
+          text={TEXT.SHARE_MESSAGE}
+          hashtags={ARTICLES.A_1.TAGS}
+          size="2em"
+        />
+        <Facebook
+          url={shareLink}
+          quote={TEXT.SHARE_MESSAGE}
+          hashtag={ARTICLES.A_1.TAGS[0] || ""}
+          size="2em"
+        />
+        <Email
+          url={shareLink}
+          body={TEXT.SHARE_MESSAGE}
+          subject={TEXT.SHARE_SUBJECT}
+          size="2em"
+        />
       </Box>
     </Container>
   )

@@ -8,11 +8,13 @@ import * as headerHin from "text/hin/header"
 import * as homepageEng from "text/eng/home"
 import * as homepageHin from "text/hin/home"
 import * as articlesEng from "text/eng/articles"
+import * as articleEng from "text/eng/article"
 
 const useText = () => {
   const { lang } = useContext(Store)
   const isEng = lang === LANG.ENG
   return {
+    article: articleEng,
     articles: articlesEng,
     header: isEng ? headerEng : headerHin,
     homepage: isEng ? homepageEng : homepageHin,

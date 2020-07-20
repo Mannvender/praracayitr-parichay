@@ -29,6 +29,7 @@ const StyledDiv = styled(animated.div)<{
   bgColor: string
   border: object
   direction: string
+  fontColor: string
   grow: string
   height: string
   justify: string
@@ -56,6 +57,7 @@ const StyledDiv = styled(animated.div)<{
   max-width: ${({ theme, maxWidth }) => theme.size[maxWidth] || maxWidth};
   min-height: ${({ theme, minHeight }) => theme.size[minHeight] || minHeight};
   min-width: ${({ theme, minWidth }) => theme.size[minWidth] || minWidth};
+  color: ${({ theme, fontColor }) => theme.color[fontColor] || fontColor};
   background-color: ${({ theme, bgColor }) => theme.color[bgColor] || bgColor};
   align-items: ${({ align }) => align};
   justify-content: ${({ justify }) => justify};
@@ -94,6 +96,7 @@ interface Props {
   bgColor?: string
   border?: object
   children?: any
+  color?: string
   dangerouslySetInnerHTML?: any
   direction?: "row" | "column"
   grow?: string
@@ -120,6 +123,7 @@ const Box = ({
   bgColor = "",
   border = {},
   children,
+  color = "",
   dangerouslySetInnerHTML,
   direction = "column",
   grow = "",
@@ -148,6 +152,7 @@ const Box = ({
       border={border}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       direction={direction}
+      fontColor={color}
       grow={grow}
       height={height}
       justify={justify}

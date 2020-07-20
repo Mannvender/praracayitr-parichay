@@ -6,7 +6,8 @@ import ProgressBar from "components/ProgressBar"
 import Header from "components/Header"
 import Footer from "components/Footer"
 import Heading from "components/Heading"
-import Comment from 'components/Comment'
+import Comment from "components/Comment"
+import Sharing from "components/Sharing"
 
 export {
   Box,
@@ -17,5 +18,6 @@ export {
   Header,
   Footer,
   Heading,
-  Comment
+  Comment,
+  Sharing,
 }
