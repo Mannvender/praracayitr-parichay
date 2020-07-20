@@ -1,2 +1,3 @@
 
-export const TITLE = 'मान का ऑनलाइन डेरा'
+export const TITLE = 'म'
+export const ARTICLES = 'लेख'

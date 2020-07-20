@@ -1,6 +1,6 @@
 // library imports
 import React, { useContext } from "react"
-import { BrowserRouter as Router, Switch } from "react-router-dom"
+import { HashRouter as Router, Switch } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
 
 // project imports
@@ -11,8 +11,8 @@ import PublicRoute from "routes/Public"
 import PublicOnlyRoute from "routes/PublicOnly"
 import PrivateRoute from "routes/Private"
 import { Store } from "context/theme/store"
-import { useWindowSize } from 'hooks'
-import { isMobileDevice } from 'utils/device-identifiers'
+import { useWindowSize } from "hooks"
+import { isMobileDevice } from "utils/device-identifiers"
 
 function App() {
   const { mode } = useContext(Store)

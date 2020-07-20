@@ -1,9 +1,10 @@
 import Homepage from "pages/home"
 import Article from "pages/article"
+import { homepage, article } from "routes/list"
 
 export default [
   {
-    path: "/",
+    path: homepage,
     exact: true,
     component: Homepage,
     public: true,
@@ -12,7 +13,7 @@ export default [
     layout: "StackLayout",
   },
   {
-    path: "/article",
+    path: article,
     exact: true,
     component: Article,
     public: true,

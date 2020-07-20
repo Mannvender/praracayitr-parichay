@@ -1,1 +1,2 @@
-export const TITLE = 'Maan\'s web presence'
+export const TITLE = 'M'
+export const ARTICLES = 'Articles'

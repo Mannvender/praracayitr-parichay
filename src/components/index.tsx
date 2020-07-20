@@ -8,6 +8,7 @@ import Footer from "components/Footer"
 import Heading from "components/Heading"
 import Comment from "components/Comment"
 import Sharing from "components/Sharing"
+import Link from "components/Link"
 
 export {
   Box,
@@ -20,4 +21,5 @@ export {
   Heading,
   Comment,
   Sharing,
+  Link,
 }

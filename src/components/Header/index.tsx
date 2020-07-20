@@ -4,11 +4,12 @@ import { FaMoon, FaSun } from "react-icons/fa"
 import styled from "styled-components"
 
 // project imports
-import { Box, Heading } from "components"
+import { Box, Heading, Link } from "components"
 import { useText, useWindowSize } from "hooks"
 import { Store as ThemeStore, MODE } from "context/theme/store"
 import { Store as LangStore, LANG } from "context/lang/store"
 import { isMobileDevice } from "utils/device-identifiers"
+import { article, homepage } from "routes/list"
 
 const StyledFaMoon = styled(FaMoon)`
   color: ${({ theme }) => theme.color.primary3};
@@ -44,10 +45,22 @@ const Header = () => {
         justify="space-between"
         width="100%"
       >
-        <Box direction="row" align="center">
-          <Heading color="primary3" size="xxlarge" textAlign="left">
-            {isMobile ? TEXT.TITLE.charAt(0) : TEXT.TITLE}
-          </Heading>
+        <Box direction="row">
+          <Link to={homepage}>
+            <Heading
+              color="primary3"
+              margin="0 1em 0 0"
+              size="xxlarge"
+              textAlign="left"
+            >
+              {isMobile ? TEXT.TITLE.charAt(0) : TEXT.TITLE}
+            </Heading>
+          </Link>
+          <Link to={article}>
+            <Heading color="primary3" size="xxlarge" textAlign="left">
+              {TEXT.ARTICLES}
+            </Heading>
+          </Link>
         </Box>
         <Box direction="row">
           <Box
