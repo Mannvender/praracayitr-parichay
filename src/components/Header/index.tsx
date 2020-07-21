@@ -9,7 +9,7 @@ import { useText, useWindowSize } from "hooks"
 import { Store as ThemeStore, MODE } from "context/theme/store"
 import { Store as LangStore, LANG } from "context/lang/store"
 import { isMobileDevice } from "utils/device-identifiers"
-import { article, homepage } from "routes/list"
+import { homepage, search } from "routes/list"
 
 const StyledFaMoon = styled(FaMoon)`
   color: ${({ theme }) => theme.color.primary3};
@@ -56,7 +56,7 @@ const Header = () => {
               {isMobile ? TEXT.TITLE.charAt(0) : TEXT.TITLE}
             </Heading>
           </Link>
-          <Link to={article}>
+          <Link to={search}>
             <Heading color="primary3" size="xxlarge" textAlign="left">
               {TEXT.ARTICLES}
             </Heading>

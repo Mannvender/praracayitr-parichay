@@ -21,7 +21,8 @@ const SeachInp = styled.input`
 const SmallText = styled.p`
   color: ${({ theme }) => theme.color.primary2};
   font-size: ${({ theme }) => theme.text.small};
-  margin: 0 ${({ theme }) => theme.edgeSize.large} 0 0;
+  margin: 0;
+  cursor: pointer;
 `
 const Time = styled.time`
   color: ${({ theme }) => theme.color.primary2};
@@ -31,10 +32,12 @@ const Time = styled.time`
 const Title = styled(Heading)`
   margin-top: ${({ theme }) => theme.edgeSize.medium};
   font-weight: 500;
+  cursor: pointer;
 `
 const Preview = styled.p`
   color: ${({ theme }) => theme.color.secondary1};
   margin-top: ${({ theme }) => theme.edgeSize.medium};
+  margin-bottom: ${({ theme }) => theme.edgeSize.small};
   font-size: ${({ theme }) => theme.text.medium};
   line-height: 1.58;
   letter-spacing: -0.004em;
@@ -42,6 +45,7 @@ const Preview = styled.p`
 const Card = styled(Box)`
   border-bottom: 1px solid ${({ theme }) => theme.color.primary2};
   margin-top: ${({ theme }) => theme.edgeSize.xlarge};
+  padding-bottom: ${({ theme }) => theme.edgeSize.xlarge};
 `
 
 interface Text {
@@ -62,6 +66,7 @@ const Search = () => {
             {ARTICLES[id].TITLE}
           </Title>
           <Preview>{ARTICLES[id].PREVIEW}...</Preview>
+          <SmallText>{TEXT.READ_MORE}</SmallText>
         </Card>
       )
     })
