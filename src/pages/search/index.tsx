@@ -3,8 +3,9 @@ import React from "react"
 import styled from "styled-components"
 
 // project imports
-import { Box, Heading } from "components"
+import { Box, Heading, Link } from "components"
 import { useText } from "hooks"
+import { article } from "routes/list"
 
 const Container = styled(Box)``
 const SeachInp = styled.input`
@@ -57,17 +58,19 @@ const Search = () => {
   const renderArticleCards = () => {
     return Object.keys(ARTICLES).map((id) => {
       return (
-        <Card>
-          <Box direction="row">
-            <Time>{ARTICLES[id].PUBLISHED_ON}</Time>
-            <SmallText>{ARTICLES[id].TIME_TO_READ}</SmallText>
-          </Box>
-          <Title color="secondary1" size="xxlarge">
-            {ARTICLES[id].TITLE}
-          </Title>
-          <Preview>{ARTICLES[id].PREVIEW}...</Preview>
-          <SmallText>{TEXT.READ_MORE}</SmallText>
-        </Card>
+        <Link to={article + "?id=" + id}>
+          <Card>
+            <Box direction="row">
+              <Time>{ARTICLES[id].PUBLISHED_ON}</Time>
+              <SmallText>{ARTICLES[id].TIME_TO_READ}</SmallText>
+            </Box>
+            <Title color="secondary1" size="xxlarge">
+              {ARTICLES[id].TITLE}
+            </Title>
+            <Preview>{ARTICLES[id].PREVIEW}...</Preview>
+            <SmallText>{TEXT.READ_MORE}</SmallText>
+          </Card>
+        </Link>
       )
     })
   }
