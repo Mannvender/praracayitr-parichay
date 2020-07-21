@@ -1,1 +1,1 @@
-export const PLACEHOLDER: string = 'निम्न को खोजें ...'
+export const PLACEHOLDER: string = 'खोजें ...'
