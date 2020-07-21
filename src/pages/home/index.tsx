@@ -1,5 +1,6 @@
 // lib imports
 import React, { Fragment } from "react"
+import styled from "styled-components"
 
 // project imports
 import { Box, SpeechBubble } from "components"
@@ -14,6 +15,14 @@ import {
   StyledLinkLabel,
   StyledLinkedIn,
 } from "pages/home/styles"
+
+const Graphic = styled(Box)`
+  position: absolute;
+  right: -${({ theme }) => theme.size.xlarge};
+  bottom: -${({ theme }) => theme.size.large};
+  z-index: -1;
+  transform: rotate(-45deg);
+`
 
 const Home = () => {
   return (
@@ -80,6 +89,12 @@ const Home = () => {
         </StyledLink>
       </Box>
       <BottomSection />
+      <Graphic
+        radius="large"
+        height="xxxlarge"
+        width="xxxlarge"
+        bgColor="primary2"
+      />
     </Fragment>
   )
 }

@@ -1,6 +1,7 @@
 import Homepage from "pages/home"
 import Article from "pages/article"
-import { homepage, article } from "routes/list"
+import Search from "pages/search"
+import { homepage, article, search } from "routes/list"
 
 export default [
   {
@@ -16,6 +17,15 @@ export default [
     path: article,
     exact: true,
     component: Article,
+    public: true,
+    private: false,
+    publicOnly: false,
+    layout: "StackLayout",
+  },
+  {
+    path: search,
+    exact: true,
+    component: Search,
     public: true,
     private: false,
     publicOnly: false,

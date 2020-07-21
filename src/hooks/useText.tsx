@@ -9,6 +9,8 @@ import * as homepageEng from "text/eng/home"
 import * as homepageHin from "text/hin/home"
 import * as articlesEng from "text/eng/articles"
 import * as articleEng from "text/eng/article"
+import * as searchEng from "text/eng/search"
+import * as searchHin from "text/hin/search"
 
 const useText = () => {
   const { lang } = useContext(Store)
@@ -18,6 +20,7 @@ const useText = () => {
     articles: articlesEng,
     header: isEng ? headerEng : headerHin,
     homepage: isEng ? homepageEng : homepageHin,
+    search: isEng ? searchEng : searchHin,
   }
 }
 

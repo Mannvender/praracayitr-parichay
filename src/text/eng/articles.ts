@@ -1,4 +1,4 @@
-export const A_1 = {PUBLISHED_ON: '20th July, 2020',TIME_TO_READ:'3 mins', TAGS:['Programming', 'Github','Open Source', 'Coding', "Security"],CONTENT:`<div class="s u tw gr gs ez">
+export const A_1 = {PUBLISHED_ON: '20th July, 2020',TIME_TO_READ:'3 mins',TITLE:"4 New GitHub Products That Will Change How You Code",PREVIEW:"Exciting announcements from the first virtual GitHub Satellite event", TAGS:['Programming', 'Github','Open Source', 'Coding', "Security"],CONTENT:`<div class="s u tw gr gs ez">
 </div>
 <section class="gt gu gv gw gx">
 <h1 id="1a1e" class="title">4 New GitHub Products That Will Change How You Code</h1></div>
