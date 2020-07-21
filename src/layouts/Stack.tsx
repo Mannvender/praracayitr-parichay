@@ -18,14 +18,13 @@ const StackLayout = ({ children }: Props) => {
     <Box
       bgColor="primary3"
       style={{
-        ...animationProps,
         position: "relative",
         zIndex: 0,
         overflow: "hidden",
       }}
     >
       <Header />
-      {children}
+      <Box style={animationProps}>{children}</Box>
       <Footer />
     </Box>
   )
