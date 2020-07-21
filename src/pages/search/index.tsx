@@ -58,19 +58,21 @@ const Search = () => {
   const renderArticleCards = () => {
     return Object.keys(ARTICLES).map((id) => {
       return (
-        <Link to={article + "?id=" + id}>
-          <Card>
-            <Box direction="row">
-              <Time>{ARTICLES[id].PUBLISHED_ON}</Time>
-              <SmallText>{ARTICLES[id].TIME_TO_READ}</SmallText>
-            </Box>
+        <Card key={id}>
+          <Box direction="row">
+            <Time>{ARTICLES[id].PUBLISHED_ON}</Time>
+            <SmallText>{ARTICLES[id].TIME_TO_READ}</SmallText>
+          </Box>
+          <Link to={article + "?id=" + id} key={id}>
             <Title color="secondary1" size="xxlarge">
               {ARTICLES[id].TITLE}
             </Title>
-            <Preview>{ARTICLES[id].PREVIEW}...</Preview>
+          </Link>
+          <Preview>{ARTICLES[id].PREVIEW}...</Preview>
+          <Link to={article + "?id=" + id} key={id}>
             <SmallText>{TEXT.READ_MORE}</SmallText>
-          </Card>
-        </Link>
+          </Link>
+        </Card>
       )
     })
   }

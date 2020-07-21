@@ -1,10 +1,13 @@
 // lib imports
 import React from "react"
 import styled from "styled-components"
+import { useLocation, useHistory } from "react-router-dom"
 
 // project imports
 import { Box, Sharing } from "components"
 import { useText } from "hooks"
+import { page_not_found } from "routes/list"
+import { getSearchParam } from "utils/search-param"
 
 const { Whatsapp, Email, Twitter, Facebook } = Sharing
 const Container = styled(Box)`
@@ -77,14 +80,28 @@ const SmallText = styled.p`
 
 const shareLink = window.location.toString()
 
+// todo: update interface with proper types
+interface Text {
+  articles: any
+  article: any
+}
+
 const Article = () => {
-  const { articles: ARTICLES, article: TEXT } = useText()
+  const location = useLocation()
+  const history = useHistory()
+  const { articles: ARTICLES, article: TEXT }: Text = useText()
+
+  const id = getSearchParam(location.search)
+  const ARTICLE = ARTICLES[id]
+  if (!id || !ARTICLE) history.replace(page_not_found)
+
   function createMarkup() {
     return {
-      __html: ARTICLES.A_1.CONTENT,
+      __html: ARTICLES[id].CONTENT,
     }
   }
 
+  if (!ARTICLE) return null
   return (
     <Container
       maxWidth="article"
@@ -92,12 +109,12 @@ const Article = () => {
       pad={{ horizontal: "xlarge" }}
     >
       <Box direction="row">
-        <SmallText>{ARTICLES.A_1.PUBLISHED_ON}</SmallText>
-        <SmallText>{ARTICLES.A_1.TIME_TO_READ}</SmallText>
+        <SmallText>{ARTICLE.PUBLISHED_ON}</SmallText>
+        <SmallText>{ARTICLE.TIME_TO_READ}</SmallText>
       </Box>
       <div dangerouslySetInnerHTML={createMarkup()} />
       <Box direction="row" wrap="wrap" margin={{ vertical: "large" }}>
-        {ARTICLES.A_1.TAGS.map((tag) => (
+        {ARTICLE.TAGS.map((tag: string) => (
           <Box
             color="primary3"
             radius="medium"
@@ -105,6 +122,7 @@ const Article = () => {
             border={{ color: "primary3", size: "small" }}
             pad="medium"
             margin="0 0.6em 0.6em 0"
+            key={tag}
           >
             {tag}
           </Box>
@@ -115,13 +133,13 @@ const Article = () => {
         <Twitter
           url={shareLink}
           text={TEXT.SHARE_MESSAGE}
-          hashtags={ARTICLES.A_1.TAGS}
+          hashtags={ARTICLE.TAGS}
           size="2em"
         />
         <Facebook
           url={shareLink}
           quote={TEXT.SHARE_MESSAGE}
-          hashtag={ARTICLES.A_1.TAGS[0] || ""}
+          hashtag={ARTICLE.TAGS[0] || ""}
           size="2em"
         />
         <Email
