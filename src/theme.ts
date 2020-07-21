@@ -86,6 +86,8 @@ const theme = {
       xxlarge: "24px",
       xxxlarge: "42px",
       x4large: "46px",
+      x5large: '56px',
+      x6large: '136px'
     },
     medium: {
       xsmall: "13px",
@@ -96,6 +98,8 @@ const theme = {
       xxlarge: "32px",
       xxxlarge: "48px",
       x4large: "56px",
+      x5large: '77px',
+      x6large: '200px'
     },
   },
 }

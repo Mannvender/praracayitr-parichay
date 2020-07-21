@@ -11,6 +11,8 @@ import * as articlesEng from "text/eng/articles"
 import * as articleEng from "text/eng/article"
 import * as searchEng from "text/eng/search"
 import * as searchHin from "text/hin/search"
+import * as pageNotFoundEng from "text/eng/404"
+import * as pageNotFoundHin from "text/hin/404"
 
 const useText = () => {
   const { lang } = useContext(Store)
@@ -20,6 +22,7 @@ const useText = () => {
     articles: articlesEng,
     header: isEng ? headerEng : headerHin,
     homepage: isEng ? homepageEng : homepageHin,
+    pageNotFound: isEng ? pageNotFoundEng : pageNotFoundHin,
     search: isEng ? searchEng : searchHin,
   }
 }
