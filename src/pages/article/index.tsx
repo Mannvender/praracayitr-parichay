@@ -92,12 +92,12 @@ const Article = () => {
   const { articles: ARTICLES, article: TEXT }: Text = useText()
 
   const id = getSearchParam(location.search)
-  const ARTICLE = ARTICLES[id]
+  const ARTICLE = ARTICLES.find((ARTICLE: any) => ARTICLE.ID === id)
   if (!id || !ARTICLE) history.replace(page_not_found)
 
   function createMarkup() {
     return {
-      __html: ARTICLES[id].CONTENT,
+      __html: ARTICLE.CONTENT,
     }
   }
 

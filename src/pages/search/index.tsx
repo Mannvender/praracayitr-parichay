@@ -1,5 +1,5 @@
 // lib imports
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 // project imports
@@ -55,21 +55,35 @@ interface Text {
 }
 const Search = () => {
   const { search: TEXT, articles: ARTICLES }: Text = useText()
-  const renderArticleCards = () => {
-    return Object.keys(ARTICLES).map((id) => {
+  const [query, setQuery] = useState("")
+
+  const handleSearchInpChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ): void => setQuery(e.target.value)
+
+  const filterArticles = () =>
+    ARTICLES.filter((ARTICLE: any) => {
       return (
-        <Card key={id}>
+        ARTICLE.TITLE.includes(query) ||
+        ARTICLE.TAGS.find((tag: string) => tag === query)
+      )
+    })
+
+  const renderArticleCards = () => {
+    return filterArticles().map((ARTICLE: any) => {
+      return (
+        <Card key={ARTICLE.ID}>
           <Box direction="row">
-            <Time>{ARTICLES[id].PUBLISHED_ON}</Time>
-            <SmallText>{ARTICLES[id].TIME_TO_READ}</SmallText>
+            <Time>{ARTICLE.PUBLISHED_ON}</Time>
+            <SmallText>{ARTICLE.TIME_TO_READ}</SmallText>
           </Box>
-          <Link to={article + "?id=" + id} key={id}>
+          <Link to={article + "?id=" + ARTICLE.ID} key={ARTICLE.ID}>
             <Title color="secondary1" size="xxlarge">
-              {ARTICLES[id].TITLE}
+              {ARTICLE.TITLE}
             </Title>
           </Link>
-          <Preview>{ARTICLES[id].PREVIEW}...</Preview>
-          <Link to={article + "?id=" + id} key={id}>
+          <Preview>{ARTICLE.PREVIEW}...</Preview>
+          <Link to={article + "?id=" + ARTICLE.ID}>
             <SmallText>{TEXT.READ_MORE}</SmallText>
           </Link>
         </Card>
@@ -82,7 +96,12 @@ const Search = () => {
       margin={{ horizontal: "auto", vertical: "xlarge" }}
       pad={{ horizontal: "xlarge" }}
     >
-      <SeachInp placeholder={TEXT.PLACEHOLDER} type="search" />
+      <SeachInp
+        placeholder={TEXT.PLACEHOLDER}
+        type="search"
+        value={query}
+        onChange={handleSearchInpChange}
+      />
       {renderArticleCards()}
     </Container>
   )
