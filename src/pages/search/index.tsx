@@ -63,8 +63,9 @@ const Search = () => {
 
   const filterArticles = (): Array<object> =>
     ARTICLES.filter((ARTICLE: any) => {
+      var re = new RegExp(query, "gi")
       return (
-        ARTICLE.TITLE.includes(query) ||
+        ARTICLE.TITLE.match(re) ||
         ARTICLE.TAGS.find((tag: string) => tag === query)
       )
     })
@@ -75,7 +76,6 @@ const Search = () => {
       return (
         <Box
           color="primary4"
-          width="article"
           margin={{ vertical: "xlarge" }}
           style={{ textAlign: "center" }}
         >
@@ -105,7 +105,6 @@ const Search = () => {
   }
   return (
     <Container
-      maxWidth="article"
       margin={{ horizontal: "auto", vertical: "xlarge" }}
       pad={{ horizontal: "xlarge" }}
     >
