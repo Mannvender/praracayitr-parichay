@@ -3,7 +3,7 @@ import React from "react"
 import { useSpring, config } from "react-spring"
 
 // shared imports
-import { Box, Header, Footer } from "components"
+import { Box, Header } from "components"
 
 interface Props {
   children?: any
@@ -25,7 +25,6 @@ const StackLayout = ({ children }: Props) => {
     >
       <Header />
       <Box style={animationProps}>{children}</Box>
-      <Footer />
     </Box>
   )
 }

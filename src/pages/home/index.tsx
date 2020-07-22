@@ -3,7 +3,7 @@ import React, { Fragment } from "react"
 import styled from "styled-components"
 
 // project imports
-import { Box, SpeechBubble } from "components"
+import { Box, SpeechBubble, Footer } from "components"
 
 // home directory imports
 import BottomSection from "pages/home/BottomSection"
@@ -95,6 +95,7 @@ const Home = () => {
         width="xxxlarge"
         bgColor="primary2"
       />
+      <Footer />
     </Fragment>
   )
 }
