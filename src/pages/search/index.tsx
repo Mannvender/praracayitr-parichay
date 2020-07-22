@@ -61,7 +61,7 @@ const Search = () => {
     e: React.ChangeEvent<HTMLInputElement>
   ): void => setQuery(e.target.value)
 
-  const filterArticles = () =>
+  const filterArticles = (): Array<object> =>
     ARTICLES.filter((ARTICLE: any) => {
       return (
         ARTICLE.TITLE.includes(query) ||
@@ -70,7 +70,20 @@ const Search = () => {
     })
 
   const renderArticleCards = () => {
-    return filterArticles().map((ARTICLE: any) => {
+    const filteredArticles = filterArticles()
+    if (filteredArticles.length <= 0)
+      return (
+        <Box
+          color="primary4"
+          width="article"
+          margin={{ vertical: "xlarge" }}
+          style={{ textAlign: "center" }}
+        >
+          {TEXT.NO_SEARCH_RESULTS}
+        </Box>
+      )
+
+    return filteredArticles.map((ARTICLE: any) => {
       return (
         <Card key={ARTICLE.ID}>
           <Box direction="row">
