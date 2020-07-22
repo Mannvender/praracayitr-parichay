@@ -66,7 +66,9 @@ const Search = () => {
       var re = new RegExp(query, "gi")
       return (
         ARTICLE.TITLE.match(re) ||
-        ARTICLE.TAGS.find((tag: string) => tag === query)
+        ARTICLE.TAGS.find(
+          (tag: string) => tag.toLowerCase() === query.toLowerCase()
+        )
       )
     })
 
