@@ -1,7 +1,7 @@
 export const NAME = "Mannvender Singh"
 export const HI = "Hi!"
 export const IM = "I'm"
-export const AGE = "23 years old"
+export const AGE = "23 + 4 years old";
 export const INTRO_HELLO = "H E L L O!!!"
 export const INTRO_HEADING = "I'm Web Developer in New Delhi, India."
 export const INTRO_DESCRIPTION = `I love Programming and never stop searching for
@@ -58,6 +58,6 @@ export const GAMING = "PC Gaming"
 
 // Contact Details
 export const NAME_LABEL = "Name:"
-export const PHONE = "+91 7217855864"
+export const PHONE = "+91 xxxxxxxxxx";
 export const EMAIL = "mannvender001&shy;@gmail"
 export const ADDRESS = "Sector 45, Gurugram"
